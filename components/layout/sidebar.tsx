@@ -1,16 +1,29 @@
 "use client";
 import { useWindowSize } from "@/hooks/use-window";
 import { cn } from "@/lib/utils";
-import { Activity, BarChart3, BookOpen, Brain, Clock, CreditCard, HelpCircle, Home, LifeBuoy, LogOut, Stethoscope, Trophy, X, Zap } from "lucide-react";
+import {
+  BarChart3, BookOpen, Brain, Calculator, Clock,
+  CreditCard, Eye, HelpCircle, Home, LifeBuoy,
+  LogOut, Stethoscope, Trophy, Users, X, Zap, FileText
+} from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type React from "react";
 import { useSidebar } from "./sidebar-context";
 
+const UCAT_SECTIONS = [
+  { href: "/explore?subtest=VR", icon: <BookOpen className="size-4" />, label: "Verbal Reasoning",        short: "VR",  color: "text-blue-400" },
+  { href: "/explore?subtest=DM", icon: <Brain className="size-4" />,    label: "Decision Making",         short: "DM",  color: "text-purple-400" },
+  { href: "/explore?subtest=QR", icon: <Calculator className="size-4" />,label: "Quantitative Reasoning", short: "QR",  color: "text-amber-400" },
+  { href: "/explore?subtest=AR", icon: <Eye className="size-4" />,       label: "Abstract Reasoning",     short: "AR",  color: "text-rose-400" },
+  { href: "/explore?subtest=SJT",icon: <Users className="size-4" />,     label: "Situational Judgement",  short: "SJT", color: "text-teal-400" },
+];
+
 export function AppSidebar() {
   const pathname = usePathname();
   const { collapsed, setCollapsed } = useSidebar();
   const isActive = (path: string) => pathname === path || pathname.startsWith(`${path}/`);
+  const isSubtest = (href: string) => pathname + (typeof window !== "undefined" ? window.location.search : "") === href;
 
   return (
     <aside className={cn(
@@ -18,6 +31,8 @@ export function AppSidebar() {
       collapsed ? "w-[250px] xl:w-[70px]" : "w-[250px]",
       collapsed ? "max-xl:-translate-x-full" : "max-xl:translate-x-0"
     )}>
+
+      {/* Logo */}
       <div className={`flex h-16 items-center max-xl:justify-between gap-2 border-b px-4 ${collapsed ? "justify-center" : "justify-between"}`}>
         <Link href="/" className="flex justify-center items-center gap-2">
           <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-teal-500">
@@ -35,27 +50,80 @@ export function AppSidebar() {
         </button>
       </div>
 
-      <div className="flex-1 overflow-auto py-4">
-        <nav className="grid gap-1 px-2">
-          {!collapsed && <p className="px-3 py-1 text-xs font-semibold text-muted-foreground uppercase tracking-wider">Main</p>}
-          <NavItem href="/" icon={<Home className="size-5" />} label="Dashboard" active={isActive("/")} />
-          <NavItem href="/daily-challenge" icon={<Zap className="size-5" />} label="Daily Practice" active={isActive("/daily-challenge")} />
-          <NavItem href="/explore" icon={<Brain className="size-5" />} label="Mock Exams" active={isActive("/explore")} />
-          <NavItem href="/categories" icon={<BookOpen className="size-5" />} label="Subtests" active={isActive("/categories")} />
+      <div className="flex-1 overflow-auto py-3">
+        <nav className="grid gap-0.5 px-2">
 
-          {!collapsed && <p className="px-3 py-1 mt-3 text-xs font-semibold text-muted-foreground uppercase tracking-wider">Progress</p>}
-          <NavItem href="/leaderboard" icon={<Trophy className="size-5" />} label="Leaderboard" active={isActive("/leaderboard")} />
-          <NavItem href="/dashboard" icon={<BarChart3 className="size-5" />} label="My Analytics" active={isActive("/dashboard")} />
-          <NavItem href="/tournaments" icon={<Activity className="size-5" />} label="Timed Exams" active={isActive("/tournaments")} />
-          <NavItem href="/battle" icon={<Clock className="size-5" />} label="Exam Simulator" active={isActive("/battle")} />
+          {/* Home */}
+          <NavItem href="/" icon={<Home className="size-5" />} label="Dashboard" active={pathname === "/"} collapsed={collapsed} setCollapsed={setCollapsed} />
 
-          {!collapsed && <p className="px-3 py-1 mt-3 text-xs font-semibold text-muted-foreground uppercase tracking-wider">Account</p>}
-          <NavItem href="/pricing" icon={<CreditCard className="size-5" />} label="Subscription" active={isActive("/pricing")} />
-          <NavItem href="/support" icon={<LifeBuoy className="size-5" />} label="Help & Support" active={isActive("/support")} />
-          <NavItem href="/quiz-discussions" icon={<HelpCircle className="size-5" />} label="Q&A Forum" active={isActive("/quiz-discussions")} />
+          {/* Question Banks */}
+          {!collapsed && (
+            <p className="px-3 pt-4 pb-1 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+              Question Banks
+            </p>
+          )}
+          {collapsed && <div className="my-2 border-t" />}
+
+          {UCAT_SECTIONS.map((s) => (
+            collapsed ? (
+              <div key={s.href} className="relative group flex justify-center items-center">
+                <Link href={s.href} className={cn(
+                  "flex h-10 w-10 items-center justify-center rounded-md transition-colors",
+                  "hover:bg-accent hover:text-accent-foreground"
+                )}>
+                  <span className={s.color}>{s.icon}</span>
+                </Link>
+              </div>
+            ) : (
+              <Link key={s.href} href={s.href} className={cn(
+                "flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors",
+                "hover:bg-accent hover:text-accent-foreground"
+              )}>
+                <span className={s.color}>{s.icon}</span>
+                <span className="flex-1">{s.label}</span>
+                <span className={cn("text-xs font-bold", s.color)}>{s.short}</span>
+              </Link>
+            )
+          ))}
+
+          {/* Practice Tests */}
+          {!collapsed && (
+            <p className="px-3 pt-4 pb-1 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+              Practice Tests
+            </p>
+          )}
+          {collapsed && <div className="my-2 border-t" />}
+
+          <NavItem href="/battle"       icon={<FileText className="size-5" />} label="Full Mock Exam"    active={isActive("/battle")}       collapsed={collapsed} setCollapsed={setCollapsed} />
+          <NavItem href="/tournaments"  icon={<Clock className="size-5" />}    label="Timed Practice"    active={isActive("/tournaments")}   collapsed={collapsed} setCollapsed={setCollapsed} />
+          <NavItem href="/daily-challenge" icon={<Zap className="size-5" />}  label="Daily Challenge"   active={isActive("/daily-challenge")} collapsed={collapsed} setCollapsed={setCollapsed} />
+
+          {/* My Progress */}
+          {!collapsed && (
+            <p className="px-3 pt-4 pb-1 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+              My Progress
+            </p>
+          )}
+          {collapsed && <div className="my-2 border-t" />}
+
+          <NavItem href="/dashboard"    icon={<BarChart3 className="size-5" />} label="My Analytics"   active={isActive("/dashboard")}     collapsed={collapsed} setCollapsed={setCollapsed} />
+          <NavItem href="/leaderboard"  icon={<Trophy className="size-5" />}   label="Leaderboard"     active={isActive("/leaderboard")}   collapsed={collapsed} setCollapsed={setCollapsed} />
+
+          {/* Account */}
+          {!collapsed && (
+            <p className="px-3 pt-4 pb-1 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+              Account
+            </p>
+          )}
+          {collapsed && <div className="my-2 border-t" />}
+
+          <NavItem href="/pricing"      icon={<CreditCard className="size-5" />} label="Subscription"  active={isActive("/pricing")}       collapsed={collapsed} setCollapsed={setCollapsed} />
+          <NavItem href="/support"      icon={<LifeBuoy className="size-5" />}  label="Help & Support" active={isActive("/support")}       collapsed={collapsed} setCollapsed={setCollapsed} />
+          <NavItem href="/quiz-discussions" icon={<HelpCircle className="size-5" />} label="Q&A Forum" active={isActive("/quiz-discussions")} collapsed={collapsed} setCollapsed={setCollapsed} />
         </nav>
       </div>
 
+      {/* Trial badge */}
       {!collapsed && (
         <div className="mx-3 mb-3 p-3 rounded-lg bg-teal-500/10 border border-teal-500/20">
           <p className="text-xs font-semibold text-teal-400">🎓 Free Trial Active</p>
@@ -66,9 +134,10 @@ export function AppSidebar() {
         </div>
       )}
 
-      <div className="border-t py-4">
-        <nav className="grid gap-1 px-2">
-          <NavItem href="/login" icon={<LogOut className="size-5" />} label="Logout" active={false} />
+      {/* Logout */}
+      <div className="border-t py-3">
+        <nav className="grid gap-0.5 px-2">
+          <NavItem href="/login" icon={<LogOut className="size-5" />} label="Logout" active={false} collapsed={collapsed} setCollapsed={setCollapsed} />
         </nav>
       </div>
     </aside>
@@ -80,18 +149,21 @@ interface NavItemProps {
   icon: React.ReactNode;
   label: string;
   active?: boolean;
-  nested?: boolean;
+  collapsed: boolean;
+  setCollapsed: (v: boolean) => void;
 }
 
-function NavItem({ href, icon, label, active, nested = false }: NavItemProps) {
-  const { collapsed, setCollapsed } = useSidebar();
+function NavItem({ href, icon, label, active, collapsed, setCollapsed }: NavItemProps) {
   const { width } = useWindowSize();
   const handleClick = () => { if (width < 1280) setCollapsed(true); };
 
   if (collapsed) {
     return (
       <div className="relative group flex justify-center items-center">
-        <Link href={href} className={cn("flex h-10 w-10 items-center justify-center rounded-md transition-colors", active ? "bg-teal-500 text-white" : "hover:bg-accent hover:text-accent-foreground")}>
+        <Link href={href} className={cn(
+          "flex h-10 w-10 items-center justify-center rounded-md transition-colors",
+          active ? "bg-teal-500 text-white" : "hover:bg-accent hover:text-accent-foreground"
+        )}>
           {icon}
         </Link>
       </div>
@@ -99,7 +171,10 @@ function NavItem({ href, icon, label, active, nested = false }: NavItemProps) {
   }
 
   return (
-    <Link href={href} onClick={handleClick} className={cn("flex items-center gap-3 rounded-md px-3 py-2 xl:py-2.5 text-sm font-medium transition-colors", active ? "bg-teal-500 text-white" : "hover:bg-accent hover:text-accent-foreground", nested && "pl-6")}>
+    <Link href={href} onClick={handleClick} className={cn(
+      "flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors",
+      active ? "bg-teal-500 text-white" : "hover:bg-accent hover:text-accent-foreground"
+    )}>
       <span>{icon}</span>
       <span>{label}</span>
     </Link>
