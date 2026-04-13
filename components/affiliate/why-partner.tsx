@@ -40,7 +40,7 @@ export function WhyPartner() {
 
   const testimonials = [
     {
-      quote: "I've been part of many affiliate programs, but QuizHub 's stands out with its high commission rates and reliable tracking. I've earned over $5,000 monthly since joining.",
+      quote: "I've been part of many affiliate programs, but Medical Exam UCAT 's stands out with its high commission rates and reliable tracking. I've earned over $5,000 monthly since joining.",
       author: "Sarah Johnson",
       role: "Educational Content Creator",
       image: "/avatars/sarah.webp",
@@ -60,7 +60,7 @@ export function WhyPartner() {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Partner With Us?</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-green-600 to-teal-600 mx-auto mb-6"></div>
-            <p className="text-lg text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">Join thousands of successful affiliates who are earning substantial income by promoting QuizHub </p>
+            <p className="text-lg text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">Join thousands of successful affiliates who are earning substantial income by promoting Medical Exam UCAT </p>
           </motion.div>
         </div>
 
@@ -123,7 +123,7 @@ export function WhyPartner() {
                 <thead>
                   <tr className="bg-slate-50 dark:bg-slate-800">
                     <th className="text-left p-4 font-medium">Feature</th>
-                    <th className="text-center p-4 font-medium">QuizHub Affiliate</th>
+                    <th className="text-center p-4 font-medium">Medical Exam UCAT Affiliate</th>
                     <th className="text-center p-4 font-medium">Other Programs</th>
                   </tr>
                 </thead>

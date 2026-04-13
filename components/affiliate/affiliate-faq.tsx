@@ -7,7 +7,7 @@ export function AffiliateFAQ() {
   const faqs = [
     {
       question: "How does the affiliate program work?",
-      answer: "Our affiliate program is simple: you refer users to QuizHub  using your unique link, and you earn a 30% commission on all their subscription payments for as long as they remain a customer. We track all referrals automatically and pay out monthly.",
+      answer: "Our affiliate program is simple: you refer users to Medical Exam UCAT  using your unique link, and you earn a 30% commission on all their subscription payments for as long as they remain a customer. We track all referrals automatically and pay out monthly.",
     },
     {
       question: "Who can join the affiliate program?",
@@ -31,7 +31,7 @@ export function AffiliateFAQ() {
     },
     {
       question: "Can I promote the affiliate program on social media?",
-      answer: "Social media is one of the best ways to promote QuizHub . You can share your affiliate link on platforms like Twitter, Facebook, Instagram, TikTok, and LinkedIn. We even provide platform-specific content templates in your dashboard.",
+      answer: "Social media is one of the best ways to promote Medical Exam UCAT . You can share your affiliate link on platforms like Twitter, Facebook, Instagram, TikTok, and LinkedIn. We even provide platform-specific content templates in your dashboard.",
     },
     {
       question: "Is there a limit to how many people I can refer?",

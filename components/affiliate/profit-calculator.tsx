@@ -80,7 +80,7 @@ export function ProfitCalculator(): JSX.Element {
       <div className="container px-4 mx-auto">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Calculate Your Potential Earnings</h2>
-          <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">Use our calculator to estimate how much you could earn as a QuizHub affiliate. Adjust the sliders to match your audience and see your potential earnings.</p>
+          <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">Use our calculator to estimate how much you could earn as a Medical Exam UCAT affiliate. Adjust the sliders to match your audience and see your potential earnings.</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -95,7 +95,7 @@ export function ProfitCalculator(): JSX.Element {
                 <span className="text-sm font-semibold bg-white dark:bg-slate-700 px-2 py-1 rounded-md shadow-sm">{state.referrals}</span>
               </div>
               <Slider value={[state.referrals]} min={1} max={100} step={1} onValueChange={handleReferralsChange} className="py-2 " />
-              <p className="text-sm text-slate-500 dark:text-slate-400">The number of people you refer to QuizHub each month</p>
+              <p className="text-sm text-slate-500 dark:text-slate-400">The number of people you refer to Medical Exam UCAT each month</p>
             </div>
 
             <div className="space-y-4">
@@ -119,7 +119,7 @@ export function ProfitCalculator(): JSX.Element {
                 <span className="text-sm font-semibold bg-white dark:bg-slate-700 px-2 py-1 rounded-md shadow-sm">${state.averageValue}</span>
               </div>
               <Slider value={[state.averageValue]} min={10} max={200} step={5} onValueChange={handleAverageValueChange} className="py-2" />
-              <p className="text-sm text-slate-500 dark:text-slate-400">The average amount your referrals spend on QuizHub </p>
+              <p className="text-sm text-slate-500 dark:text-slate-400">The average amount your referrals spend on Medical Exam UCAT </p>
             </div>
           </motion.div>
 

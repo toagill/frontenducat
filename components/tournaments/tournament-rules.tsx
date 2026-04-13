@@ -20,7 +20,7 @@ export function TournamentRules({ tournament }: TournamentRulesProps) {
             <AccordionTrigger>Eligibility & Registration</AccordionTrigger>
             <AccordionContent>
               <ul className="list-disc pl-5 space-y-2">
-                <li>All registered users of QuizHub are eligible to participate.</li>
+                <li>All registered users of Medical Exam UCAT are eligible to participate.</li>
                 <li>Registration must be completed before the deadline ({tournament.registrationEnds} remaining).</li>
                 <li>Each participant may only register once using their primary account.</li>
                 <li>By registering, participants agree to abide by all tournament rules.</li>
@@ -63,7 +63,7 @@ export function TournamentRules({ tournament }: TournamentRulesProps) {
                 <li>Use of external resources or assistance during the tournament is prohibited.</li>
                 <li>Sharing questions or answers with other participants is not allowed.</li>
                 <li>Multiple accounts or collaborative play is forbidden.</li>
-                <li>QuizHub reserves the right to disqualify participants suspected of cheating.</li>
+                <li>Medical Exam UCAT reserves the right to disqualify participants suspected of cheating.</li>
                 <li>All participants are expected to maintain respectful conduct in tournament discussions.</li>
               </ul>
             </AccordionContent>

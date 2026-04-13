@@ -22,7 +22,7 @@ export function AppSidebar() {
       <div className="flex h-16 items-center justify-center border-b px-4">
         <Link href="/" className="flex items-center space-x-2">
           <BookOpen className="h-6 w-6 text-primary" />
-          {!collapsed && <span className="text-xl font-bold">QuizHub</span>}
+          {!collapsed && <span className="text-xl font-bold">Medical Exam UCAT</span>}
         </Link>
       </div>
 

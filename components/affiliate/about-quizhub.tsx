@@ -33,7 +33,7 @@ export function AboutQuizHub() {
       <div className="container px-4 mx-auto">
         <div className="text-center mb-12">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">About QuizHub </h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">About Medical Exam UCAT </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-indigo-600 mx-auto mb-6"></div>
             <p className="text-lg text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">The leading platform revolutionizing how people create, share, and experience quizzes worldwide</p>
           </motion.div>
@@ -54,7 +54,7 @@ export function AboutQuizHub() {
           <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.2 }} viewport={{ once: true }} className="space-y-8">
             <div>
               <h3 className="text-2xl font-bold mb-4">Our Story</h3>
-              <p className="text-slate-600 dark:text-slate-400 mb-4">Founded in 2018, QuizHub began with a simple mission: to transform learning into an engaging, interactive experience. What started as a small project has grown into a global platform used by educators, businesses, and quiz enthusiasts in over 150 countries.</p>
+              <p className="text-slate-600 dark:text-slate-400 mb-4">Founded in 2018, Medical Exam UCAT began with a simple mission: to transform learning into an engaging, interactive experience. What started as a small project has grown into a global platform used by educators, businesses, and quiz enthusiasts in over 150 countries.</p>
               <p className="text-slate-600 dark:text-slate-400">Our platform combines cutting-edge technology with user-friendly design to make quiz creation and participation accessible to everyone. With AI-powered tools and a vibrant community, we're redefining how knowledge is shared and tested online.</p>
             </div>
 

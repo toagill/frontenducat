@@ -8,13 +8,13 @@ export function Metadata({ params }: { params: Promise<{ slug: string }> }) {
 
   if (!category) {
     return {
-      title: "Category Not Found | QuizHub",
+      title: "Category Not Found | Medical Exam UCAT",
       description: "The requested category could not be found.",
     };
   }
 
   return {
-    title: `${category.name} Quizzes | QuizHub`,
+    title: `${category.name} Quizzes | Medical Exam UCAT`,
     description: `Browse and play ${category.name.toLowerCase()} quizzes. ${category.description}`,
   };
 }

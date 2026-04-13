@@ -2,7 +2,7 @@ import { TournamentPage } from "@/components/tournaments/tournament-page";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Quiz Tournaments | QuizHub",
+  title: "Quiz Tournaments | Medical Exam UCAT",
   description: "Participate in exciting quiz tournaments and win amazing prizes.",
 };
 

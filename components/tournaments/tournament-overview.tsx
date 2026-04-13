@@ -25,7 +25,7 @@ export function TournamentOverview({ tournament }: TournamentOverviewProps) {
             </p>
 
             <h3 className="font-semibold text-lg">Eligibility</h3>
-            <p>{tournament.eligibility}. All participants must have a registered account on QuizHub and agree to the tournament rules and fair play guidelines.</p>
+            <p>{tournament.eligibility}. All participants must have a registered account on Medical Exam UCAT and agree to the tournament rules and fair play guidelines.</p>
 
             <h3 className="font-semibold text-lg">How to Participate</h3>
             <ol className="list-decimal list-inside space-y-2 ml-4">

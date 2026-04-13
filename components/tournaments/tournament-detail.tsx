@@ -46,7 +46,7 @@ export function TournamentDetail({ id }: TournamentDetailProps) {
     prize: id === "global-championship" ? "$5,000" : "$1,000",
     registrationEnds: id === "global-championship" ? "3 days" : "2 days",
     difficulty: id === "global-championship" ? "Hard" : "Medium",
-    organizer: "QuizHub Official",
+    organizer: "Medical Exam UCAT Official",
     rounds: id === "global-championship" ? 3 : 2,
     questionsPerRound: id === "global-championship" ? 50 : 30,
     timePerQuestion: 60, // seconds

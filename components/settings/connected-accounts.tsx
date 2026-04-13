@@ -54,7 +54,7 @@ export function ConnectedAccounts() {
       <Card>
         <CardHeader>
           <CardTitle>Social Accounts</CardTitle>
-          <CardDescription>Connect your social media accounts to QuizHub .</CardDescription>
+          <CardDescription>Connect your social media accounts to Medical Exam UCAT .</CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="flex items-center justify-between">

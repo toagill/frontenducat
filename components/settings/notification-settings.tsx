@@ -54,7 +54,7 @@ export function NotificationSettings() {
     <div className="space-y-6">
       <div>
         <h3 className="text-lg font-medium">Notification Preferences</h3>
-        <p className="text-sm text-muted-foreground">Manage how and when you receive notifications from QuizHub .</p>
+        <p className="text-sm text-muted-foreground">Manage how and when you receive notifications from Medical Exam UCAT .</p>
       </div>
 
       <Card>

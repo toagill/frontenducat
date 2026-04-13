@@ -42,7 +42,7 @@ export function HowToStart() {
       <div className="container px-4 mx-auto">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">How to Start Earning</h2>
-          <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">Getting started with our affiliate program is simple. Follow these steps and start earning passive income by sharing QuizHub with your audience.</p>
+          <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">Getting started with our affiliate program is simple. Follow these steps and start earning passive income by sharing Medical Exam UCAT with your audience.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">

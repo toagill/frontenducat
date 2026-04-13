@@ -12,7 +12,7 @@ export function SuccessStories() {
       name: "Sarah Johnson",
       role: "Content Creator",
       image: "/avatars/wizard.webp",
-      quote: "I've been promoting QuizHub  to my audience for 6 months now and the results have been incredible. The 30% commission is one of the best in the industry, and the recurring revenue has added a reliable income stream to my business.",
+      quote: "I've been promoting Medical Exam UCAT  to my audience for 6 months now and the results have been incredible. The 30% commission is one of the best in the industry, and the recurring revenue has added a reliable income stream to my business.",
       earnings: "$2,450/month",
       rating: 5,
     },
@@ -20,7 +20,7 @@ export function SuccessStories() {
       name: "Michael Chen",
       role: "Education Blogger",
       image: "/avatars/sarah.webp",
-      quote: "What I love about QuizHub 's affiliate program is how easy they make it to promote. The marketing materials are top-notch, and my audience loves the product. I'm earning more with QuizHub  than with any other affiliate program I've tried.",
+      quote: "What I love about Medical Exam UCAT 's affiliate program is how easy they make it to promote. The marketing materials are top-notch, and my audience loves the product. I'm earning more with Medical Exam UCAT  than with any other affiliate program I've tried.",
       earnings: "$1,875/month",
       rating: 5,
     },
@@ -28,7 +28,7 @@ export function SuccessStories() {
       name: "Jessica Williams",
       role: "YouTube Educator",
       image: "/avatars/king.webp",
-      quote: "As someone who creates educational content, QuizHub  was a natural fit for my audience. The affiliate dashboard makes it easy to track my performance, and the team is always responsive when I have questions. Highly recommended!",
+      quote: "As someone who creates educational content, Medical Exam UCAT  was a natural fit for my audience. The affiliate dashboard makes it easy to track my performance, and the team is always responsive when I have questions. Highly recommended!",
       earnings: "$3,200/month",
       rating: 5,
     },
@@ -47,7 +47,7 @@ export function SuccessStories() {
       <div className="container px-4 mx-auto">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Success Stories</h2>
-          <p className="text-slate-600 dark:text-slate-400">Hear from our top-performing affiliates who are earning consistent income by promoting QuizHub .</p>
+          <p className="text-slate-600 dark:text-slate-400">Hear from our top-performing affiliates who are earning consistent income by promoting Medical Exam UCAT .</p>
         </div>
 
         <div className="max-w-4xl mx-auto">

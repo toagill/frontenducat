@@ -35,7 +35,7 @@ export function AppearanceSettings() {
     <div className="space-y-6">
       <div>
         <h3 className="text-lg font-medium">Appearance Settings</h3>
-        <p className="text-sm text-muted-foreground">Customize how QuizHub looks and feels for you.</p>
+        <p className="text-sm text-muted-foreground">Customize how Medical Exam UCAT looks and feels for you.</p>
       </div>
 
       <Card>

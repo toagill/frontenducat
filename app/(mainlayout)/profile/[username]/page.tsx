@@ -252,13 +252,13 @@ const user: User = {
 export async function generateMetadata({ params }: ProfilePageProps): Promise<Metadata> {
   if (!user) {
     return {
-      title: "User Not Found | QuizHub",
+      title: "User Not Found | Medical Exam UCAT",
       description: "This user profile could not be found.",
     };
   }
 
   return {
-    title: `${user.name}'s Profile | QuizHub`,
+    title: `${user.name}'s Profile | Medical Exam UCAT`,
     description: `Check out ${user.name}'s quiz achievements, stats, and more.`,
   };
 }

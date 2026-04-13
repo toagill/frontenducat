@@ -50,7 +50,7 @@ export function PrivacySettings() {
     <div className="space-y-6">
       <div>
         <h3 className="text-lg font-medium">Privacy Settings</h3>
-        <p className="text-sm text-muted-foreground">Control your privacy and how your information is shared on QuizHub .</p>
+        <p className="text-sm text-muted-foreground">Control your privacy and how your information is shared on Medical Exam UCAT .</p>
       </div>
 
       <Card>
@@ -173,7 +173,7 @@ export function PrivacySettings() {
       <Card>
         <CardHeader>
           <CardTitle>Data Privacy</CardTitle>
-          <CardDescription>Control how your data is used on QuizHub .</CardDescription>
+          <CardDescription>Control how your data is used on Medical Exam UCAT .</CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="flex items-center justify-between">
@@ -181,7 +181,7 @@ export function PrivacySettings() {
               <Shield className="h-5 w-5 text-primary" />
               <div>
                 <p className="font-medium">Data Collection</p>
-                <p className="text-sm text-muted-foreground">Allow QuizHub to collect data to improve your experience.</p>
+                <p className="text-sm text-muted-foreground">Allow Medical Exam UCAT to collect data to improve your experience.</p>
               </div>
             </div>
             <Switch checked={privacy.dataCollection} onCheckedChange={(value) => handleToggle("dataCollection", value)} />
