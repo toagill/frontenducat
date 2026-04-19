@@ -1,4 +1,5 @@
 import DailyChallengePage from "@/components/daily-challenge/daily-challenge-page";
+export const dynamic = "force-dynamic";
 
 export const metadata = {
   title: "Daily Challenge | Quizhub",

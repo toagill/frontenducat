@@ -1,4 +1,5 @@
 import { categoriesData } from "@/components/categories/categories-data";
+export const dynamic = "force-dynamic";
 import { CategoryDetailPage } from "@/components/categories/category-detail-page";
 import { use } from "react";
 

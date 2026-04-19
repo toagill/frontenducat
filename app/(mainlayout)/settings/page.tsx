@@ -1,4 +1,5 @@
 import { AccountSettings } from "@/components/settings/account-settings";
+export const dynamic = "force-dynamic";
 
 export const metadata = {
   title: "Account Settings | Medical Exam UCAT",

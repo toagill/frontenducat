@@ -1,4 +1,5 @@
 import { PricingPlans } from "@/components/pricing/pricing-plans"
+export const dynamic = "force-dynamic";
 import { PricingFaq } from "@/components/pricing/pricing-faq"
 import { PricingCta } from "@/components/pricing/pricing-cta"
 import { Footer } from "@/components/layout/footer"

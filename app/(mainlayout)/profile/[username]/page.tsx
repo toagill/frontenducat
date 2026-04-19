@@ -1,4 +1,5 @@
 import { UserProfile } from "@/components/profile/user-profile";
+export const dynamic = "force-dynamic";
 import { User } from "@/lib/data/users";
 import type { Metadata } from "next";
 

@@ -1,4 +1,5 @@
 import { SearchResults } from "@/components/search/search-results";
+export const dynamic = "force-dynamic";
 
 export const metadata = {
   title: "Search Results | QuizMaker",

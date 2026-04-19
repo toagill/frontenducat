@@ -1,4 +1,5 @@
 import { NewsArticle } from "@/components/news/news-article";
+export const dynamic = "force-dynamic";
 import { use } from "react";
 
 export const metadata = {

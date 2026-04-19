@@ -1,4 +1,5 @@
 import { DashboardPage } from "@/components/dashboard/dashboard-page";
+export const dynamic = "force-dynamic";
 import { Suspense } from "react";
 
 export default function Dashboard() {
