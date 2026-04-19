@@ -16,7 +16,7 @@ const TRIAL_BENEFITS = [
   "50 practice questions included",
   "1 complete timed mock exam",
   "Performance summary and analytics",
-  "No credit card required",
+  "Card required — cancel before 2 days to pay nothing",
 ];
 
 export default function RegisterPage() {
@@ -55,7 +55,7 @@ export default function RegisterPage() {
             </div>
           </div>
           <Badge className="mb-6 bg-teal-500/20 text-teal-300 border border-teal-500/30 text-sm">
-            <Zap className="size-3 mr-1" /> 2-Day Free Trial, No Card Needed
+            <Zap className="size-3 mr-1" /> 2-Day Free Trial — Card Required
           </Badge>
           <h2 className="text-4xl font-bold mb-4 leading-tight">Everything you need to ace the UCAT.</h2>
           <p className="text-white/60 mb-8">Get instant access to 2,000+ questions, full timed simulations, and detailed feedback.</p>
@@ -71,7 +71,7 @@ export default function RegisterPage() {
           </div>
           <div className="mt-10 p-4 rounded-xl bg-white/5 border border-white/10">
             <p className="text-xs text-white/50 mb-1">After your trial, unlock everything for</p>
-            <p className="text-3xl font-bold text-teal-400">19.99 <span className="text-lg font-normal text-white/60">GBP / year</span></p>
+            <p className="text-3xl font-bold text-teal-400">£29.99 <span className="text-lg font-normal text-white/60">/ year</span></p>
             <p className="text-xs text-white/40 mt-1">One-time payment, 365 days access, 7-day refund</p>
           </div>
         </div>
@@ -81,7 +81,7 @@ export default function RegisterPage() {
         <Card className="w-full max-w-md shadow-xl">
           <CardHeader className="text-center pb-6">
             <CardTitle className="text-3xl font-bold">Create Your Account</CardTitle>
-            <CardDescription>Start your free 2-day trial, no card required</CardDescription>
+            <CardDescription>Start your free 2-day trial — card required, cancel anytime</CardDescription>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleRegister} className="space-y-4">

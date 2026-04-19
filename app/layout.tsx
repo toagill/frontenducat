@@ -8,7 +8,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Medical Exam UCAT — UK's #1 UCAT Mock Exam Platform",
-  description: "Ace your UCAT with realistic mock exams, detailed analytics, and expert-crafted questions. Free 2-day trial. £19.99 for 1-year unlimited access.",
+  description: "Ace your UCAT with realistic mock exams, detailed analytics, and expert-crafted questions. Free 2-day trial (card required). £29.99 for 1-year unlimited access.",
 };
 
 export default function RootLayout({

@@ -61,7 +61,7 @@ export default function LoginPage() {
               </div>
             ))}
           </div>
-          <Badge className="bg-teal-500/20 text-teal-300 border border-teal-500/30">Free 2-day trial, no credit card needed</Badge>
+          <Badge className="bg-teal-500/20 text-teal-300 border border-teal-500/30">Free 2-day trial — card required</Badge>
         </div>
       </div>
 
