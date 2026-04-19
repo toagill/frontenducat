@@ -49,7 +49,7 @@ export function SubscriptionSettings() {
       <Card>
         <CardHeader>
           <CardTitle>Current Plan</CardTitle>
-          <CardDescription>You are currently on the {currentPlan === "free" ? "Free" : currentPlan === "pro" ? "Pro" : "Premium"} plan.</CardDescription>
+              <p className="text-2xl font-bold">{currentPlan === "free" ? "Free" : "£29.99"}</p>
         </CardHeader>
         <CardContent>
           <div className="flex items-center justify-between">
@@ -58,15 +58,15 @@ export function SubscriptionSettings() {
                 {currentPlan === "free" ? "Free Plan" : currentPlan === "pro" ? "Pro Plan" : "Premium Plan"}
                 {currentPlan !== "free" && (
                   <Badge variant="outline" className="ml-2">
-                    {billingCycle === "monthly" ? "Monthly" : "Annual"}
+                    {"Annual"}
                   </Badge>
                 )}
               </h4>
               <p className="text-sm text-muted-foreground mt-1">{currentPlan === "free" ? "Basic features with limited access" : currentPlan === "pro" ? "Advanced features for quiz creators" : "All features with priority support"}</p>
             </div>
             <div className="text-right">
-              <p className="text-2xl font-bold">{currentPlan === "free" ? "Free" : currentPlan === "pro" ? (billingCycle === "monthly" ? "$9.99" : "$99.99") : billingCycle === "monthly" ? "$19.99" : "$199.99"}</p>
-              {currentPlan !== "free" && <p className="text-sm text-muted-foreground">{billingCycle === "monthly" ? "per month" : "per year"}</p>}
+              <p className="text-2xl font-bold">{currentPlan === "free" ? "Free" : "£29.99"}</p>
+              {currentPlan !== "free" && <p className="text-sm text-muted-foreground">{"per year"}</p>}
             </div>
           </div>
 
@@ -212,7 +212,7 @@ export function SubscriptionSettings() {
                 <p className="text-sm text-muted-foreground">April 1, 2023</p>
               </div>
               <div className="text-right">
-                <p className="font-medium">$9.99</p>
+                <p className="font-medium">£29.99</p>
                 <Badge variant="outline" className="ml-2">
                   Paid
                 </Badge>
@@ -225,7 +225,7 @@ export function SubscriptionSettings() {
                 <p className="text-sm text-muted-foreground">March 1, 2023</p>
               </div>
               <div className="text-right">
-                <p className="font-medium">$9.99</p>
+                <p className="font-medium">£29.99</p>
                 <Badge variant="outline" className="ml-2">
                   Paid
                 </Badge>
@@ -238,7 +238,7 @@ export function SubscriptionSettings() {
                 <p className="text-sm text-muted-foreground">February 1, 2023</p>
               </div>
               <div className="text-right">
-                <p className="font-medium">$9.99</p>
+                <p className="font-medium">£29.99</p>
                 <Badge variant="outline" className="ml-2">
                   Paid
                 </Badge>

@@ -44,14 +44,14 @@ export function DailyRewards() {
                 <Badge variant="outline" className="mb-1">
                   3 Days
                 </Badge>
-                <span className="text-xs font-medium">+50 Coins</span>
+                <span className="text-xs font-medium">Bonus Practice</span>
               </div>
 
               <div className="border rounded-lg p-2 flex flex-col items-center text-center">
                 <Badge variant="outline" className="mb-1">
                   5 Days
                 </Badge>
-                <span className="text-xs font-medium">+100 Coins</span>
+                <span className="text-xs font-medium">Extra Questions</span>
               </div>
 
               <div className="border rounded-lg p-2 flex flex-col items-center text-center">

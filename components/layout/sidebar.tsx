@@ -129,7 +129,7 @@ export function AppSidebar() {
           <p className="text-xs font-semibold text-teal-400">🎓 Free Trial Active</p>
           <p className="text-xs text-muted-foreground mt-0.5">1 day 14 hrs remaining</p>
           <Link href="/pricing" className="mt-2 block text-center text-xs bg-teal-500 text-white rounded-md py-1.5 font-medium hover:bg-teal-600 transition-colors">
-            Upgrade — £19.99/yr
+            Upgrade — £29.99/yr
           </Link>
         </div>
       )}

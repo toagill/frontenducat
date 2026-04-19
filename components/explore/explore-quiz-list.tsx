@@ -7,7 +7,7 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { CircularProgress } from "@/components/ui/circular-progress";
 import { Pagination, PaginationContent, PaginationItem, PaginationLink } from "@/components/ui/pagination";
 import { Skeleton } from "@/components/ui/skeleton";
-import { Clock, DollarSign, Users } from "lucide-react";
+import { Clock, Users } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -32,7 +32,7 @@ const quizzes = [
     category: "Geography",
     difficulty: "Medium",
     timeLimit: 15,
-    reward: "$5.00",
+    
     players: 285,
     maxPlayers: 300,
     spotsLeft: 15,
@@ -54,7 +54,7 @@ const quizzes = [
     category: "Science",
     difficulty: "Hard",
     timeLimit: 20,
-    reward: "$7.50",
+    
     players: 178,
     maxPlayers: 500,
     spotsLeft: 322,
@@ -76,7 +76,7 @@ const quizzes = [
     category: "History",
     difficulty: "Medium",
     timeLimit: 15,
-    reward: "$5.00",
+    
     players: 412,
     maxPlayers: 450,
     spotsLeft: 38,
@@ -98,7 +98,7 @@ const quizzes = [
     category: "Mathematics",
     difficulty: "Hard",
     timeLimit: 25,
-    reward: "$8.00",
+    
     players: 156,
     maxPlayers: 300,
     spotsLeft: 144,
@@ -120,7 +120,7 @@ const quizzes = [
     category: "Literature",
     difficulty: "Medium",
     timeLimit: 15,
-    reward: "$5.00",
+    
     players: 298,
     maxPlayers: 300,
     spotsLeft: 2,
@@ -142,7 +142,7 @@ const quizzes = [
     category: "Sports",
     difficulty: "Easy",
     timeLimit: 10,
-    reward: "$3.00",
+    
     players: 124,
     maxPlayers: 250,
     spotsLeft: 126,
@@ -164,7 +164,7 @@ const quizzes = [
     category: "Music",
     difficulty: "Medium",
     timeLimit: 15,
-    reward: "$5.50",
+    
     players: 210,
     maxPlayers: 300,
     spotsLeft: 90,
@@ -186,7 +186,7 @@ const quizzes = [
     category: "Technology",
     difficulty: "Hard",
     timeLimit: 20,
-    reward: "$7.00",
+    
     players: 175,
     maxPlayers: 250,
     spotsLeft: 75,
@@ -347,7 +347,7 @@ export function ExploreQuizList({ category, searchQuery, viewMode, filters }: Ex
                   </Badge>
                 </div>
 
-                {/* Rating and reward */}
+                {/* Rating */}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-1">
                     <svg className="h-4 w-4 text-yellow-400 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -357,10 +357,7 @@ export function ExploreQuizList({ category, searchQuery, viewMode, filters }: Ex
                       {quiz.rating} <span className="text-muted-foreground">({quiz.totalRatings})</span>
                     </span>
                   </div>
-                  <div className="flex items-center gap-1 text-green-600 font-medium">
-                    <DollarSign className="h-4 w-4" />
-                    <span>{quiz.reward}</span>
-                  </div>
+
                 </div>
 
                 {/* Progress indicator */}
@@ -446,10 +443,7 @@ export function ExploreQuizList({ category, searchQuery, viewMode, filters }: Ex
                     </div>
 
                     <div className="flex items-center gap-4">
-                      <div className="text-green-600 font-medium">
-                        <DollarSign className="h-4 w-4 inline mr-1" />
-                        {quiz.reward}
-                      </div>
+
                       <Button asChild>
                         <Link href={`/quiz/${quiz.id}`}>Play Now</Link>
                       </Button>

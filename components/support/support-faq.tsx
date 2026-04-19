@@ -30,7 +30,7 @@ export function SupportFAQ({ selectedCategory }: SupportFAQProps) {
       },
       {
         question: "How do I delete my account?",
-        answer: "To delete your account, go to Account Settings > Privacy, and scroll to the bottom where you'll find the 'Delete Account' option. Please note that account deletion is permanent and will remove all your data, including created quizzes and earnings history.",
+        answer: "To delete your account, go to Account Settings > Privacy, and scroll to the bottom where you'll find the 'Delete Account' option. Please note that account deletion is permanent and will remove all your data, including created quizzes and quiz history.",
       },
       {
         question: "How do I change my email address?",
@@ -45,14 +45,6 @@ export function SupportFAQ({ selectedCategory }: SupportFAQProps) {
       {
         question: "How do I update my payment information?",
         answer: "To update your payment information, go to Account Settings > Billing. Click on 'Payment Methods' and select 'Add New Method' or 'Edit' next to an existing method. Follow the prompts to update your information securely.",
-      },
-      {
-        question: "When will I receive my earnings?",
-        answer: "Earnings are calculated daily and updated in your dashboard. You can withdraw your earnings once they reach the minimum threshold ($25). Withdrawals are processed within 3-5 business days, depending on your payment method and location.",
-      },
-      {
-        question: "How do I cancel my subscription?",
-        answer: "To cancel your subscription, go to Account Settings > Billing > Subscriptions. Click on 'Cancel Subscription' and follow the prompts. Your subscription will remain active until the end of the current billing period, after which it will not renew.",
       },
       {
         question: "Is there a refund policy?",

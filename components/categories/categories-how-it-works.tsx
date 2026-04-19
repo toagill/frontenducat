@@ -1,6 +1,6 @@
 "use client";
 import browse from "@/public/browse-category.png";
-import earnReward from "@/public/earn-reward.png";
+
 import takequiz from "@/public/take-quiz.png";
 import { motion } from "framer-motion";
 import { Award, BookOpen, Search } from "lucide-react";
@@ -32,7 +32,7 @@ export function CategoriesHowItWorks() {
       image: "/placeholder.svg?height=200&width=300",
       color: "from-blue-500 to-blue-600",
       delay: 0.7,
-      img: earnReward,
+      img: null,
     },
   ];
 

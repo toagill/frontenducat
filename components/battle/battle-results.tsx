@@ -228,7 +228,7 @@ export function BattleResults({ battleState, onRematch, onReturnHome }: BattleRe
               <div className="flex items-center justify-between p-2 rounded-lg bg-purple-500/10 border border-purple-500/20">
                 <div className="flex items-center gap-2">
                   <Award className="h-5 w-5 text-purple-500" />
-                  <span>Battle Coins</span>
+                  <span>Practice XP</span>
                 </div>
                 <span className="font-bold">+{Math.floor((currentPlayer?.score || 0) / 20)}</span>
               </div>

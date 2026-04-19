@@ -75,7 +75,7 @@ export function DailyChallengeHeader() {
             </div>
             <div>
               <p className="text-sm font-medium text-muted-foreground">Top Prize</p>
-              <p className="text-xl font-bold">500 Coins</p>
+              <p className="text-xl font-bold">Top Badge</p>
             </div>
           </CardContent>
         </Card>

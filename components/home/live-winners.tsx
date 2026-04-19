@@ -130,9 +130,8 @@ export function LiveWinners() {
                   </div>
                 </div>
                 <div className="mt-3 flex items-center gap-2">
-                  <span className="text-xl">💰</span>
                   <p className="text-sm">
-                    Won <span className="font-semibold text-green-600">${winner.amount.toFixed(2)}</span> playing <span className="font-medium">"{winner.quiz}"</span>
+                    Completed <span className="font-medium">"{winner.quiz}"</span>
                   </p>
                 </div>
               </Card>

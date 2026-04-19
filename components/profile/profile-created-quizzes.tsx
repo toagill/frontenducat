@@ -536,7 +536,7 @@ function QuizCard({ quiz, onEdit, onPreview, onViewStats, onDelete }: QuizCardPr
             <div className="font-medium text-purple-800">Tournament Status: {quiz.tournamentDetails.status.charAt(0).toUpperCase() + quiz.tournamentDetails.status.slice(1)}</div>
             <div className="mt-1 flex items-center justify-between">
               <span className="text-purple-700">{quiz.tournamentDetails.participants} participants</span>
-              <span className="font-medium text-purple-800">{quiz.tournamentDetails.prize}</span>
+              
             </div>
           </div>
         )}
@@ -659,7 +659,7 @@ function QuizListItem({ quiz, onEdit, onPreview, onViewStats, onDelete }: QuizLi
               <div className="font-medium text-purple-800">Tournament Status: {quiz.tournamentDetails.status.charAt(0).toUpperCase() + quiz.tournamentDetails.status.slice(1)}</div>
               <div className="mt-1 flex items-center justify-between">
                 <span className="text-purple-700">{quiz.tournamentDetails.participants} participants</span>
-                <span className="font-medium text-purple-800">{quiz.tournamentDetails.prize}</span>
+                
               </div>
             </div>
           )}

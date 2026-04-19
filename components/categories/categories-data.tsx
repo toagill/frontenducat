@@ -1,4 +1,4 @@
-import { Atom, BookOpen, Building2, Code, Dumbbell, Globe, Landmark, Lightbulb, Music, Palette, Popcorn, Rocket, Utensils, Wallet } from "lucide-react";
+import { Atom, BookOpen, Building2, Code, Dumbbell, Globe, Landmark, Lightbulb, Music, Palette, Popcorn, Rocket, Utensils } from "lucide-react";
 import type React from "react";
 
 export interface CategoryType {
@@ -116,7 +116,7 @@ export const categoriesData: CategoryType[] = [
     name: "Business & Finance",
     slug: "business-finance",
     description: "Challenge yourself with questions about economics, companies, entrepreneurs, and financial concepts.",
-    icon: <Wallet className="h-12 w-12" />,
+    icon: <Landmark className="h-12 w-12" />,
     count: 24,
     featured: false,
   },

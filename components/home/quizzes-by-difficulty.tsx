@@ -5,7 +5,7 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { CircularProgress } from "@/components/ui/circular-progress";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { ChevronLeft, ChevronRight, Clock, DollarSign, Users } from "lucide-react";
+import { ChevronLeft, ChevronRight, Clock, Users } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -21,7 +21,7 @@ const quizzesByDifficulty = {
       title: "General Knowledge Basics",
       category: "General",
       estimatedTime: 10,
-      reward: 3.0,
+      
       players: 15,
       maxPlayers: 100,
       spotsLeft: 85,
@@ -32,7 +32,7 @@ const quizzesByDifficulty = {
       title: "Pop Culture Essentials",
       category: "Entertainment",
       estimatedTime: 8,
-      reward: 2.5,
+      
       players: 60,
       maxPlayers: 100,
       spotsLeft: 40,
@@ -43,7 +43,7 @@ const quizzesByDifficulty = {
       title: "Science for Beginners",
       category: "Science",
       estimatedTime: 12,
-      reward: 3.5,
+      
       players: 90,
       maxPlayers: 100,
       spotsLeft: 10,
@@ -54,7 +54,7 @@ const quizzesByDifficulty = {
       title: "Sports Fundamentals",
       category: "Sports",
       estimatedTime: 10,
-      reward: 3.0,
+      
       players: 40,
       maxPlayers: 100,
       spotsLeft: 60,
@@ -65,7 +65,7 @@ const quizzesByDifficulty = {
       title: "Geography Starters",
       category: "Geography",
       estimatedTime: 15,
-      reward: 4.0,
+      
       players: 75,
       maxPlayers: 100,
       spotsLeft: 25,
@@ -76,7 +76,7 @@ const quizzesByDifficulty = {
       title: "History Basics",
       category: "History",
       estimatedTime: 12,
-      reward: 3.5,
+      
       players: 50,
       maxPlayers: 100,
       spotsLeft: 50,
@@ -87,7 +87,7 @@ const quizzesByDifficulty = {
       title: "Mathematics Basics",
       category: "Mathematics",
       estimatedTime: 10,
-      reward: 3.0,
+      
       players: 30,
       maxPlayers: 100,
       spotsLeft: 70,
@@ -100,7 +100,7 @@ const quizzesByDifficulty = {
       title: "History Through the Ages",
       category: "History",
       estimatedTime: 15,
-      reward: 5.0,
+      
       players: 25,
       maxPlayers: 50,
       spotsLeft: 25,
@@ -111,7 +111,7 @@ const quizzesByDifficulty = {
       title: "Science & Technology",
       category: "Science",
       estimatedTime: 18,
-      reward: 6.0,
+      
       players: 40,
       maxPlayers: 50,
       spotsLeft: 10,
@@ -122,7 +122,7 @@ const quizzesByDifficulty = {
       title: "World Literature Classics",
       category: "Literature",
       estimatedTime: 20,
-      reward: 6.5,
+      
       players: 10,
       maxPlayers: 50,
       spotsLeft: 40,
@@ -133,7 +133,7 @@ const quizzesByDifficulty = {
       title: "Mathematical Challenges",
       category: "Mathematics",
       estimatedTime: 25,
-      reward: 7.0,
+      
       players: 30,
       maxPlayers: 50,
       spotsLeft: 20,
@@ -144,7 +144,7 @@ const quizzesByDifficulty = {
       title: "Music Through Decades",
       category: "Music",
       estimatedTime: 15,
-      reward: 5.5,
+      
       players: 5,
       maxPlayers: 50,
       spotsLeft: 45,
@@ -155,7 +155,7 @@ const quizzesByDifficulty = {
       title: "Geography Adventures",
       category: "Geography",
       estimatedTime: 20,
-      reward: 6.0,
+      
       players: 15,
       maxPlayers: 50,
       spotsLeft: 35,
@@ -168,7 +168,7 @@ const quizzesByDifficulty = {
       title: "Advanced Quantum Physics",
       category: "Science",
       estimatedTime: 30,
-      reward: 10.0,
+      
       players: 75,
       maxPlayers: 100,
       spotsLeft: 25,
@@ -179,7 +179,7 @@ const quizzesByDifficulty = {
       title: "Ancient Civilizations Deep Dive",
       category: "History",
       estimatedTime: 25,
-      reward: 9.0,
+      
       players: 90,
       maxPlayers: 100,
       spotsLeft: 10,
@@ -190,7 +190,7 @@ const quizzesByDifficulty = {
       title: "Complex Mathematical Theories",
       category: "Mathematics",
       estimatedTime: 35,
-      reward: 12.0,
+      
       players: 50,
       maxPlayers: 100,
       spotsLeft: 50,
@@ -201,7 +201,7 @@ const quizzesByDifficulty = {
       title: "Philosophy & Ethics",
       category: "Philosophy",
       estimatedTime: 30,
-      reward: 10.5,
+      
       players: 20,
       maxPlayers: 100,
       spotsLeft: 80,
@@ -212,7 +212,7 @@ const quizzesByDifficulty = {
       title: "Advanced Programming Concepts",
       category: "Technology",
       estimatedTime: 40,
-      reward: 15.0,
+      
       players: 60,
       maxPlayers: 100,
       spotsLeft: 40,
@@ -223,7 +223,7 @@ const quizzesByDifficulty = {
       title: "World History Through Time",
       category: "History",
       estimatedTime: 35,
-      reward: 12.5,
+      
       players: 30,
       maxPlayers: 100,
       spotsLeft: 70,
@@ -303,8 +303,8 @@ export function QuizzesByDifficulty() {
                         </div>
                       </div>
                       <div className="text-center">
-                        <p className="text-xs text-white">Reward</p>
-                        <span className="font-medium text-green-600">{quiz.reward}</span>
+                        
+                        
                       </div>
                     </div>
                   </div>
@@ -371,8 +371,7 @@ export function QuizzesByDifficulty() {
                       <h3 className="font-semibold line-clamp-1 mb-2">{quiz.title}</h3>
                       <div className="flex justify-between items-center gap-2 mb-3">
                         <div className="flex items-center text-green-600">
-                          <DollarSign className="h-4 w-4" />
-                          <span className="font-medium">{quiz.reward.toFixed(2)}</span>
+                          
                         </div>
                         <div className="flex items-center gap-1.5 text-slate-600 dark:text-slate-400">
                           <Users className="h-3.5 w-3.5" />
@@ -423,8 +422,7 @@ export function QuizzesByDifficulty() {
                       </div>
                       <h3 className="font-semibold line-clamp-1 mb-2">{quiz.title}</h3>
                       <div className="flex items-center text-green-600">
-                        <DollarSign className="h-4 w-4" />
-                        <span className="font-medium">{quiz.reward.toFixed(2)}</span>
+                        
                       </div>
                       <div className="space-y-1.5">
                         <div className="flex items-center justify-between">

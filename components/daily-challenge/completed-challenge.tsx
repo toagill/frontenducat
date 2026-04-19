@@ -201,7 +201,7 @@ export function CompletedChallenge({ result, onReset, dailyQuizData, selectedAns
                 </div>
                 <div>
                   <h4 className="font-medium">Daily Participant</h4>
-                  <p className="text-sm text-muted-foreground">+50 Coins</p>
+                  <p className="text-sm text-muted-foreground">Participation Badge</p>
                 </div>
               </div>
 
@@ -221,7 +221,7 @@ export function CompletedChallenge({ result, onReset, dailyQuizData, selectedAns
                 </div>
                 <div>
                   <h4 className="font-medium">Streak Bonus</h4>
-                  <p className="text-sm text-muted-foreground">+25 Coins (4-day streak)</p>
+                  <p className="text-sm text-muted-foreground">Streak Achievement</p>
                 </div>
               </div>
 
@@ -245,7 +245,7 @@ export function CompletedChallenge({ result, onReset, dailyQuizData, selectedAns
                   <div className="bg-amber-100 dark:bg-amber-900 p-1 rounded-full mr-2">
                     <span className="text-amber-600 dark:text-amber-400 text-xs font-bold">$</span>
                   </div>
-                  <span className="font-bold">+75 Coins</span>
+                  <span className="font-bold">+75 XP</span>
                 </div>
                 <div className="flex items-center">
                   <div className="bg-blue-100 dark:bg-blue-900 p-1 rounded-full mr-2">

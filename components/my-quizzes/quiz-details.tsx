@@ -8,7 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CircularProgress } from "@/components/ui/circular-progress";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { AlertCircle, ArrowLeft, Award, BarChart3, Calendar, CheckCheck, CheckCircle, Clock, Copy, DollarSign, Edit, ExternalLink, Share2, Trash2, Users } from "lucide-react";
+import { AlertCircle, ArrowLeft, Award, BarChart3, Calendar, CheckCheck, CheckCircle, Clock, Copy, Edit, ExternalLink, Share2, Trash2, Users } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -22,7 +22,7 @@ const quizData = {
   difficulty: "Medium",
   status: "active",
   timeLimit: 15,
-  reward: "$5.00",
+  
   players: 285,
   maxPlayers: 300,
   spotsLeft: 15,
@@ -219,10 +219,6 @@ export function QuizDetails({ id }: { id: string }) {
               <div className="flex items-center gap-1">
                 <Clock className="h-4 w-4" />
                 <span>{quizData.timeLimit} minutes</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <DollarSign className="h-4 w-4" />
-                <span>{quizData.reward} reward</span>
               </div>
               <div className="flex items-center gap-1">
                 <Calendar className="h-4 w-4" />
@@ -440,10 +436,6 @@ export function QuizDetails({ id }: { id: string }) {
                 <div className="flex justify-between text-sm">
                   <span className="text-muted-foreground">Questions</span>
                   <span>{quizData.stats.totalQuestions}</span>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-green-600">Reward</span>
-                  <span className="font-medium text-green-600">{quizData.reward}</span>
                 </div>
               </div>
             </CardContent>

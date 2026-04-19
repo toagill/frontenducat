@@ -25,7 +25,7 @@ interface ExploreFiltersProps {
 }
 
 export function ExploreFilters({ activeFilters, setActiveFilters }: ExploreFiltersProps) {
-  const [rewardRange, setRewardRange] = useState([0, 15]);
+  
   const [timeRange, setTimeRange] = useState([0, 30]);
   const [selectedDifficulties, setSelectedDifficulties] = useState<string[]>([]);
   const [activeFilterCount, setActiveFilterCount] = useState(0);
@@ -57,7 +57,7 @@ export function ExploreFilters({ activeFilters, setActiveFilters }: ExploreFilte
       sortBy: "popular",
       timeRange: "all",
     });
-    setRewardRange([0, 15]);
+    
     setTimeRange([0, 30]);
     setSelectedDifficulties([]);
     setActiveFilterCount(0);
@@ -75,7 +75,7 @@ export function ExploreFilters({ activeFilters, setActiveFilters }: ExploreFilte
       </div>
 
       <div className="rounded-lg border bg-card">
-        <Accordion type="multiple" defaultValue={["difficulty", "sort", "reward"]}>
+        <Accordion type="multiple" defaultValue={["difficulty", "sort"]}>
           <AccordionItem value="difficulty">
             <AccordionTrigger className="px-4">Difficulty</AccordionTrigger>
             <AccordionContent className="px-4 pb-4">
@@ -126,25 +126,13 @@ export function ExploreFilters({ activeFilters, setActiveFilters }: ExploreFilte
                   <Label htmlFor="highest-rated">Highest Rated</Label>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="highest-reward" id="highest-reward" />
-                  <Label htmlFor="highest-reward">Highest Reward</Label>
+                  
                 </div>
               </RadioGroup>
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="reward">
-            <AccordionTrigger className="px-4">Reward</AccordionTrigger>
-            <AccordionContent className="px-4 pb-4 space-y-4">
-              <div className="space-y-2">
-                <div className="flex justify-between">
-                  <span className="text-sm">${rewardRange[0]}</span>
-                  <span className="text-sm">${rewardRange[1]}+</span>
-                </div>
-                <Slider defaultValue={[0, 15]} max={15} step={1} value={rewardRange} onValueChange={setRewardRange} />
-              </div>
-            </AccordionContent>
-          </AccordionItem>
+          
 
           <AccordionItem value="time">
             <AccordionTrigger className="px-4">Time Limit</AccordionTrigger>

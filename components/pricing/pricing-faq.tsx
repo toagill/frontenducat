@@ -3,15 +3,15 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 const faqs = [
   {
     q: "How does the free trial work?",
-    a: "When you register, you get 48 hours of full access — no credit card required. You can take mock exams, practice questions, and explore all 5 UCAT subtests. After 48 hours, you'll need to subscribe to continue.",
+    a: "When you register, you get 48 hours of full access — a card is required to start — cancel before 2 days to pay nothing. You can take mock exams, practice questions, and explore all 5 UCAT subtests. After 48 hours, you'll need to subscribe to continue.",
   },
   {
-    q: "What's included in the £19.99 annual plan?",
+    q: "What's included in the £29.99 annual plan?",
     a: "You get 365 days of unlimited access to everything: 2,000+ practice questions across all 5 subtests, unlimited timed mock exams, detailed analytics and score tracking, worked solutions, percentile rankings, and the leaderboard.",
   },
   {
     q: "Is it a one-time payment or a subscription?",
-    a: "It's a one-time payment of £19.99 that grants you 12 months of access. There are no recurring charges — you won't be auto-billed at renewal.",
+    a: "It's a one-time payment of £29.99 that grants you 12 months of access. There are no recurring charges — you won't be auto-billed at renewal.",
   },
   {
     q: "What UCAT subtests are covered?",

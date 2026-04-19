@@ -13,7 +13,7 @@ const topPlayers = [
     id: 1,
     username: "AlexMaster",
     avatar: "/avatars/alex.png",
-    earnings: 1250.75,
+    
     score: 9850,
     rank: 1,
   },
@@ -21,7 +21,7 @@ const topPlayers = [
     id: 2,
     username: "QuizWizard",
     avatar: "/avatars/wizard.webp",
-    earnings: 980.5,
+    
     score: 8720,
     rank: 2,
   },
@@ -29,7 +29,7 @@ const topPlayers = [
     id: 3,
     username: "BrainiacSarah",
     avatar: "/avatars/sarah.webp",
-    earnings: 875.25,
+    
     score: 7640,
     rank: 3,
   },
@@ -37,7 +37,7 @@ const topPlayers = [
     id: 4,
     username: "TriviaKing",
     avatar: "/avatars/king.webp",
-    earnings: 720.8,
+    
     score: 6980,
     rank: 4,
   },
@@ -45,7 +45,7 @@ const topPlayers = [
     id: 5,
     username: "QuizChampion",
     avatar: "/avatars/champion.png",
-    earnings: 695.4,
+    
     score: 6540,
     rank: 5,
   },
@@ -73,12 +73,7 @@ export function TopPlayers() {
           <Trophy className="h-6 w-6 text-yellow-500" />
           <h2 className="text-2xl font-bold tracking-tight">Weekly Leaderboard</h2>
         </div>
-        <Tabs defaultValue="earnings" className="hidden sm:block">
-          <TabsList>
-            <TabsTrigger value="earnings">Top Earners</TabsTrigger>
-            <TabsTrigger value="score">High Scores</TabsTrigger>
-          </TabsList>
-        </Tabs>
+        
       </div>
 
       <div className="grid gap-4 md:grid-cols-3">
@@ -96,7 +91,7 @@ export function TopPlayers() {
                   <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 flex h-8 w-8 items-center justify-center rounded-full bg-slate-300 text-white font-bold">2</div>
                 </div>
                 <h3 className="font-semibold">{topPlayers[1].username}</h3>
-                <p className="text-green-600 font-medium">${topPlayers[1].earnings.toFixed(2)}</p>
+                <p className="text-green-600 font-medium">{topPlayers[0].score?.toLocaleString()} pts</p>
               </div>
 
               {/* 1st Place */}
@@ -114,7 +109,7 @@ export function TopPlayers() {
                   <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 flex h-8 w-8 items-center justify-center rounded-full bg-yellow-400 text-white font-bold">1</div>
                 </div>
                 <h3 className="text-lg font-bold">{topPlayers[0].username}</h3>
-                <p className="text-green-600 font-bold">${topPlayers[0].earnings.toFixed(2)}</p>
+                <p className="text-green-600 font-bold">{topPlayers[0].score?.toLocaleString()} pts</p>
               </div>
 
               {/* 3rd Place */}
@@ -127,7 +122,7 @@ export function TopPlayers() {
                   <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 flex h-8 w-8 items-center justify-center rounded-full bg-amber-700 text-white font-bold">3</div>
                 </div>
                 <h3 className="font-semibold">{topPlayers[2].username}</h3>
-                <p className="text-green-600 font-medium">${topPlayers[2].earnings.toFixed(2)}</p>
+                <p className="text-green-600 font-medium">{topPlayers[0].score?.toLocaleString()} pts</p>
               </div>
             </div>
           </CardContent>
@@ -150,7 +145,7 @@ export function TopPlayers() {
                     </Avatar>
                     <span className="font-medium">{player.username}</span>
                   </div>
-                  <div className="text-green-600 font-medium">${player.earnings.toFixed(2)}</div>
+                  <div className="text-green-600 font-medium">{player.score?.toLocaleString()} pts</div>
                 </div>
               ))}
             </div>

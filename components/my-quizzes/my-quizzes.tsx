@@ -9,7 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
-import { BarChart3, Clock, DollarSign, Edit, Eye, Grid3X3, List, MoreHorizontal, Plus, Search, Share2, Trash2, Users } from "lucide-react";
+import { BarChart3, Clock, Edit, Eye, Grid3X3, List, MoreHorizontal, Plus, Search, Share2, Trash2, Users } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -24,7 +24,7 @@ const myQuizzes = [
     difficulty: "Medium",
     status: "active",
     timeLimit: 15,
-    reward: "$5.00",
+    
     players: 285,
     maxPlayers: 300,
     spotsLeft: 15,
@@ -44,7 +44,7 @@ const myQuizzes = [
     difficulty: "Hard",
     status: "active",
     timeLimit: 20,
-    reward: "$7.50",
+    
     players: 178,
     maxPlayers: 500,
     spotsLeft: 322,
@@ -64,7 +64,7 @@ const myQuizzes = [
     difficulty: "Medium",
     status: "active",
     timeLimit: 15,
-    reward: "$5.00",
+    
     players: 412,
     maxPlayers: 450,
     spotsLeft: 38,
@@ -84,7 +84,7 @@ const myQuizzes = [
     difficulty: "Hard",
     status: "draft",
     timeLimit: 25,
-    reward: "$8.00",
+    
     players: 0,
     maxPlayers: 300,
     spotsLeft: 300,
@@ -104,7 +104,7 @@ const myQuizzes = [
     difficulty: "Medium",
     status: "completed",
     timeLimit: 15,
-    reward: "$5.00",
+    
     players: 300,
     maxPlayers: 300,
     spotsLeft: 0,
@@ -124,7 +124,7 @@ const myQuizzes = [
     difficulty: "Easy",
     status: "active",
     timeLimit: 10,
-    reward: "$3.00",
+    
     players: 124,
     maxPlayers: 250,
     spotsLeft: 126,
@@ -452,11 +452,10 @@ export function MyQuizzes() {
                           <p className="font-medium">{quiz.stats.averageScore}%</p>
                         </div>
                         <div className="space-y-1">
-                          <div className="flex items-center gap-1.5 text-green-600">
-                            <DollarSign className="h-3.5 w-3.5" />
-                            <span>Revenue</span>
+                          <div className="flex items-center gap-1.5 text-muted-foreground">
+                            <span>Completion</span>
                           </div>
-                          <p className="font-medium text-green-600">${quiz.stats.revenue.toFixed(0)}</p>
+                          <p className="font-medium">{quiz.stats.completionRate}%</p>
                         </div>
                       </div>
 

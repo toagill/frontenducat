@@ -13,10 +13,10 @@ export function PricingCta() {
             <p className="text-teal-400 text-sm font-semibold uppercase tracking-widest mb-3">Ready to start?</p>
             <h2 className="text-4xl font-bold mb-4">Start your free trial today</h2>
             <p className="text-white/60 max-w-lg mx-auto mb-8 text-sm leading-relaxed">
-              No credit card required. Get 48 hours of full access and see why 12,000+ students trust Medical Exam UCAT for their UCAT preparation.
+              A card is required to start. Get 48 hours of full access and see why 12,000+ students trust Medical Exam UCAT for their UCAT preparation.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-8">
-              {["2-day free trial", "No card needed", "All 5 subtests", "£19.99/yr after trial"].map((item) => (
+              {["2-day free trial", "Card required", "All 5 subtests", "£29.99/yr after trial"].map((item) => (
                 <span key={item} className="flex items-center gap-1.5 text-sm text-white/70">
                   <Check className="size-4 text-teal-400" /> {item}
                 </span>

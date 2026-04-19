@@ -298,11 +298,6 @@ export function Header() {
 
           <ThemeToggle />
 
-          <Link href="/dashboard/user?tab=wallet" className="flex items-center gap-2 rounded-full border px-3 py-1.5 max-sm:hidden">
-            <span className="text-sm font-medium">$124.50</span>
-            <span className="text-green-500">💰</span>
-          </Link>
-
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size="icon" className="rounded-full">

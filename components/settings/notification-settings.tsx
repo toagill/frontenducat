@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Switch } from "@/components/ui/switch";
-import { Bell, DollarSign, Loader2, MessageSquare, Trophy, Users } from "lucide-react";
+import { Bell, Trophy, Loader2, MessageSquare, Users } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -16,7 +16,7 @@ export function NotificationSettings() {
       quizLikes: true,
       newFollowers: true,
       tournamentUpdates: true,
-      earnings: true,
+      scores: true,
       newsletter: false,
       productUpdates: true,
     },
@@ -25,7 +25,7 @@ export function NotificationSettings() {
       quizLikes: false,
       newFollowers: true,
       tournamentUpdates: true,
-      earnings: true,
+      scores: true,
       productUpdates: false,
     },
   });
@@ -117,13 +117,13 @@ export function NotificationSettings() {
 
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
-              <DollarSign className="h-5 w-5 text-primary" />
+              <Trophy className="h-5 w-5 text-primary" />
               <div>
-                <p className="font-medium">Earnings Updates</p>
-                <p className="text-sm text-muted-foreground">Receive emails about your earnings and payouts.</p>
+                <p className="font-medium">Score Updates</p>
+                <p className="text-sm text-muted-foreground">Receive emails about your exam results and scores.</p>
               </div>
             </div>
-            <Switch checked={notifications.email.earnings} onCheckedChange={(value) => handleToggle("email", "earnings", value)} />
+            <Switch checked={notifications.email.scores} onCheckedChange={(value) => handleToggle("email", "scores", value)} />
           </div>
 
           <Separator />
@@ -214,13 +214,13 @@ export function NotificationSettings() {
 
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
-              <DollarSign className="h-5 w-5 text-primary" />
+              <Trophy className="h-5 w-5 text-primary" />
               <div>
-                <p className="font-medium">Earnings Updates</p>
-                <p className="text-sm text-muted-foreground">Receive push notifications about your earnings and payouts.</p>
+                <p className="font-medium">Score Updates</p>
+                <p className="text-sm text-muted-foreground">Receive push notifications about your exam results.</p>
               </div>
             </div>
-            <Switch checked={notifications.push.earnings} onCheckedChange={(value) => handleToggle("push", "earnings", value)} />
+            <Switch checked={notifications.push.scores} onCheckedChange={(value) => handleToggle("push", "scores", value)} />
           </div>
 
           <Separator />

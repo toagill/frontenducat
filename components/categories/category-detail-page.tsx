@@ -8,7 +8,7 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { CircularProgress } from "@/components/ui/circular-progress";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Input } from "@/components/ui/input";
-import { ArrowLeft, Clock, DollarSign, Filter, Search, SortAsc, Target, Users } from "lucide-react";
+import { ArrowLeft, Clock, Filter, Search, SortAsc, Target, Users } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -19,7 +19,6 @@ interface Quiz {
   category: string;
   difficulty: string;
   timeLimit: number;
-  reward: string;
   players: number;
   maxPlayers: number;
   spotsLeft: number;
@@ -42,7 +41,7 @@ const quizzes = [
     category: "Geography",
     difficulty: "Medium",
     timeLimit: 15,
-    reward: "$5.00",
+    
     players: 285,
     maxPlayers: 300,
     spotsLeft: 15,
@@ -59,7 +58,7 @@ const quizzes = [
     category: "Science",
     difficulty: "Hard",
     timeLimit: 20,
-    reward: "$7.50",
+    
     players: 178,
     maxPlayers: 500,
     spotsLeft: 322,
@@ -76,7 +75,7 @@ const quizzes = [
     category: "History",
     difficulty: "Medium",
     timeLimit: 15,
-    reward: "$5.00",
+    
     players: 412,
     maxPlayers: 450,
     spotsLeft: 38,
@@ -93,7 +92,7 @@ const quizzes = [
     category: "Mathematics",
     difficulty: "Hard",
     timeLimit: 25,
-    reward: "$8.00",
+    
     players: 156,
     maxPlayers: 300,
     spotsLeft: 144,
@@ -110,7 +109,7 @@ const quizzes = [
     category: "Literature",
     difficulty: "Medium",
     timeLimit: 15,
-    reward: "$5.00",
+    
     players: 298,
     maxPlayers: 300,
     spotsLeft: 2,
@@ -127,7 +126,7 @@ const quizzes = [
     category: "Sports",
     difficulty: "Easy",
     timeLimit: 10,
-    reward: "$3.00",
+    
     players: 124,
     maxPlayers: 250,
     spotsLeft: 126,
@@ -184,11 +183,7 @@ export function CategoryDetailPage({ categoryName }: CategoryDetailPageProps) {
           return b.rating - a.rating;
         case "newest":
           return b.id - a.id;
-        case "reward":
-          return parseFloat(b.reward.replace("$", "")) - parseFloat(a.reward.replace("$", ""));
-        case "difficulty":
-          // Sort by difficulty: Hard > Medium > Easy
-          const difficultyOrder = { Hard: 3, Medium: 2, Easy: 1 };
+        ;
           return (difficultyOrder[b.difficulty as keyof typeof difficultyOrder] || 0) - (difficultyOrder[a.difficulty as keyof typeof difficultyOrder] || 0);
         default:
           return 0;
@@ -276,7 +271,7 @@ export function CategoryDetailPage({ categoryName }: CategoryDetailPageProps) {
               <DropdownMenuItem onClick={() => handleSortChange("popular")}>Most Popular</DropdownMenuItem>
               <DropdownMenuItem onClick={() => handleSortChange("rating")}>Highest Rated</DropdownMenuItem>
               <DropdownMenuItem onClick={() => handleSortChange("newest")}>Newest</DropdownMenuItem>
-              <DropdownMenuItem onClick={() => handleSortChange("reward")}>Highest Reward</DropdownMenuItem>
+              
             </DropdownMenuContent>
           </DropdownMenu>
 
@@ -336,7 +331,7 @@ export function CategoryDetailPage({ categoryName }: CategoryDetailPageProps) {
                   </Badge>
                 </div>
 
-                {/* Rating and reward */}
+                {/* Rating */}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-1">
                     <svg className="h-4 w-4 text-yellow-400 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -347,8 +342,7 @@ export function CategoryDetailPage({ categoryName }: CategoryDetailPageProps) {
                     </span>
                   </div>
                   <div className="flex items-center gap-1 text-green-600 font-medium">
-                    <DollarSign className="h-4 w-4" />
-                    <span>{quiz.reward}</span>
+                    
                   </div>
                 </div>
 

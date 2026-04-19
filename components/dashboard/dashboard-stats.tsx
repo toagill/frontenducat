@@ -1,4 +1,4 @@
-import { BarChart3, Trophy, Users, DollarSign } from "lucide-react"
+import { BarChart3, Trophy, Users, Star } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 export function DashboardStats() {
@@ -39,12 +39,12 @@ export function DashboardStats() {
 
       <Card>
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-          <CardTitle className="text-sm font-medium">Total Earnings</CardTitle>
-          <DollarSign className="h-4 w-4 text-muted-foreground" />
+          <CardTitle className="text-sm font-medium">Average Score</CardTitle>
+          <Star className="h-4 w-4 text-muted-foreground" />
         </CardHeader>
         <CardContent>
-          <div className="text-2xl font-bold">$124.50</div>
-          <p className="text-xs text-muted-foreground">+$42.50 from last month</p>
+          <div className="text-2xl font-bold">72.4%</div>
+          <p className="text-xs text-muted-foreground">+3.2% from last month</p>
         </CardContent>
       </Card>
     </div>

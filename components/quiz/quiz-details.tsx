@@ -21,7 +21,7 @@ const quizData = {
   category: "Science & Technology",
   difficulty: "Medium",
   timeLimit: 20,
-  reward: "$5.00",
+  
   players: 285,
   maxPlayers: 300,
   spotsLeft: 15,

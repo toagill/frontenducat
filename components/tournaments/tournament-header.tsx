@@ -56,7 +56,7 @@ export function TournamentHeader({ tournament }: TournamentHeaderProps) {
               </div>
               <div className="flex items-center gap-2">
                 <Trophy className="h-4 w-4" />
-                <span className="text-sm">{tournament.prize} prize pool</span>
+                <span className="text-sm">{tournament.prize}</span>
               </div>
             </div>
 

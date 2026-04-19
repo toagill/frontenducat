@@ -42,7 +42,7 @@ export function FeaturedTournament() {
                 </div>
                 <div className="flex items-center gap-2">
                   <Trophy className="h-4 w-4" />
-                  <span className="text-sm">$5,000 prize pool</span>
+                  <span className="text-sm">Top Score Challenge</span>
                 </div>
               </div>
 

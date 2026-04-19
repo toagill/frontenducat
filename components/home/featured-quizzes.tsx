@@ -23,7 +23,7 @@ const featuredQuizzes = [
     players: 2453,
     maxPlayers: 3000,
     spotsLeft: 547,
-    reward: "$10.00",
+    
     limitedTime: true,
     expiresIn: 172800, // 48 hours in seconds
     almostFull: false,
@@ -44,7 +44,7 @@ const featuredQuizzes = [
     players: 1872,
     maxPlayers: 2000,
     spotsLeft: 128,
-    reward: "$7.50",
+    
     limitedTime: false,
     almostFull: true,
     recentPlayers: [
@@ -64,7 +64,7 @@ const featuredQuizzes = [
     players: 3241,
     maxPlayers: 5000,
     spotsLeft: 1759,
-    reward: "$8.00",
+    
     limitedTime: true,
     expiresIn: 86400, // 24 hours in seconds
     almostFull: false,
@@ -85,7 +85,7 @@ const featuredQuizzes = [
     players: 1563,
     maxPlayers: 1600,
     spotsLeft: 37,
-    reward: "$6.50",
+    
     limitedTime: false,
     almostFull: true,
     recentPlayers: [
@@ -216,12 +216,7 @@ export function FeaturedQuizzes() {
                     </div>
                   </div>
                 </div>
-                <div>
-                  <p className="text-xs text-muted-foreground">Reward</p>
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="font-medium text-green-600">{quiz.reward}</span>
-                  </div>
-                </div>
+
               </div>
 
               <div className="space-y-1.5">

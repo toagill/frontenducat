@@ -20,7 +20,7 @@ const testimonials = [
     name: "Priya Sharma",
     role: "Imperial College Medicine offer",
     score: "3,140 UCAT Score",
-    text: "I tried other platforms but the question quality here is so much better. The abstract reasoning section alone is worth the £19.99. Incredible value.",
+    text: "I tried other platforms but the question quality here is so much better. The abstract reasoning section alone is worth the £29.99. Incredible value.",
     stars: 5,
   },
   {

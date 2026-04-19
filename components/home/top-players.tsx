@@ -5,66 +5,25 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { ChevronRight, DollarSign, TrendingUp, Trophy } from "lucide-react";
+import { ChevronRight, TrendingUp, Trophy } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 type Player = {
   id: number;
   username: string;
   avatar: string;
-  earnings?: number;
+  
   quizzes: number;
   badge: string;
   score?: number;
 };
 type TopPlayers = {
-  earnings: Player[];
+  
   score: Player[];
 };
 // Sample top players data
 const topPlayers: TopPlayers = {
-  earnings: [
-    {
-      id: 1,
-      username: "AlexMaster",
-      avatar: "/avatars/alex.png",
-      earnings: 1250.75,
-      quizzes: 42,
-      badge: "diamond",
-    },
-    {
-      id: 2,
-      username: "QuizWizard",
-      avatar: "/avatars/wizard.webp",
-      earnings: 980.5,
-      quizzes: 38,
-      badge: "platinum",
-    },
-    {
-      id: 3,
-      username: "BrainiacSarah",
-      avatar: "/avatars/sarah.webp",
-      earnings: 875.25,
-      quizzes: 35,
-      badge: "gold",
-    },
-    {
-      id: 4,
-      username: "TriviaKing",
-      avatar: "/avatars/king.webp",
-      earnings: 720.8,
-      quizzes: 31,
-      badge: "gold",
-    },
-    {
-      id: 5,
-      username: "QuizChampion",
-      avatar: "/avatars/champion.png",
-      earnings: 695.4,
-      quizzes: 29,
-      badge: "silver",
-    },
-  ],
+  
   score: [
     {
       id: 6,
@@ -110,7 +69,7 @@ const topPlayers: TopPlayers = {
 };
 
 export function TopPlayers() {
-  const [leaderboardType, setLeaderboardType] = useState("earnings");
+  const leaderboardType = "score";
 
   // Get badge color based on badge type
   const getBadgeColor = (badge: string) => {
@@ -129,7 +88,7 @@ export function TopPlayers() {
   };
 
   // Get players based on selected leaderboard type
-  const players = leaderboardType === "earnings" ? topPlayers.earnings : topPlayers.score;
+  const players = topPlayers.score;
 
   return (
     <section className="space-y-4">
@@ -142,18 +101,7 @@ export function TopPlayers() {
           <p className="text-muted-foreground">This week's highest performers</p>
         </div>
 
-        <Tabs defaultValue="earnings" value={leaderboardType} onValueChange={setLeaderboardType} className="w-full sm:w-auto">
-          <TabsList className="grid grid-cols-2 w-full sm:w-auto">
-            <TabsTrigger value="earnings" className="flex items-center gap-1">
-              <DollarSign className="h-3.5 w-3.5" />
-              <span>Top Earners</span>
-            </TabsTrigger>
-            <TabsTrigger value="score" className="flex items-center gap-1">
-              <TrendingUp className="h-3.5 w-3.5" />
-              <span>High Scores</span>
-            </TabsTrigger>
-          </TabsList>
-        </Tabs>
+        
       </div>
 
       <Card>
@@ -181,7 +129,7 @@ export function TopPlayers() {
                   </div>
                 </div>
                 <div className="text-right">
-                  <div className="font-semibold">{leaderboardType === "earnings" ? <span className="text-green-600">${player.earnings!.toFixed(2)}</span> : <span>{player?.score?.toLocaleString()} pts</span>}</div>
+                  <div className="font-semibold">{<span>{player?.score?.toLocaleString()} pts</span>}</div>
                   <p className="text-xs text-muted-foreground">This week</p>
                 </div>
               </div>

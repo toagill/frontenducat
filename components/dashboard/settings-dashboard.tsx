@@ -30,37 +30,6 @@ export function SettingsDashboard() {
                 <Switch id="compact-mode" />
               </div>
 
-              <div className="flex items-center justify-between">
-                <div className="space-y-0.5">
-                  <Label htmlFor="show-earnings">Show Earnings</Label>
-                  <p className="text-sm text-muted-foreground">Display earnings information on dashboard</p>
-                </div>
-                <Switch id="show-earnings" defaultChecked />
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="default-view">Default Dashboard View</Label>
-                <Select defaultValue="overview">
-                  <SelectTrigger id="default-view">
-                    <SelectValue placeholder="Select default view" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="overview">Overview</SelectItem>
-                    <SelectItem value="my-quizzes">My Quizzes</SelectItem>
-                    <SelectItem value="wallet">Wallet</SelectItem>
-                    <SelectItem value="affiliate">Affiliate</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader>
-              <CardTitle>Chart Settings</CardTitle>
-              <CardDescription>Customize how charts are displayed</CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-4">
               <div className="space-y-2">
                 <Label htmlFor="chart-timeframe">Default Chart Timeframe</Label>
                 <Select defaultValue="30days">
@@ -96,34 +65,26 @@ export function SettingsDashboard() {
             <CardContent className="space-y-4">
               <div className="flex items-center justify-between">
                 <div className="space-y-0.5">
-                  <Label htmlFor="earnings-notifications">Earnings Updates</Label>
-                  <p className="text-sm text-muted-foreground">Get notified about new earnings</p>
+                  <Label htmlFor="score-notifications">Score Updates</Label>
+                  <p className="text-sm text-muted-foreground">Get notified about your exam results</p>
                 </div>
-                <Switch id="earnings-notifications" defaultChecked />
+                <Switch id="score-notifications" defaultChecked />
               </div>
 
               <div className="flex items-center justify-between">
                 <div className="space-y-0.5">
-                  <Label htmlFor="quiz-notifications">Quiz Activity</Label>
-                  <p className="text-sm text-muted-foreground">Get notified when someone plays your quiz</p>
+                  <Label htmlFor="streak-notifications">Streak Reminders</Label>
+                  <p className="text-sm text-muted-foreground">Get reminded to keep your daily practice streak</p>
                 </div>
-                <Switch id="quiz-notifications" defaultChecked />
+                <Switch id="streak-notifications" defaultChecked />
               </div>
 
               <div className="flex items-center justify-between">
                 <div className="space-y-0.5">
-                  <Label htmlFor="referral-notifications">Referral Activity</Label>
-                  <p className="text-sm text-muted-foreground">Get notified about new referrals</p>
+                  <Label htmlFor="tips-notifications">Study Tips</Label>
+                  <p className="text-sm text-muted-foreground">Receive personalised UCAT study tips</p>
                 </div>
-                <Switch id="referral-notifications" defaultChecked />
-              </div>
-
-              <div className="flex items-center justify-between">
-                <div className="space-y-0.5">
-                  <Label htmlFor="withdrawal-notifications">Withdrawal Updates</Label>
-                  <p className="text-sm text-muted-foreground">Get notified about withdrawal status changes</p>
-                </div>
-                <Switch id="withdrawal-notifications" defaultChecked />
+                <Switch id="tips-notifications" defaultChecked />
               </div>
             </CardContent>
           </Card>
@@ -136,21 +97,6 @@ export function SettingsDashboard() {
               <CardDescription>Customize your dashboard experience</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
-              <div className="space-y-2">
-                <Label htmlFor="currency">Currency Display</Label>
-                <Select defaultValue="usd">
-                  <SelectTrigger id="currency">
-                    <SelectValue placeholder="Select currency" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="usd">USD ($)</SelectItem>
-                    <SelectItem value="eur">EUR (€)</SelectItem>
-                    <SelectItem value="gbp">GBP (£)</SelectItem>
-                    <SelectItem value="cad">CAD ($)</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-
               <div className="flex items-center justify-between">
                 <div className="space-y-0.5">
                   <Label htmlFor="auto-refresh">Auto-refresh Dashboard</Label>

@@ -1,7 +1,7 @@
 "use client"
 
 import { useRef } from "react"
-import { ChevronLeft, ChevronRight, ArrowRight, BookOpen, TrendingUp, DollarSign, Lightbulb, Clock } from "lucide-react"
+import { ChevronLeft, ChevronRight, ArrowRight, BookOpen, TrendingUp, Lightbulb, Clock } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -18,23 +18,6 @@ const quizTips = [
     icon: TrendingUp,
     color: "bg-blue-500",
   },
-  {
-    id: 2,
-    title: "Top Quiz Formats That Boost Earnings",
-    excerpt: "Discover the most profitable quiz formats and how to implement them effectively.",
-    category: "Monetization",
-    readTime: 7,
-    icon: DollarSign,
-    color: "bg-green-500",
-  },
-  {
-    id: 3,
-    title: "Writing Questions That Keep Players Coming Back",
-    excerpt: "Craft engaging questions that challenge players and encourage repeat participation.",
-    category: "Content",
-    readTime: 6,
-    icon: BookOpen,
-    color: "bg-purple-500",
   },
   {
     id: 4,

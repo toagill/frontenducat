@@ -24,7 +24,7 @@ const featuredQuizzes = {
       players: 2453,
       maxPlayers: 3000,
       spotsLeft: 547,
-      reward: "$10.00",
+      
       limitedTime: true,
       expiresIn: 172800, // 48 hours in seconds
       createdBy: "MarvelFan",
@@ -40,7 +40,7 @@ const featuredQuizzes = {
       players: 1872,
       maxPlayers: 2000,
       spotsLeft: 128,
-      reward: "$7.50",
+      
       limitedTime: false,
       expiresIn: 172800,
       createdBy: "GeoExplorer",
@@ -56,7 +56,7 @@ const featuredQuizzes = {
       players: 3241,
       maxPlayers: 5000,
       spotsLeft: 1759,
-      reward: "$8.00",
+      
       limitedTime: true,
       expiresIn: 86400, // 24 hours in seconds
       createdBy: "PuzzleMaster",
@@ -74,7 +74,7 @@ const featuredQuizzes = {
       players: 1563,
       maxPlayers: 1600,
       spotsLeft: 37,
-      reward: "$6.50",
+      
       limitedTime: false,
       expiresIn: 172800,
       createdBy: "HistoryBuff",
@@ -90,7 +90,7 @@ const featuredQuizzes = {
       players: 2105,
       maxPlayers: 2500,
       spotsLeft: 395,
-      reward: "$7.50",
+      
       limitedTime: false,
       expiresIn: 172800,
       createdBy: "CosmicMind",
@@ -106,7 +106,7 @@ const featuredQuizzes = {
       players: 1298,
       maxPlayers: 1500,
       spotsLeft: 202,
-      reward: "$5.00",
+      
       limitedTime: false,
       expiresIn: 172800,
       createdBy: "BookWorm",
@@ -124,7 +124,7 @@ const featuredQuizzes = {
       players: 210,
       maxPlayers: 1000,
       spotsLeft: 790,
-      reward: "$5.50",
+      
       limitedTime: false,
       expiresIn: 172800,
       createdBy: "MusicMaestro",
@@ -140,7 +140,7 @@ const featuredQuizzes = {
       players: 175,
       maxPlayers: 1000,
       spotsLeft: 825,
-      reward: "$7.00",
+      
       limitedTime: false,
       expiresIn: 172800,
       createdBy: "TechGuru",
@@ -156,7 +156,7 @@ const featuredQuizzes = {
       players: 124,
       maxPlayers: 1000,
       spotsLeft: 876,
-      reward: "$3.00",
+      
       limitedTime: false,
       expiresIn: 172800,
       createdBy: "SportsNut",
@@ -280,7 +280,6 @@ export function ExploreFeatured() {
                   <Users className="h-3.5 w-3.5 text-muted-foreground" />
                   <span className="text-sm">{formatPlayerCount(quiz.players)} players</span>
                 </div>
-                <span className="font-medium text-green-600">{quiz.reward}</span>
               </div>
 
               <div className="flex items-center justify-between">

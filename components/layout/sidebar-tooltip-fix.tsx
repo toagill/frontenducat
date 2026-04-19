@@ -4,7 +4,7 @@ import type React from "react";
 
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { cn } from "@/lib/utils";
-import { BarChart3, BookOpen, ChevronDown, Compass, DollarSign, Home, LayoutDashboard, LogOut, PlusCircle, Settings, Trophy, Users } from "lucide-react";
+import { BarChart3, BookOpen, ChevronDown, Compass, Home, LayoutDashboard, LogOut, PlusCircle, Settings, Trophy, Users } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useSidebar } from "./sidebar-context";
@@ -50,10 +50,8 @@ export function AppSidebar() {
 
           <NavItem href="/categories" icon={<BookOpen className="h-5 w-5" />} label="Categories" active={isActive("/categories")} />
           <NavItem href="/leaderboard" icon={<Trophy className="h-5 w-5" />} label="Leaderboard" active={isActive("/leaderboard")} />
-          <NavItem href="/affiliate" icon={<Users className="h-5 w-5" />} label="Affiliate Page" active={isActive("/affiliate")} />
-          <NavItem href="/pricing" icon={<DollarSign className="h-5 w-5" />} label="Pricing Plan" active={isActive("/pricing")} />
-          <NavItem href="/earnings" icon={<DollarSign className="h-5 w-5" />} label="Earnings & Wallet" active={isActive("/earnings")} />
-          <NavItem href="/analytics" icon={<BarChart3 className="h-5 w-5" />} label="Results & Analytics" active={isActive("/analytics")} />
+                    <NavItem href="/pricing" icon={<CreditCard className="h-5 w-5" />} label="Pricing Plan" active={isActive("/pricing")} />
+                    <NavItem href="/analytics" icon={<BarChart3 className="h-5 w-5" />} label="Results & Analytics" active={isActive("/analytics")} />
           <NavItem href="/settings" icon={<Settings className="h-5 w-5" />} label="Account Settings" active={isActive("/settings")} />
         </nav>
       </div>

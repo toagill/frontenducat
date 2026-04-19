@@ -16,6 +16,7 @@ const FREE_FEATURES = [
   "50 practice questions",
   "Basic performance summary",
   "1 timed mock exam",
+  "Card required — cancel before 2 days to pay nothing",
 ];
 
 const PRO_FEATURES = [
@@ -53,7 +54,7 @@ export function PricingPlans() {
           <Badge className="mb-4 bg-teal-500/10 text-teal-400 border-teal-500/20">Pricing</Badge>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Simple, Transparent Pricing</h1>
           <p className="text-xl text-muted-foreground max-w-xl mx-auto">
-            Start free for 2 days. Then just 19.99 GBP for a full year of unlimited UCAT preparation.
+            Start free for 2 days — card required, cancel anytime before the trial ends. Then just £29.99 for a full year of unlimited UCAT preparation.
           </p>
         </div>
 
@@ -65,7 +66,7 @@ export function PricingPlans() {
                 <span className="text-sm font-semibold text-amber-400 uppercase tracking-wider">Free Trial</span>
               </div>
               <CardTitle className="text-3xl font-bold">Free</CardTitle>
-              <p className="text-muted-foreground text-sm">2 days full access, no credit card required</p>
+              <p className="text-muted-foreground text-sm">2-day full access — card required to start</p>
             </CardHeader>
             <CardContent className="flex-grow space-y-3">
               {FREE_FEATURES.map((f) => (
@@ -77,7 +78,7 @@ export function PricingPlans() {
             </CardContent>
             <CardFooter>
               <Button className="w-full" variant="outline" asChild>
-                <Link href="/register">Start Free Trial</Link>
+                <Link href="/register?plan=trial">Start Free Trial — Card Required</Link>
               </Button>
             </CardFooter>
           </Card>
@@ -94,7 +95,7 @@ export function PricingPlans() {
                 <span className="text-sm font-semibold text-teal-400 uppercase tracking-wider">Annual Plan</span>
               </div>
               <div className="flex items-baseline gap-2">
-                <CardTitle className="text-4xl font-bold">19.99 GBP</CardTitle>
+                <CardTitle className="text-4xl font-bold">£29.99</CardTitle>
                 <span className="text-muted-foreground text-sm">/ year</span>
               </div>
               <p className="text-muted-foreground text-sm">One-time payment, 12 months full access</p>
@@ -126,16 +127,16 @@ export function PricingPlans() {
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto text-sm text-muted-foreground">
           <div>
-            <p className="font-semibold text-foreground mb-1">When does the trial start?</p>
-            <p>Immediately after registration. You get 48 hours of full access with no card required.</p>
+            <p className="font-semibold text-foreground mb-1">Do I need a card for the trial?</p>
+            <p>Yes. A card is required to start the 2-day free trial. You will not be charged if you cancel before the trial ends.</p>
           </div>
           <div>
             <p className="font-semibold text-foreground mb-1">Is it a one-time payment?</p>
-            <p>Yes. 19.99 GBP gives you 365 days of access. No recurring charges, no hidden fees.</p>
+            <p>Yes. £29.99 gives you 365 days of full access. No recurring charges, no hidden fees.</p>
           </div>
           <div>
             <p className="font-semibold text-foreground mb-1">What if I am not satisfied?</p>
-            <p>Email us within 7 days for a full refund, no questions asked.</p>
+            <p>Email us within 7 days of payment for a full refund, no questions asked.</p>
           </div>
         </div>
       </div>
