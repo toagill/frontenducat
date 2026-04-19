@@ -1,0 +1,902 @@
+[
+  {
+    "questionId": "VR-001", "subtest": "VR", "difficulty": "easy", "type": "multiple_choice",
+    "passage": "The NHS was founded in 1948 on the principle that healthcare should be free at the point of use for all residents of the United Kingdom, regardless of their ability to pay. Funded through taxation, it represented a radical shift from the previous system in which people paid directly for medical treatment. Since its creation, the NHS has grown to become one of the largest employers in the world, employing over 1.5 million people.",
+    "question": "According to the passage, how is the NHS primarily funded?",
+    "options": ["A. Through private insurance premiums", "B. Through direct patient payments", "C. Through taxation", "D. Through charitable donations"],
+    "correctAnswer": "C",
+    "explanation": "The passage states the NHS is 'Funded through taxation'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-002", "subtest": "VR", "difficulty": "easy", "type": "multiple_choice",
+    "passage": "The NHS was founded in 1948 on the principle that healthcare should be free at the point of use for all residents of the United Kingdom, regardless of their ability to pay. Funded through taxation, it represented a radical shift from the previous system in which people paid directly for medical treatment. Since its creation, the NHS has grown to become one of the largest employers in the world, employing over 1.5 million people.",
+    "question": "What was the system of healthcare before the NHS was founded?",
+    "options": ["A. Free healthcare for all", "B. Direct patient payment for treatment", "C. Insurance-based system", "D. Government-funded hospitals only"],
+    "correctAnswer": "B",
+    "explanation": "The passage states it was a shift 'from the previous system in which people paid directly for medical treatment'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-003", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "Antibiotic resistance is one of the greatest threats to global health. When bacteria are exposed to antibiotics repeatedly, they can develop mechanisms to survive the drugs designed to kill them. The overuse and misuse of antibiotics in both humans and livestock has accelerated this process. Scientists warn that if no action is taken, routine operations could become life-threatening by 2050 due to untreatable infections.",
+    "question": "What has accelerated the development of antibiotic resistance according to the passage?",
+    "options": ["A. Underuse of antibiotics in hospitals", "B. Overuse in humans and livestock", "C. Development of new bacteria strains", "D. Lack of funding for research"],
+    "correctAnswer": "B",
+    "explanation": "The passage states 'The overuse and misuse of antibiotics in both humans and livestock has accelerated this process'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-004", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "Antibiotic resistance is one of the greatest threats to global health. When bacteria are exposed to antibiotics repeatedly, they can develop mechanisms to survive the drugs designed to kill them. The overuse and misuse of antibiotics in both humans and livestock has accelerated this process. Scientists warn that if no action is taken, routine operations could become life-threatening by 2050 due to untreatable infections.",
+    "question": "What does the passage suggest could happen by 2050 if no action is taken?",
+    "options": ["A. All antibiotics will be banned", "B. New antibiotics will be discovered", "C. Routine operations could become life-threatening", "D. Bacteria will become extinct"],
+    "correctAnswer": "C",
+    "explanation": "The passage states 'routine operations could become life-threatening by 2050 due to untreatable infections'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-005", "subtest": "VR", "difficulty": "hard", "type": "multiple_choice",
+    "passage": "Mental health disorders affect one in four people in the UK at some point in their lives, yet mental health services receive a disproportionately small share of the NHS budget compared to physical health. Critics argue this reflects a longstanding societal stigma around mental illness. Proponents of parity of esteem — the principle that mental and physical health should be given equal priority — have lobbied for decades for increased funding and awareness.",
+    "question": "What does 'parity of esteem' mean in the context of the passage?",
+    "options": ["A. Mental health should receive more funding than physical health", "B. Mental and physical health should be given equal priority", "C. Stigma around mental health should be eliminated", "D. All patients should pay equally for treatment"],
+    "correctAnswer": "B",
+    "explanation": "The passage defines parity of esteem as 'the principle that mental and physical health should be given equal priority'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-006", "subtest": "VR", "difficulty": "hard", "type": "multiple_choice",
+    "passage": "Mental health disorders affect one in four people in the UK at some point in their lives, yet mental health services receive a disproportionately small share of the NHS budget compared to physical health. Critics argue this reflects a longstanding societal stigma around mental illness. Proponents of parity of esteem — the principle that mental and physical health should be given equal priority — have lobbied for decades for increased funding and awareness.",
+    "question": "What do critics suggest is the reason for the underfunding of mental health services?",
+    "options": ["A. Mental health is less serious than physical health", "B. There are fewer mental health patients", "C. Societal stigma around mental illness", "D. Mental health treatment is cheaper"],
+    "correctAnswer": "C",
+    "explanation": "Critics argue the underfunding 'reflects a longstanding societal stigma around mental illness'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-007", "subtest": "VR", "difficulty": "easy", "type": "multiple_choice",
+    "passage": "Vaccination programmes have been one of the most successful public health interventions in history. Smallpox, once a devastating global disease, was eradicated entirely by 1980 following a coordinated international vaccination campaign. Polio has been eliminated from most of the world. Scientists credit herd immunity — the protection that occurs when a sufficient proportion of a population becomes immune — as a key mechanism behind these successes.",
+    "question": "When was smallpox eradicated according to the passage?",
+    "options": ["A. 1948", "B. 1970", "C. 1980", "D. 1990"],
+    "correctAnswer": "C",
+    "explanation": "The passage states smallpox 'was eradicated entirely by 1980'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-008", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "Vaccination programmes have been one of the most successful public health interventions in history. Smallpox, once a devastating global disease, was eradicated entirely by 1980 following a coordinated international vaccination campaign. Polio has been eliminated from most of the world. Scientists credit herd immunity — the protection that occurs when a sufficient proportion of a population becomes immune — as a key mechanism behind these successes.",
+    "question": "How does the passage define herd immunity?",
+    "options": ["A. When every member of a population is vaccinated", "B. When a disease is completely eradicated", "C. When a sufficient proportion of a population becomes immune", "D. When animals and humans share the same vaccines"],
+    "correctAnswer": "C",
+    "explanation": "The passage defines herd immunity as 'the protection that occurs when a sufficient proportion of a population becomes immune'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-009", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "Sleep deprivation has been linked to a wide range of health problems, including obesity, diabetes, cardiovascular disease, and impaired immune function. Adults are generally recommended to get between seven and nine hours of sleep per night. Despite this, surveys suggest that a significant proportion of the UK population regularly sleeps fewer than six hours. Researchers believe this is partly driven by increased screen time and the always-on culture of modern work.",
+    "question": "How many hours of sleep are adults generally recommended to get per night?",
+    "options": ["A. Five to seven hours", "B. Six to eight hours", "C. Seven to nine hours", "D. Eight to ten hours"],
+    "correctAnswer": "C",
+    "explanation": "The passage states adults are 'generally recommended to get between seven and nine hours of sleep per night'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-010", "subtest": "VR", "difficulty": "hard", "type": "multiple_choice",
+    "passage": "Sleep deprivation has been linked to a wide range of health problems, including obesity, diabetes, cardiovascular disease, and impaired immune function. Adults are generally recommended to get between seven and nine hours of sleep per night. Despite this, surveys suggest that a significant proportion of the UK population regularly sleeps fewer than six hours. Researchers believe this is partly driven by increased screen time and the always-on culture of modern work.",
+    "question": "What does the passage suggest as a partial cause of widespread sleep deprivation in the UK?",
+    "options": ["A. Poor diet and nutrition", "B. Increased screen time and modern work culture", "C. Genetic predisposition to insomnia", "D. Inadequate healthcare advice"],
+    "correctAnswer": "B",
+    "explanation": "Researchers believe it is 'partly driven by increased screen time and the always-on culture of modern work'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-011", "subtest": "VR", "difficulty": "easy", "type": "multiple_choice",
+    "passage": "Climate change poses significant risks to public health. Rising temperatures are expanding the geographic range of disease-carrying insects such as mosquitoes, potentially bringing diseases like malaria and dengue fever to regions previously unaffected. Heatwaves are becoming more frequent and more intense, posing particular risks to elderly people and those with chronic conditions. Air pollution, exacerbated by higher temperatures, is also expected to worsen respiratory disease.",
+    "question": "What effect does the passage suggest rising temperatures are having on disease-carrying insects?",
+    "options": ["A. They are being eliminated", "B. Their geographic range is expanding", "C. They are becoming resistant to pesticides", "D. They are only affecting tropical regions"],
+    "correctAnswer": "B",
+    "explanation": "The passage states rising temperatures are 'expanding the geographic range of disease-carrying insects'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-012", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "Climate change poses significant risks to public health. Rising temperatures are expanding the geographic range of disease-carrying insects such as mosquitoes, potentially bringing diseases like malaria and dengue fever to regions previously unaffected. Heatwaves are becoming more frequent and more intense, posing particular risks to elderly people and those with chronic conditions. Air pollution, exacerbated by higher temperatures, is also expected to worsen respiratory disease.",
+    "question": "Who does the passage identify as being at particular risk from heatwaves?",
+    "options": ["A. Children and pregnant women", "B. Elderly people and those with chronic conditions", "C. Healthcare workers", "D. People living in coastal areas"],
+    "correctAnswer": "B",
+    "explanation": "The passage states heatwaves 'posing particular risks to elderly people and those with chronic conditions'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-013", "subtest": "VR", "difficulty": "hard", "type": "multiple_choice",
+    "passage": "The placebo effect refers to the measurable, positive health outcome that results from a patient's belief that they are receiving effective treatment, even when the treatment is inert. Far from being a curiosity, the placebo effect has measurable physiological effects, including the release of endorphins and changes in brain activity. Critics of placebo use in medicine argue it involves deception, which violates patient autonomy. Supporters counter that where placebos reduce suffering without harm, their use can be ethically justified.",
+    "question": "What argument do supporters of placebo use in medicine make?",
+    "options": ["A. Placebos are as effective as real medication", "B. Patient autonomy should always be overridden", "C. Placebos that reduce suffering without harm can be ethically justified", "D. The placebo effect is not scientifically proven"],
+    "correctAnswer": "C",
+    "explanation": "Supporters argue 'where placebos reduce suffering without harm, their use can be ethically justified'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-014", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "The placebo effect refers to the measurable, positive health outcome that results from a patient's belief that they are receiving effective treatment, even when the treatment is inert. Far from being a curiosity, the placebo effect has measurable physiological effects, including the release of endorphins and changes in brain activity. Critics of placebo use in medicine argue it involves deception, which violates patient autonomy. Supporters counter that where placebos reduce suffering without harm, their use can be ethically justified.",
+    "question": "What physiological effects does the passage attribute to the placebo effect?",
+    "options": ["A. Increased heart rate and blood pressure", "B. Release of endorphins and changes in brain activity", "C. Reduction in white blood cell count", "D. Improved kidney function"],
+    "correctAnswer": "B",
+    "explanation": "The passage states placebo has 'measurable physiological effects, including the release of endorphins and changes in brain activity'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-015", "subtest": "VR", "difficulty": "easy", "type": "multiple_choice",
+    "passage": "Organ donation rates in the UK increased significantly following the introduction of an opt-out system in England in 2020. Under this system, all adults are presumed to have consented to donation unless they have explicitly registered their objection. Wales introduced a similar system in 2015, and Scotland followed in 2021. Proponents argue the change saves lives by increasing the pool of available organs.",
+    "question": "When did England introduce the opt-out organ donation system?",
+    "options": ["A. 2015", "B. 2018", "C. 2020", "D. 2021"],
+    "correctAnswer": "C",
+    "explanation": "The passage states England introduced the opt-out system 'in 2020'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-016", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "Organ donation rates in the UK increased significantly following the introduction of an opt-out system in England in 2020. Under this system, all adults are presumed to have consented to donation unless they have explicitly registered their objection. Wales introduced a similar system in 2015, and Scotland followed in 2021. Proponents argue the change saves lives by increasing the pool of available organs.",
+    "question": "What happens under the opt-out system if an adult has not registered their objection?",
+    "options": ["A. They are automatically removed from the donor list", "B. Their family decides", "C. They are presumed to have consented to donation", "D. A court decides"],
+    "correctAnswer": "C",
+    "explanation": "Under this system 'all adults are presumed to have consented to donation unless they have explicitly registered their objection'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-017", "subtest": "VR", "difficulty": "hard", "type": "multiple_choice",
+    "passage": "Telemedicine — the delivery of healthcare consultations remotely via video or telephone — expanded rapidly during the COVID-19 pandemic. While it offered clear benefits in terms of accessibility for patients in rural areas and reduced infection risk, concerns have been raised about its limitations. Physical examinations cannot be conducted remotely, potentially leading to missed diagnoses. Furthermore, elderly patients or those without digital access may be excluded from care.",
+    "question": "What concern does the passage raise about elderly patients in relation to telemedicine?",
+    "options": ["A. They prefer in-person consultations", "B. They may be excluded due to lack of digital access", "C. They are more likely to receive misdiagnoses", "D. They cannot afford telemedicine services"],
+    "correctAnswer": "B",
+    "explanation": "The passage states 'elderly patients or those without digital access may be excluded from care'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-018", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "Telemedicine — the delivery of healthcare consultations remotely via video or telephone — expanded rapidly during the COVID-19 pandemic. While it offered clear benefits in terms of accessibility for patients in rural areas and reduced infection risk, concerns have been raised about its limitations. Physical examinations cannot be conducted remotely, potentially leading to missed diagnoses. Furthermore, elderly patients or those without digital access may be excluded from care.",
+    "question": "What benefit of telemedicine is specifically mentioned for patients in rural areas?",
+    "options": ["A. Lower cost of treatment", "B. Improved accessibility", "C. Better diagnostic accuracy", "D. Faster prescription delivery"],
+    "correctAnswer": "B",
+    "explanation": "The passage mentions 'clear benefits in terms of accessibility for patients in rural areas'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-019", "subtest": "VR", "difficulty": "easy", "type": "multiple_choice",
+    "passage": "Exercise has been shown to reduce the risk of over 35 chronic diseases, including type 2 diabetes, heart disease, and several cancers. The UK Chief Medical Officers recommend that adults undertake at least 150 minutes of moderate intensity activity or 75 minutes of vigorous activity per week. Despite this, surveys indicate that fewer than 60% of adults in England meet these guidelines.",
+    "question": "How many minutes of moderate intensity activity per week do UK Chief Medical Officers recommend?",
+    "options": ["A. 75 minutes", "B. 100 minutes", "C. 150 minutes", "D. 200 minutes"],
+    "correctAnswer": "C",
+    "explanation": "The passage states the recommendation is 'at least 150 minutes of moderate intensity activity'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-020", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "Exercise has been shown to reduce the risk of over 35 chronic diseases, including type 2 diabetes, heart disease, and several cancers. The UK Chief Medical Officers recommend that adults undertake at least 150 minutes of moderate intensity activity or 75 minutes of vigorous activity per week. Despite this, surveys indicate that fewer than 60% of adults in England meet these guidelines.",
+    "question": "What does the passage suggest about adult adherence to exercise guidelines in England?",
+    "options": ["A. Over 80% of adults meet the guidelines", "B. Exactly half of adults meet the guidelines", "C. Fewer than 60% of adults meet the guidelines", "D. All adults exceed the guidelines"],
+    "correctAnswer": "C",
+    "explanation": "The passage states 'fewer than 60% of adults in England meet these guidelines'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-021", "subtest": "VR", "difficulty": "hard", "type": "multiple_choice",
+    "passage": "The concept of informed consent is central to modern medical ethics. For consent to be valid, a patient must have capacity — the ability to understand, retain, and weigh information and communicate a decision. Capacity is decision-specific, meaning a patient may have capacity to consent to one procedure but not another. The Mental Capacity Act 2005 provides a legal framework for assessing capacity and making decisions on behalf of those who lack it.",
+    "question": "What does 'decision-specific' mean in the context of capacity as described in the passage?",
+    "options": ["A. Only doctors can determine capacity", "B. Capacity applies to all decisions equally", "C. A patient may have capacity for one decision but not another", "D. Capacity can only be assessed once"],
+    "correctAnswer": "C",
+    "explanation": "The passage states 'Capacity is decision-specific, meaning a patient may have capacity to consent to one procedure but not another'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-022", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "The concept of informed consent is central to modern medical ethics. For consent to be valid, a patient must have capacity — the ability to understand, retain, and weigh information and communicate a decision. Capacity is decision-specific, meaning a patient may have capacity to consent to one procedure but not another. The Mental Capacity Act 2005 provides a legal framework for assessing capacity and making decisions on behalf of those who lack it.",
+    "question": "What does the Mental Capacity Act 2005 provide?",
+    "options": ["A. A list of treatments requiring consent", "B. A legal framework for assessing capacity", "C. Guidelines for doctor training", "D. Rules for hospital administration"],
+    "correctAnswer": "B",
+    "explanation": "The passage states the Mental Capacity Act 2005 'provides a legal framework for assessing capacity'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-023", "subtest": "VR", "difficulty": "easy", "type": "multiple_choice",
+    "passage": "Obesity is now classified as a global epidemic by the World Health Organization. In England, approximately 28% of adults are classified as obese, with a further 36% classified as overweight. The health consequences are significant, including increased risk of type 2 diabetes, heart disease, stroke, and certain cancers. The causes are complex, involving genetic, environmental, and socioeconomic factors.",
+    "question": "What percentage of adults in England are classified as obese according to the passage?",
+    "options": ["A. 18%", "B. 28%", "C. 36%", "D. 46%"],
+    "correctAnswer": "B",
+    "explanation": "The passage states 'approximately 28% of adults are classified as obese'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-024", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "Obesity is now classified as a global epidemic by the World Health Organization. In England, approximately 28% of adults are classified as obese, with a further 36% classified as overweight. The health consequences are significant, including increased risk of type 2 diabetes, heart disease, stroke, and certain cancers. The causes are complex, involving genetic, environmental, and socioeconomic factors.",
+    "question": "What does the passage say about the causes of obesity?",
+    "options": ["A. Obesity is solely caused by poor diet", "B. The causes are simple and well understood", "C. Obesity is caused by genetic factors only", "D. The causes are complex and multifactorial"],
+    "correctAnswer": "D",
+    "explanation": "The passage states 'The causes are complex, involving genetic, environmental, and socioeconomic factors'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-025", "subtest": "VR", "difficulty": "hard", "type": "multiple_choice",
+    "passage": "Gene therapy involves introducing, altering, or replacing genetic material within a person's cells to treat or prevent disease. While the technology holds enormous promise — particularly for inherited conditions such as cystic fibrosis and sickle cell disease — it remains largely experimental. Ethical concerns centre on the distinction between therapeutic use, which aims to treat disease, and enhancement, which seeks to improve traits beyond normal human function.",
+    "question": "What ethical distinction does the passage highlight in relation to gene therapy?",
+    "options": ["A. Between public and private healthcare", "B. Between therapeutic use and enhancement", "C. Between adults and children receiving treatment", "D. Between approved and experimental drugs"],
+    "correctAnswer": "B",
+    "explanation": "Ethical concerns 'centre on the distinction between therapeutic use... and enhancement'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-026", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "Gene therapy involves introducing, altering, or replacing genetic material within a person's cells to treat or prevent disease. While the technology holds enormous promise — particularly for inherited conditions such as cystic fibrosis and sickle cell disease — it remains largely experimental. Ethical concerns centre on the distinction between therapeutic use, which aims to treat disease, and enhancement, which seeks to improve traits beyond normal human function.",
+    "question": "Which inherited conditions does the passage mention as potential beneficiaries of gene therapy?",
+    "options": ["A. Diabetes and arthritis", "B. Cancer and dementia", "C. Cystic fibrosis and sickle cell disease", "D. Asthma and multiple sclerosis"],
+    "correctAnswer": "C",
+    "explanation": "The passage mentions 'inherited conditions such as cystic fibrosis and sickle cell disease'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-027", "subtest": "VR", "difficulty": "easy", "type": "multiple_choice",
+    "passage": "Hand hygiene is considered the single most effective measure for preventing the spread of healthcare-associated infections. The World Health Organization's 'Five Moments for Hand Hygiene' framework identifies five key points in clinical practice when healthcare workers should clean their hands: before touching a patient, before a procedure, after a procedure, after touching a patient, and after touching a patient's surroundings.",
+    "question": "According to the WHO framework, how many key moments for hand hygiene are identified?",
+    "options": ["A. Three", "B. Four", "C. Five", "D. Six"],
+    "correctAnswer": "C",
+    "explanation": "The passage describes the WHO's 'Five Moments for Hand Hygiene' framework.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-028", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "Hand hygiene is considered the single most effective measure for preventing the spread of healthcare-associated infections. The World Health Organization's 'Five Moments for Hand Hygiene' framework identifies five key points in clinical practice when healthcare workers should clean their hands: before touching a patient, before a procedure, after a procedure, after touching a patient, and after touching a patient's surroundings.",
+    "question": "What does the passage identify as the single most effective measure for preventing healthcare-associated infections?",
+    "options": ["A. Wearing gloves", "B. Using antibiotics prophylactically", "C. Hand hygiene", "D. Isolating infected patients"],
+    "correctAnswer": "C",
+    "explanation": "The passage clearly states 'Hand hygiene is considered the single most effective measure'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-029", "subtest": "VR", "difficulty": "hard", "type": "multiple_choice",
+    "passage": "The global burden of non-communicable diseases (NCDs) — including cardiovascular disease, cancer, chronic respiratory conditions, and diabetes — now accounts for approximately 74% of all deaths worldwide. While once considered diseases of affluence, NCDs increasingly affect low- and middle-income countries. Factors such as urbanisation, dietary changes, and reduced physical activity are driving this shift. The WHO has called for greater investment in preventive care as the most cost-effective strategy.",
+    "question": "What does the passage suggest has changed about the perception of non-communicable diseases?",
+    "options": ["A. They are now considered easily treatable", "B. They were once seen as diseases of affluence but now affect poorer countries too", "C. They are caused entirely by genetic factors", "D. They only affect elderly populations"],
+    "correctAnswer": "B",
+    "explanation": "The passage states they were 'once considered diseases of affluence' but 'increasingly affect low- and middle-income countries'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-030", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "The global burden of non-communicable diseases (NCDs) — including cardiovascular disease, cancer, chronic respiratory conditions, and diabetes — now accounts for approximately 74% of all deaths worldwide. While once considered diseases of affluence, NCDs increasingly affect low- and middle-income countries. Factors such as urbanisation, dietary changes, and reduced physical activity are driving this shift. The WHO has called for greater investment in preventive care as the most cost-effective strategy.",
+    "question": "What strategy does the WHO call for as the most cost-effective approach?",
+    "options": ["A. Increased hospital capacity", "B. Greater investment in preventive care", "C. Development of new drugs", "D. Stricter food labelling regulations"],
+    "correctAnswer": "B",
+    "explanation": "The passage states 'The WHO has called for greater investment in preventive care as the most cost-effective strategy'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-031", "subtest": "VR", "difficulty": "easy", "type": "multiple_choice",
+    "passage": "Dementia affects over 900,000 people in the UK and is the leading cause of death among women. Alzheimer's disease is the most common form, accounting for around 60-70% of cases. While there is currently no cure, research into disease-modifying treatments has accelerated in recent years. Early diagnosis is considered crucial because it allows patients to plan for their future care and may enable access to treatments that slow progression.",
+    "question": "What is the most common form of dementia according to the passage?",
+    "options": ["A. Vascular dementia", "B. Lewy body dementia", "C. Alzheimer's disease", "D. Frontotemporal dementia"],
+    "correctAnswer": "C",
+    "explanation": "The passage states 'Alzheimer's disease is the most common form, accounting for around 60-70% of cases'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-032", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "Dementia affects over 900,000 people in the UK and is the leading cause of death among women. Alzheimer's disease is the most common form, accounting for around 60-70% of cases. While there is currently no cure, research into disease-modifying treatments has accelerated in recent years. Early diagnosis is considered crucial because it allows patients to plan for their future care and may enable access to treatments that slow progression.",
+    "question": "Why does the passage consider early diagnosis of dementia crucial?",
+    "options": ["A. It allows for a complete cure", "B. It allows patients to plan and may enable access to treatments", "C. It reduces the cost of care", "D. It prevents the disease from developing"],
+    "correctAnswer": "B",
+    "explanation": "Early diagnosis 'allows patients to plan for their future care and may enable access to treatments that slow progression'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-033", "subtest": "VR", "difficulty": "hard", "type": "multiple_choice",
+    "passage": "The principle of beneficence in medical ethics requires that healthcare professionals act in the best interests of their patients. However, this can sometimes come into tension with the principle of autonomy, which holds that patients have the right to make their own decisions about their care, even if those decisions may harm their health. When these principles conflict — for example, when a competent patient refuses life-saving treatment — clinicians must navigate a complex ethical and legal landscape.",
+    "question": "What tension does the passage describe in medical ethics?",
+    "options": ["A. Between cost and quality of care", "B. Between beneficence and patient autonomy", "C. Between junior and senior doctors", "D. Between private and public healthcare"],
+    "correctAnswer": "B",
+    "explanation": "The passage describes tension between beneficence — acting in patients' best interests — and autonomy — patients' right to decide.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-034", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "The principle of beneficence in medical ethics requires that healthcare professionals act in the best interests of their patients. However, this can sometimes come into tension with the principle of autonomy, which holds that patients have the right to make their own decisions about their care, even if those decisions may harm their health. When these principles conflict — for example, when a competent patient refuses life-saving treatment — clinicians must navigate a complex ethical and legal landscape.",
+    "question": "What does the principle of autonomy hold according to the passage?",
+    "options": ["A. Doctors always know best", "B. Patients can only make decisions with medical guidance", "C. Patients have the right to make their own decisions about their care", "D. Medical ethics is determined by law alone"],
+    "correctAnswer": "C",
+    "explanation": "Autonomy 'holds that patients have the right to make their own decisions about their care'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-035", "subtest": "VR", "difficulty": "easy", "type": "multiple_choice",
+    "passage": "The UK has one of the highest rates of childhood obesity in Europe. Around one in five children is obese when they start primary school, rising to one in three by the time they leave. The government has introduced a number of measures to address this, including restrictions on junk food advertising before the 9pm watershed, a sugar tax on soft drinks, and mandatory calorie labelling in restaurants.",
+    "question": "What proportion of children are obese when they leave primary school according to the passage?",
+    "options": ["A. One in five", "B. One in four", "C. One in three", "D. One in two"],
+    "correctAnswer": "C",
+    "explanation": "The passage states obesity rises to 'one in three by the time they leave' primary school.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-036", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "The UK has one of the highest rates of childhood obesity in Europe. Around one in five children is obese when they start primary school, rising to one in three by the time they leave. The government has introduced a number of measures to address this, including restrictions on junk food advertising before the 9pm watershed, a sugar tax on soft drinks, and mandatory calorie labelling in restaurants.",
+    "question": "Which of the following government measures is mentioned in the passage?",
+    "options": ["A. Banning fast food restaurants near schools", "B. Free gym memberships for children", "C. A sugar tax on soft drinks", "D. Compulsory PE lessons every day"],
+    "correctAnswer": "C",
+    "explanation": "The passage mentions 'a sugar tax on soft drinks' as one of the government measures.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-037", "subtest": "VR", "difficulty": "hard", "type": "multiple_choice",
+    "passage": "Artificial intelligence is increasingly being used in diagnostic medicine, with algorithms capable of detecting diabetic retinopathy, skin cancers, and certain tumours from images with accuracy matching or exceeding that of specialist clinicians. Proponents argue AI will reduce diagnostic errors and enable earlier detection of disease. Critics raise concerns about accountability: when an AI system makes an error, it is unclear who bears responsibility — the developer, the hospital, or the clinician.",
+    "question": "What concern do critics of AI in medicine raise according to the passage?",
+    "options": ["A. AI is less accurate than human clinicians", "B. AI is too expensive to implement widely", "C. Accountability when AI makes an error is unclear", "D. AI cannot process medical images"],
+    "correctAnswer": "C",
+    "explanation": "Critics raise concerns about 'accountability: when an AI system makes an error, it is unclear who bears responsibility'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-038", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "Artificial intelligence is increasingly being used in diagnostic medicine, with algorithms capable of detecting diabetic retinopathy, skin cancers, and certain tumours from images with accuracy matching or exceeding that of specialist clinicians. Proponents argue AI will reduce diagnostic errors and enable earlier detection of disease. Critics raise concerns about accountability: when an AI system makes an error, it is unclear who bears responsibility — the developer, the hospital, or the clinician.",
+    "question": "What benefit of AI in medicine do proponents argue for?",
+    "options": ["A. Reduced cost of hospital stays", "B. Reduction of diagnostic errors and earlier disease detection", "C. Elimination of the need for specialist doctors", "D. Faster drug development"],
+    "correctAnswer": "B",
+    "explanation": "Proponents argue 'AI will reduce diagnostic errors and enable earlier detection of disease'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-039", "subtest": "VR", "difficulty": "easy", "type": "multiple_choice",
+    "passage": "The Human Papillomavirus (HPV) vaccine protects against the strains of HPV most commonly associated with cervical cancer. Since its introduction in the UK school vaccination programme in 2008, rates of HPV infection among young women have fallen dramatically. The vaccine was later extended to boys as well. Studies have shown that vaccinated cohorts have significantly lower rates of pre-cancerous cervical changes.",
+    "question": "When was the HPV vaccine introduced in the UK school vaccination programme?",
+    "options": ["A. 2000", "B. 2004", "C. 2008", "D. 2012"],
+    "correctAnswer": "C",
+    "explanation": "The passage states the vaccine was introduced 'in 2008'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-040", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "The Human Papillomavirus (HPV) vaccine protects against the strains of HPV most commonly associated with cervical cancer. Since its introduction in the UK school vaccination programme in 2008, rates of HPV infection among young women have fallen dramatically. The vaccine was later extended to boys as well. Studies have shown that vaccinated cohorts have significantly lower rates of pre-cancerous cervical changes.",
+    "question": "What does the passage say about the extension of the HPV vaccine?",
+    "options": ["A. It was extended to elderly women", "B. It was extended to boys", "C. It was extended to healthcare workers", "D. It was withdrawn from the programme"],
+    "correctAnswer": "B",
+    "explanation": "The passage states 'The vaccine was later extended to boys as well'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-041", "subtest": "VR", "difficulty": "hard", "type": "multiple_choice",
+    "passage": "Social prescribing is a relatively new approach in primary care that allows GPs to refer patients to non-clinical services in the community, such as arts programmes, volunteering, and social groups. It is particularly aimed at patients whose health problems are rooted in social isolation, financial stress, or lack of purpose. Proponents argue it addresses the root causes of ill health rather than treating symptoms. Critics question the evidence base and worry it may divert resources from clinical services.",
+    "question": "What concern do critics of social prescribing raise?",
+    "options": ["A. It is too expensive to implement", "B. GPs lack the authority to make referrals", "C. The evidence base is questioned and resources may be diverted from clinical care", "D. Community organisations cannot handle patient referrals"],
+    "correctAnswer": "C",
+    "explanation": "Critics 'question the evidence base and worry it may divert resources from clinical services'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-042", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "Social prescribing is a relatively new approach in primary care that allows GPs to refer patients to non-clinical services in the community, such as arts programmes, volunteering, and social groups. It is particularly aimed at patients whose health problems are rooted in social isolation, financial stress, or lack of purpose. Proponents argue it addresses the root causes of ill health rather than treating symptoms. Critics question the evidence base and worry it may divert resources from clinical services.",
+    "question": "What types of patients is social prescribing particularly aimed at?",
+    "options": ["A. Patients with severe physical illness", "B. Patients whose problems are rooted in social isolation or financial stress", "C. Elderly patients in care homes", "D. Patients awaiting surgery"],
+    "correctAnswer": "B",
+    "explanation": "It is aimed at 'patients whose health problems are rooted in social isolation, financial stress, or lack of purpose'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-043", "subtest": "VR", "difficulty": "easy", "type": "multiple_choice",
+    "passage": "Cardiovascular disease remains the leading cause of death globally, responsible for approximately 18 million deaths per year. Risk factors include high blood pressure, high cholesterol, smoking, diabetes, obesity, and physical inactivity. Many of these are modifiable, meaning that lifestyle changes and medical interventions can significantly reduce an individual's risk. Public health campaigns have focused on raising awareness of these risk factors and promoting healthy behaviours.",
+    "question": "How many deaths per year does cardiovascular disease cause globally according to the passage?",
+    "options": ["A. 8 million", "B. 12 million", "C. 18 million", "D. 25 million"],
+    "correctAnswer": "C",
+    "explanation": "The passage states cardiovascular disease is 'responsible for approximately 18 million deaths per year'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-044", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "Cardiovascular disease remains the leading cause of death globally, responsible for approximately 18 million deaths per year. Risk factors include high blood pressure, high cholesterol, smoking, diabetes, obesity, and physical inactivity. Many of these are modifiable, meaning that lifestyle changes and medical interventions can significantly reduce an individual's risk. Public health campaigns have focused on raising awareness of these risk factors and promoting healthy behaviours.",
+    "question": "What does the passage mean by 'modifiable' risk factors?",
+    "options": ["A. Risk factors that cannot be changed", "B. Risk factors that only affect certain populations", "C. Risk factors that can be reduced through lifestyle changes or medical intervention", "D. Risk factors caused by genetics"],
+    "correctAnswer": "C",
+    "explanation": "The passage explains modifiable means 'lifestyle changes and medical interventions can significantly reduce an individual's risk'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-045", "subtest": "VR", "difficulty": "hard", "type": "multiple_choice",
+    "passage": "The opioid crisis in the United States has claimed hundreds of thousands of lives over the past two decades. Initially driven by the overprescribing of legal opioid painkillers such as oxycodone, the crisis evolved as patients turned to illicit alternatives including heroin and fentanyl when access to prescription drugs became restricted. Critics of pharmaceutical companies argue that misleading marketing downplayed the addictive potential of these medications.",
+    "question": "What does the passage suggest happened when access to prescription opioids became restricted?",
+    "options": ["A. Opioid addiction rates fell significantly", "B. Patients turned to illicit alternatives like heroin and fentanyl", "C. Pharmaceutical companies increased production", "D. Patients sought help from addiction services"],
+    "correctAnswer": "B",
+    "explanation": "The passage states 'patients turned to illicit alternatives including heroin and fentanyl when access to prescription drugs became restricted'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-046", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "The opioid crisis in the United States has claimed hundreds of thousands of lives over the past two decades. Initially driven by the overprescribing of legal opioid painkillers such as oxycodone, the crisis evolved as patients turned to illicit alternatives including heroin and fentanyl when access to prescription drugs became restricted. Critics of pharmaceutical companies argue that misleading marketing downplayed the addictive potential of these medications.",
+    "question": "What do critics accuse pharmaceutical companies of in relation to the opioid crisis?",
+    "options": ["A. Producing unsafe medications", "B. Overcharging patients for treatment", "C. Misleading marketing that downplayed addictive potential", "D. Failing to fund addiction research"],
+    "correctAnswer": "C",
+    "explanation": "Critics argue 'misleading marketing downplayed the addictive potential of these medications'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-047", "subtest": "VR", "difficulty": "easy", "type": "multiple_choice",
+    "passage": "Screening programmes aim to detect disease at an early stage in people who have no symptoms, when treatment is more likely to be effective. The NHS offers screening for a range of conditions including bowel cancer, breast cancer, cervical cancer, and abdominal aortic aneurysm. Not everyone benefits equally from screening — some people receive false positive results that lead to unnecessary investigations and anxiety.",
+    "question": "What is the main aim of screening programmes according to the passage?",
+    "options": ["A. To treat disease in its advanced stages", "B. To detect disease early in people without symptoms", "C. To vaccinate high-risk populations", "D. To monitor patients already receiving treatment"],
+    "correctAnswer": "B",
+    "explanation": "Screening aims 'to detect disease at an early stage in people who have no symptoms'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-048", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "Screening programmes aim to detect disease at an early stage in people who have no symptoms, when treatment is more likely to be effective. The NHS offers screening for a range of conditions including bowel cancer, breast cancer, cervical cancer, and abdominal aortic aneurysm. Not everyone benefits equally from screening — some people receive false positive results that lead to unnecessary investigations and anxiety.",
+    "question": "What problem does the passage identify with screening programmes?",
+    "options": ["A. They are too expensive to run", "B. They only detect advanced disease", "C. Some people receive false positive results leading to unnecessary investigations", "D. Doctors do not trust the results"],
+    "correctAnswer": "C",
+    "explanation": "The passage states 'some people receive false positive results that lead to unnecessary investigations and anxiety'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-049", "subtest": "VR", "difficulty": "hard", "type": "multiple_choice",
+    "passage": "Integrated care systems (ICSs) were formally established across England in 2022 following the Health and Care Act. They bring together NHS organisations, local authorities, and other partners to plan and deliver health and care services for their local populations. The rationale is that health outcomes improve when services are coordinated across primary care, secondary care, social care, and public health rather than operating in silos.",
+    "question": "What is the rationale behind integrated care systems as described in the passage?",
+    "options": ["A. To reduce the number of hospitals in England", "B. To privatise healthcare services", "C. To improve outcomes through coordinated services across care settings", "D. To eliminate the role of local authorities in healthcare"],
+    "correctAnswer": "C",
+    "explanation": "The rationale is that 'health outcomes improve when services are coordinated across primary care, secondary care, social care, and public health'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-050", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "Integrated care systems (ICSs) were formally established across England in 2022 following the Health and Care Act. They bring together NHS organisations, local authorities, and other partners to plan and deliver health and care services for their local populations. The rationale is that health outcomes improve when services are coordinated across primary care, secondary care, social care, and public health rather than operating in silos.",
+    "question": "When were integrated care systems formally established in England?",
+    "options": ["A. 2015", "B. 2018", "C. 2020", "D. 2022"],
+    "correctAnswer": "D",
+    "explanation": "The passage states ICSs 'were formally established across England in 2022'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-051", "subtest": "VR", "difficulty": "easy", "type": "multiple_choice",
+    "passage": "Smoking remains the leading preventable cause of death in the UK, responsible for around 76,000 deaths per year. It is a major risk factor for lung cancer, chronic obstructive pulmonary disease, heart disease, and stroke. Despite a significant decline in smoking rates over recent decades — from around 50% of adults in the 1970s to approximately 13% today — it remains more common among people in lower socioeconomic groups.",
+    "question": "How many deaths per year in the UK are attributed to smoking according to the passage?",
+    "options": ["A. 40,000", "B. 56,000", "C. 76,000", "D. 100,000"],
+    "correctAnswer": "C",
+    "explanation": "The passage states smoking is 'responsible for around 76,000 deaths per year'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-052", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "Smoking remains the leading preventable cause of death in the UK, responsible for around 76,000 deaths per year. It is a major risk factor for lung cancer, chronic obstructive pulmonary disease, heart disease, and stroke. Despite a significant decline in smoking rates over recent decades — from around 50% of adults in the 1970s to approximately 13% today — it remains more common among people in lower socioeconomic groups.",
+    "question": "What does the passage say about the current prevalence of smoking compared to the 1970s?",
+    "options": ["A. Smoking rates have increased since the 1970s", "B. Rates have fallen from around 50% to approximately 13%", "C. Around half of adults still smoke", "D. Smoking rates have remained stable"],
+    "correctAnswer": "B",
+    "explanation": "The passage states rates have fallen 'from around 50% of adults in the 1970s to approximately 13% today'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-053", "subtest": "VR", "difficulty": "hard", "type": "multiple_choice",
+    "passage": "The right to die — specifically, whether terminally ill patients should be able to request assistance to end their lives — remains one of the most contested ethical debates in medicine. In the UK, assisted dying is currently illegal. Opponents include many in the medical profession who argue it conflicts with the Hippocratic tradition and risks creating pressure on vulnerable people to end their lives prematurely. Supporters argue that individual autonomy and the relief of suffering should be paramount.",
+    "question": "What argument do opponents of assisted dying in the medical profession put forward?",
+    "options": ["A. It would increase NHS costs", "B. It conflicts with the Hippocratic tradition and risks pressuring vulnerable people", "C. Patients cannot make rational decisions when ill", "D. It would lead to overuse of palliative care"],
+    "correctAnswer": "B",
+    "explanation": "Opponents argue it 'conflicts with the Hippocratic tradition and risks creating pressure on vulnerable people to end their lives prematurely'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-054", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "The right to die — specifically, whether terminally ill patients should be able to request assistance to end their lives — remains one of the most contested ethical debates in medicine. In the UK, assisted dying is currently illegal. Opponents include many in the medical profession who argue it conflicts with the Hippocratic tradition and risks creating pressure on vulnerable people to end their lives prematurely. Supporters argue that individual autonomy and the relief of suffering should be paramount.",
+    "question": "What is the current legal status of assisted dying in the UK according to the passage?",
+    "options": ["A. It is legal for terminally ill patients", "B. It is legal only with a court order", "C. It is illegal", "D. It is under review by Parliament"],
+    "correctAnswer": "C",
+    "explanation": "The passage states 'In the UK, assisted dying is currently illegal'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-055", "subtest": "VR", "difficulty": "easy", "type": "multiple_choice",
+    "passage": "Health inequalities refer to the avoidable, unfair, and systematic differences in health between different groups of people. In England, people living in the most deprived areas can expect to live around 19 fewer years in good health compared to those in the least deprived areas. These inequalities are driven by differences in income, education, housing, employment, and access to services.",
+    "question": "How many fewer years in good health can people in the most deprived areas expect compared to those in the least deprived areas?",
+    "options": ["A. 9 years", "B. 14 years", "C. 19 years", "D. 25 years"],
+    "correctAnswer": "C",
+    "explanation": "The passage states people in the most deprived areas 'can expect to live around 19 fewer years in good health'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-056", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "Health inequalities refer to the avoidable, unfair, and systematic differences in health between different groups of people. In England, people living in the most deprived areas can expect to live around 19 fewer years in good health compared to those in the least deprived areas. These inequalities are driven by differences in income, education, housing, employment, and access to services.",
+    "question": "What does the passage say drives health inequalities?",
+    "options": ["A. Genetic differences between populations", "B. Differences in individual lifestyle choices", "C. Differences in income, education, housing, employment, and access to services", "D. The quality of local NHS services"],
+    "correctAnswer": "C",
+    "explanation": "Inequalities are 'driven by differences in income, education, housing, employment, and access to services'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-057", "subtest": "VR", "difficulty": "hard", "type": "multiple_choice",
+    "passage": "Research published in the Lancet suggested that alcohol is the leading risk factor for death and disability in people aged 15-49 in the developed world. Despite this, alcohol occupies a unique cultural position in many societies, making public health intervention politically sensitive. Policies such as minimum unit pricing — introduced in Scotland in 2018 — aim to reduce consumption by raising the price of the cheapest alcohol without disproportionately affecting moderate drinkers.",
+    "question": "What is the purpose of minimum unit pricing for alcohol as described in the passage?",
+    "options": ["A. To raise tax revenue for the NHS", "B. To ban the sale of strong alcohol", "C. To reduce consumption by raising the price of the cheapest alcohol without disproportionately affecting moderate drinkers", "D. To limit the number of alcohol licences issued"],
+    "correctAnswer": "C",
+    "explanation": "Minimum unit pricing aims 'to reduce consumption by raising the price of the cheapest alcohol without disproportionately affecting moderate drinkers'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-058", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "Research published in the Lancet suggested that alcohol is the leading risk factor for death and disability in people aged 15-49 in the developed world. Despite this, alcohol occupies a unique cultural position in many societies, making public health intervention politically sensitive. Policies such as minimum unit pricing — introduced in Scotland in 2018 — aim to reduce consumption by raising the price of the cheapest alcohol without disproportionately affecting moderate drinkers.",
+    "question": "When was minimum unit pricing for alcohol introduced in Scotland?",
+    "options": ["A. 2012", "B. 2015", "C. 2018", "D. 2020"],
+    "correctAnswer": "C",
+    "explanation": "The passage states minimum unit pricing was 'introduced in Scotland in 2018'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-059", "subtest": "VR", "difficulty": "easy", "type": "multiple_choice",
+    "passage": "The COVID-19 pandemic highlighted the critical importance of public health infrastructure. Countries with strong primary care systems, robust data collection, and existing pandemic preparedness plans were better able to respond to the crisis. The pandemic also demonstrated the speed at which vaccines can be developed when scientific resources and funding are concentrated — the mRNA vaccines developed in 2020 were unprecedented in their speed of development.",
+    "question": "What does the passage say was unprecedented about the mRNA vaccines developed in 2020?",
+    "options": ["A. Their cost of development", "B. Their speed of development", "C. The number of countries involved in their creation", "D. The immunity they provided"],
+    "correctAnswer": "B",
+    "explanation": "The passage states the mRNA vaccines 'were unprecedented in their speed of development'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-060", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "The COVID-19 pandemic highlighted the critical importance of public health infrastructure. Countries with strong primary care systems, robust data collection, and existing pandemic preparedness plans were better able to respond to the crisis. The pandemic also demonstrated the speed at which vaccines can be developed when scientific resources and funding are concentrated — the mRNA vaccines developed in 2020 were unprecedented in their speed of development.",
+    "question": "What factors does the passage suggest helped countries respond better to the COVID-19 pandemic?",
+    "options": ["A. Large military forces and border controls", "B. Strong primary care, robust data collection, and pandemic preparedness", "C. Wealthy economies and advanced technology", "D. Geographic isolation from other countries"],
+    "correctAnswer": "B",
+    "explanation": "Countries with 'strong primary care systems, robust data collection, and existing pandemic preparedness plans were better able to respond'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-061", "subtest": "VR", "difficulty": "hard", "type": "multiple_choice",
+    "passage": "Whistleblowing in healthcare refers to the act of raising concerns about unsafe or unethical practices within an organisation. Following high-profile scandals such as the Mid Staffordshire NHS Trust failings, legislation has sought to better protect healthcare workers who raise concerns. The Public Interest Disclosure Act 1998 provides legal protection for workers who report wrongdoing in good faith. Despite this, surveys suggest many healthcare professionals still fear reprisals for speaking up.",
+    "question": "What does the passage suggest about the effectiveness of legal protections for whistleblowers?",
+    "options": ["A. Legal protections have eliminated all fear of reprisals", "B. Many healthcare professionals still fear reprisals despite legal protection", "C. Whistleblowing has increased significantly since 1998", "D. The legal protections are considered too broad"],
+    "correctAnswer": "B",
+    "explanation": "The passage states 'surveys suggest many healthcare professionals still fear reprisals for speaking up'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-062", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "Whistleblowing in healthcare refers to the act of raising concerns about unsafe or unethical practices within an organisation. Following high-profile scandals such as the Mid Staffordshire NHS Trust failings, legislation has sought to better protect healthcare workers who raise concerns. The Public Interest Disclosure Act 1998 provides legal protection for workers who report wrongdoing in good faith. Despite this, surveys suggest many healthcare professionals still fear reprisals for speaking up.",
+    "question": "What does the Public Interest Disclosure Act 1998 do?",
+    "options": ["A. Requires all NHS staff to report concerns", "B. Provides legal protection for workers who report wrongdoing in good faith", "C. Establishes a whistleblowing hotline for patients", "D. Penalises organisations that ignore safety concerns"],
+    "correctAnswer": "B",
+    "explanation": "The Act 'provides legal protection for workers who report wrongdoing in good faith'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-063", "subtest": "VR", "difficulty": "easy", "type": "multiple_choice",
+    "passage": "Palliative care focuses on improving the quality of life for patients with life-limiting illnesses and their families by managing pain and other symptoms, rather than seeking to cure the underlying disease. The World Health Organization recognises palliative care as an ethical responsibility of health systems. In the UK, hospices play a significant role in delivering palliative care, though much of this care is provided at home or in general hospitals.",
+    "question": "What is the focus of palliative care according to the passage?",
+    "options": ["A. Curing life-limiting illnesses", "B. Improving quality of life by managing pain and symptoms", "C. Providing surgical interventions", "D. Long-term rehabilitation"],
+    "correctAnswer": "B",
+    "explanation": "Palliative care focuses on 'improving the quality of life... by managing pain and other symptoms'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-064", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "Palliative care focuses on improving the quality of life for patients with life-limiting illnesses and their families by managing pain and other symptoms, rather than seeking to cure the underlying disease. The World Health Organization recognises palliative care as an ethical responsibility of health systems. In the UK, hospices play a significant role in delivering palliative care, though much of this care is provided at home or in general hospitals.",
+    "question": "Where does the passage say much palliative care in the UK is provided?",
+    "options": ["A. Exclusively in hospices", "B. Only in specialist cancer centres", "C. At home or in general hospitals", "D. In nursing homes only"],
+    "correctAnswer": "C",
+    "explanation": "The passage states 'much of this care is provided at home or in general hospitals'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-065", "subtest": "VR", "difficulty": "hard", "type": "multiple_choice",
+    "passage": "The concept of rationing in healthcare is often presented as a taboo subject, yet all health systems ration care in some form — whether explicitly, through formal criteria for treatment, or implicitly, through waiting times and resource constraints. In England, NICE (the National Institute for Health and Care Excellence) uses a measure called the Quality-Adjusted Life Year (QALY) to determine whether new treatments offer sufficient benefit to justify their cost.",
+    "question": "What does NICE use the QALY measure for?",
+    "options": ["A. To assess doctor performance", "B. To determine whether new treatments offer sufficient benefit to justify their cost", "C. To rank hospitals by quality of care", "D. To calculate patient waiting times"],
+    "correctAnswer": "B",
+    "explanation": "NICE uses QALY 'to determine whether new treatments offer sufficient benefit to justify their cost'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-066", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "The concept of rationing in healthcare is often presented as a taboo subject, yet all health systems ration care in some form — whether explicitly, through formal criteria for treatment, or implicitly, through waiting times and resource constraints. In England, NICE (the National Institute for Health and Care Excellence) uses a measure called the Quality-Adjusted Life Year (QALY) to determine whether new treatments offer sufficient benefit to justify their cost.",
+    "question": "What does the passage say about rationing in health systems?",
+    "options": ["A. Only the NHS rations care", "B. Rationing is always done explicitly with formal criteria", "C. All health systems ration care in some form", "D. Rationing has been eliminated in developed countries"],
+    "correctAnswer": "C",
+    "explanation": "The passage states 'all health systems ration care in some form'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-067", "subtest": "VR", "difficulty": "easy", "type": "multiple_choice",
+    "passage": "Type 1 diabetes is an autoimmune condition in which the body's immune system destroys the insulin-producing cells in the pancreas. People with type 1 diabetes require insulin therapy for life. Unlike type 2 diabetes, which is strongly associated with lifestyle factors such as obesity and physical inactivity, type 1 diabetes is not preventable and is unrelated to lifestyle.",
+    "question": "What distinguishes type 1 from type 2 diabetes according to the passage?",
+    "options": ["A. Type 1 is more common than type 2", "B. Type 1 is preventable through diet", "C. Type 1 is not preventable and is unrelated to lifestyle", "D. Type 2 requires insulin therapy"],
+    "correctAnswer": "C",
+    "explanation": "The passage states 'type 1 diabetes is not preventable and is unrelated to lifestyle'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-068", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "Type 1 diabetes is an autoimmune condition in which the body's immune system destroys the insulin-producing cells in the pancreas. People with type 1 diabetes require insulin therapy for life. Unlike type 2 diabetes, which is strongly associated with lifestyle factors such as obesity and physical inactivity, type 1 diabetes is not preventable and is unrelated to lifestyle.",
+    "question": "Why do people with type 1 diabetes require insulin therapy?",
+    "options": ["A. Their body produces too much insulin", "B. Their immune system has destroyed the insulin-producing cells", "C. They have developed resistance to insulin", "D. Their liver fails to store glucose"],
+    "correctAnswer": "B",
+    "explanation": "The immune system 'destroys the insulin-producing cells in the pancreas', so insulin must be provided externally.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-069", "subtest": "VR", "difficulty": "hard", "type": "multiple_choice",
+    "passage": "Public health law encompasses the legal powers governments use to protect and promote population health, including powers to quarantine individuals, mandate vaccination, and regulate food and drug safety. These powers inevitably involve trade-offs between individual liberty and collective wellbeing. During the COVID-19 pandemic, the use of lockdowns demonstrated the difficulty of these trade-offs, with significant debate about proportionality, scientific justification, and democratic accountability.",
+    "question": "What debate did lockdowns during COVID-19 highlight according to the passage?",
+    "options": ["A. Whether vaccines should be mandatory", "B. The difficulty of trade-offs between individual liberty and collective wellbeing", "C. The role of private healthcare in pandemics", "D. Whether governments have sufficient legal powers"],
+    "correctAnswer": "B",
+    "explanation": "Lockdowns demonstrated 'the difficulty of these trade-offs, with significant debate about proportionality, scientific justification, and democratic accountability'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-070", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "Public health law encompasses the legal powers governments use to protect and promote population health, including powers to quarantine individuals, mandate vaccination, and regulate food and drug safety. These powers inevitably involve trade-offs between individual liberty and collective wellbeing. During the COVID-19 pandemic, the use of lockdowns demonstrated the difficulty of these trade-offs, with significant debate about proportionality, scientific justification, and democratic accountability.",
+    "question": "What legal powers does public health law give governments according to the passage?",
+    "options": ["A. Power to privatise healthcare services", "B. Power to quarantine individuals, mandate vaccination, and regulate food and drug safety", "C. Power to close NHS hospitals", "D. Power to control media reporting on health issues"],
+    "correctAnswer": "B",
+    "explanation": "Public health law includes 'powers to quarantine individuals, mandate vaccination, and regulate food and drug safety'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-071", "subtest": "VR", "difficulty": "easy", "type": "multiple_choice",
+    "passage": "The term 'multimorbidity' refers to the presence of two or more long-term health conditions in the same person. It is increasingly common as populations age, and presents significant challenges for healthcare systems designed around treating single conditions. People with multimorbidity are more likely to experience polypharmacy — the use of five or more medications — which increases the risk of drug interactions and adverse effects.",
+    "question": "What does 'multimorbidity' mean according to the passage?",
+    "options": ["A. A single very serious illness", "B. Two or more long-term health conditions in the same person", "C. A chronic condition requiring multiple treatments", "D. Any illness affecting multiple organs"],
+    "correctAnswer": "B",
+    "explanation": "Multimorbidity is 'the presence of two or more long-term health conditions in the same person'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-072", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "The term 'multimorbidity' refers to the presence of two or more long-term health conditions in the same person. It is increasingly common as populations age, and presents significant challenges for healthcare systems designed around treating single conditions. People with multimorbidity are more likely to experience polypharmacy — the use of five or more medications — which increases the risk of drug interactions and adverse effects.",
+    "question": "What risk does polypharmacy increase according to the passage?",
+    "options": ["A. Risk of developing new conditions", "B. Risk of drug interactions and adverse effects", "C. Risk of hospital-acquired infections", "D. Risk of treatment non-compliance"],
+    "correctAnswer": "B",
+    "explanation": "Polypharmacy 'increases the risk of drug interactions and adverse effects'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-073", "subtest": "VR", "difficulty": "hard", "type": "multiple_choice",
+    "passage": "The Dunning-Kruger effect describes a cognitive bias in which people with limited knowledge or competence in a subject overestimate their own ability, while experts tend to underestimate their relative competence. In a medical context, this has implications for patient self-diagnosis and the challenge of communicating risk to patients. Studies have shown that patients with low health literacy may be overconfident in their understanding of their diagnosis and treatment.",
+    "question": "How does the Dunning-Kruger effect apply in a medical context according to the passage?",
+    "options": ["A. Expert doctors overestimate their abilities", "B. Patients with low health literacy may be overconfident in their understanding", "C. Medical students consistently underperform in examinations", "D. Patient confidence has no bearing on treatment outcomes"],
+    "correctAnswer": "B",
+    "explanation": "The passage states 'patients with low health literacy may be overconfident in their understanding of their diagnosis and treatment'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-074", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "The Dunning-Kruger effect describes a cognitive bias in which people with limited knowledge or competence in a subject overestimate their own ability, while experts tend to underestimate their relative competence. In a medical context, this has implications for patient self-diagnosis and the challenge of communicating risk to patients. Studies have shown that patients with low health literacy may be overconfident in their understanding of their diagnosis and treatment.",
+    "question": "According to the Dunning-Kruger effect as described in the passage, what do experts tend to do?",
+    "options": ["A. Overestimate their own competence", "B. Underestimate their relative competence", "C. Accurately assess their own abilities", "D. Avoid making decisions"],
+    "correctAnswer": "B",
+    "explanation": "The passage states 'experts tend to underestimate their relative competence'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-075", "subtest": "VR", "difficulty": "easy", "type": "multiple_choice",
+    "passage": "A randomised controlled trial (RCT) is considered the gold standard for evaluating the effectiveness of a medical treatment. In an RCT, participants are randomly assigned to either a treatment group or a control group, and outcomes are compared. Randomisation minimises the effect of confounding variables — factors that might otherwise distort the results. Blinding, where participants and sometimes researchers do not know who is in which group, further reduces bias.",
+    "question": "Why is randomisation used in randomised controlled trials?",
+    "options": ["A. To ensure all participants receive the same treatment", "B. To minimise the effect of confounding variables", "C. To speed up the trial process", "D. To reduce the cost of the study"],
+    "correctAnswer": "B",
+    "explanation": "Randomisation 'minimises the effect of confounding variables — factors that might otherwise distort the results'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-076", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "A randomised controlled trial (RCT) is considered the gold standard for evaluating the effectiveness of a medical treatment. In an RCT, participants are randomly assigned to either a treatment group or a control group, and outcomes are compared. Randomisation minimises the effect of confounding variables — factors that might otherwise distort the results. Blinding, where participants and sometimes researchers do not know who is in which group, further reduces bias.",
+    "question": "What is the purpose of blinding in an RCT?",
+    "options": ["A. To speed up data analysis", "B. To ensure equal group sizes", "C. To further reduce bias", "D. To protect participant confidentiality"],
+    "correctAnswer": "C",
+    "explanation": "Blinding 'further reduces bias' by preventing knowledge of group assignment from influencing results.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-077", "subtest": "VR", "difficulty": "hard", "type": "multiple_choice",
+    "passage": "The pharmaceutical industry invests billions annually in research and development, yet the majority of drug candidates fail before reaching market. Critics argue that too much investment goes into 'me-too' drugs — slight variations of existing medications that offer little clinical benefit but can be patented and sold at high prices. Meanwhile, diseases predominantly affecting low-income countries receive disproportionately little research funding because they represent smaller commercial markets.",
+    "question": "What criticism does the passage make of pharmaceutical research investment?",
+    "options": ["A. Too much is spent on drug safety testing", "B. Too much goes into me-too drugs while neglecting diseases in low-income countries", "C. Companies do not invest enough in marketing", "D. Clinical trials are not conducted rigorously enough"],
+    "correctAnswer": "B",
+    "explanation": "Critics argue too much goes into 'me-too' drugs while diseases in low-income countries receive 'disproportionately little research funding'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-078", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "The pharmaceutical industry invests billions annually in research and development, yet the majority of drug candidates fail before reaching market. Critics argue that too much investment goes into 'me-too' drugs — slight variations of existing medications that offer little clinical benefit but can be patented and sold at high prices. Meanwhile, diseases predominantly affecting low-income countries receive disproportionately little research funding because they represent smaller commercial markets.",
+    "question": "What are 'me-too' drugs according to the passage?",
+    "options": ["A. Generic versions of branded medications", "B. Drugs developed from natural compounds", "C. Slight variations of existing medications with little additional clinical benefit", "D. Experimental treatments not yet approved"],
+    "correctAnswer": "C",
+    "explanation": "Me-too drugs are 'slight variations of existing medications that offer little clinical benefit but can be patented and sold at high prices'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-079", "subtest": "VR", "difficulty": "easy", "type": "multiple_choice",
+    "passage": "Childhood immunisation programmes protect individual children from serious diseases and contribute to herd immunity, protecting those who cannot be vaccinated — such as newborns or immunocompromised individuals. The UK routine immunisation schedule begins shortly after birth and continues through childhood. Coverage rates need to remain above approximately 95% for diseases like measles to be kept under control.",
+    "question": "What coverage rate does the passage suggest is needed to keep measles under control?",
+    "options": ["A. Above 75%", "B. Above 85%", "C. Above 95%", "D. 100%"],
+    "correctAnswer": "C",
+    "explanation": "The passage states coverage 'need to remain above approximately 95% for diseases like measles to be kept under control'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-080", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "Childhood immunisation programmes protect individual children from serious diseases and contribute to herd immunity, protecting those who cannot be vaccinated — such as newborns or immunocompromised individuals. The UK routine immunisation schedule begins shortly after birth and continues through childhood. Coverage rates need to remain above approximately 95% for diseases like measles to be kept under control.",
+    "question": "Who does the passage say benefits from herd immunity when vaccination coverage is high?",
+    "options": ["A. Only vaccinated children", "B. Healthcare workers", "C. Those who cannot be vaccinated, such as newborns", "D. Elderly people only"],
+    "correctAnswer": "C",
+    "explanation": "Herd immunity protects 'those who cannot be vaccinated — such as newborns or immunocompromised individuals'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-081", "subtest": "VR", "difficulty": "hard", "type": "multiple_choice",
+    "passage": "Health technology assessment (HTA) is the process by which healthcare decision-makers evaluate the clinical and economic evidence for new health technologies — including drugs, devices, and procedures — to inform decisions about their adoption within health systems. In England, NICE conducts HTA and issues guidance that the NHS is legally required to implement within 90 days of publication for approved treatments.",
+    "question": "What is the NHS legally required to do when NICE approves a new treatment?",
+    "options": ["A. Consult with patients before adopting it", "B. Implement the guidance within 90 days of publication", "C. Commission further trials before adoption", "D. Seek ministerial approval before implementation"],
+    "correctAnswer": "B",
+    "explanation": "The NHS is 'legally required to implement within 90 days of publication for approved treatments'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-082", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "Health technology assessment (HTA) is the process by which healthcare decision-makers evaluate the clinical and economic evidence for new health technologies — including drugs, devices, and procedures — to inform decisions about their adoption within health systems. In England, NICE conducts HTA and issues guidance that the NHS is legally required to implement within 90 days of publication for approved treatments.",
+    "question": "What does health technology assessment evaluate?",
+    "options": ["A. The safety record of NHS hospitals", "B. The clinical and economic evidence for new health technologies", "C. The qualifications of healthcare professionals", "D. Patient satisfaction with existing treatments"],
+    "correctAnswer": "B",
+    "explanation": "HTA evaluates 'the clinical and economic evidence for new health technologies'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-083", "subtest": "VR", "difficulty": "easy", "type": "multiple_choice",
+    "passage": "Stroke is a medical emergency that occurs when the blood supply to part of the brain is cut off. There are two main types: ischaemic stroke, caused by a blood clot, and haemorrhagic stroke, caused by a bleed in the brain. Ischaemic strokes account for around 85% of all strokes. Time is critical — the longer the brain is deprived of oxygen, the greater the damage. The phrase 'time is brain' is used to emphasise the importance of rapid treatment.",
+    "question": "What proportion of strokes are ischaemic according to the passage?",
+    "options": ["A. 50%", "B. 70%", "C. 85%", "D. 95%"],
+    "correctAnswer": "C",
+    "explanation": "The passage states 'Ischaemic strokes account for around 85% of all strokes'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-084", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "Stroke is a medical emergency that occurs when the blood supply to part of the brain is cut off. There are two main types: ischaemic stroke, caused by a blood clot, and haemorrhagic stroke, caused by a bleed in the brain. Ischaemic strokes account for around 85% of all strokes. Time is critical — the longer the brain is deprived of oxygen, the greater the damage. The phrase 'time is brain' is used to emphasise the importance of rapid treatment.",
+    "question": "What does the phrase 'time is brain' emphasise according to the passage?",
+    "options": ["A. The intelligence required to diagnose strokes", "B. The importance of patient education about stroke symptoms", "C. The importance of rapid treatment", "D. The time taken to develop new stroke treatments"],
+    "correctAnswer": "C",
+    "explanation": "The phrase 'is used to emphasise the importance of rapid treatment'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-085", "subtest": "VR", "difficulty": "hard", "type": "multiple_choice",
+    "passage": "Evidence-based medicine (EBM) involves integrating the best available research evidence with clinical expertise and patient values to make decisions about individual patient care. It emerged as a movement in the early 1990s as a response to concerns that many clinical practices lacked a sound evidence base. Critics of EBM argue that an over-reliance on population-level evidence from RCTs may not always translate to individual patients, who may differ significantly from trial populations.",
+    "question": "What criticism of evidence-based medicine does the passage present?",
+    "options": ["A. It is too expensive to implement", "B. Population-level evidence may not always apply to individual patients", "C. It ignores clinical expertise", "D. RCTs are rarely conducted in medicine"],
+    "correctAnswer": "B",
+    "explanation": "Critics argue 'population-level evidence from RCTs may not always translate to individual patients, who may differ significantly from trial populations'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-086", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "Evidence-based medicine (EBM) involves integrating the best available research evidence with clinical expertise and patient values to make decisions about individual patient care. It emerged as a movement in the early 1990s as a response to concerns that many clinical practices lacked a sound evidence base. Critics of EBM argue that an over-reliance on population-level evidence from RCTs may not always translate to individual patients, who may differ significantly from trial populations.",
+    "question": "Why did evidence-based medicine emerge in the early 1990s?",
+    "options": ["A. In response to a lack of doctors in the NHS", "B. Due to concerns that many clinical practices lacked a sound evidence base", "C. Because of advances in computer technology", "D. As a result of patient demand for better care"],
+    "correctAnswer": "B",
+    "explanation": "EBM emerged 'as a response to concerns that many clinical practices lacked a sound evidence base'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-087", "subtest": "VR", "difficulty": "easy", "type": "multiple_choice",
+    "passage": "Cancer is not a single disease but a group of more than 100 different conditions, each with different causes, treatments, and prognoses. In the UK, around 375,000 new cancer cases are diagnosed each year. The four most common cancers are breast, prostate, lung, and bowel cancer. Survival rates have improved significantly over the past 40 years, with around half of all patients now surviving for ten or more years after diagnosis.",
+    "question": "What are the four most common cancers in the UK according to the passage?",
+    "options": ["A. Skin, liver, kidney, and stomach", "B. Breast, prostate, lung, and bowel", "C. Brain, pancreatic, cervical, and bladder", "D. Ovarian, thyroid, colon, and blood"],
+    "correctAnswer": "B",
+    "explanation": "The passage states 'The four most common cancers are breast, prostate, lung, and bowel cancer'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-088", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "Cancer is not a single disease but a group of more than 100 different conditions, each with different causes, treatments, and prognoses. In the UK, around 375,000 new cancer cases are diagnosed each year. The four most common cancers are breast, prostate, lung, and bowel cancer. Survival rates have improved significantly over the past 40 years, with around half of all patients now surviving for ten or more years after diagnosis.",
+    "question": "What does the passage say about cancer survival rates over the past 40 years?",
+    "options": ["A. They have declined due to new cancer types", "B. They have remained unchanged", "C. Around half of patients now survive ten or more years", "D. Survival rates vary too much to generalise"],
+    "correctAnswer": "C",
+    "explanation": "The passage states 'around half of all patients now surviving for ten or more years after diagnosis'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-089", "subtest": "VR", "difficulty": "hard", "type": "multiple_choice",
+    "passage": "The social determinants of health — including income, education, housing, employment, and social support — have a profound influence on health outcomes. Research consistently shows that people with lower socioeconomic status have worse health outcomes across almost every measure. The 2010 Marmot Review concluded that health inequalities in England are largely attributable to these social factors and called for action across government departments rather than health services alone.",
+    "question": "What did the 2010 Marmot Review conclude about health inequalities in England?",
+    "options": ["A. They are primarily caused by differences in healthcare quality", "B. They are largely attributable to social factors and require cross-government action", "C. They are mainly driven by genetic differences", "D. They have improved significantly in recent decades"],
+    "correctAnswer": "B",
+    "explanation": "The review concluded inequalities 'are largely attributable to these social factors and called for action across government departments'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-090", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "The social determinants of health — including income, education, housing, employment, and social support — have a profound influence on health outcomes. Research consistently shows that people with lower socioeconomic status have worse health outcomes across almost every measure. The 2010 Marmot Review concluded that health inequalities in England are largely attributable to these social factors and called for action across government departments rather than health services alone.",
+    "question": "What does research consistently show about people with lower socioeconomic status?",
+    "options": ["A. They access more healthcare services", "B. They have better mental health outcomes", "C. They have worse health outcomes across almost every measure", "D. They benefit more from preventive interventions"],
+    "correctAnswer": "C",
+    "explanation": "Research shows 'people with lower socioeconomic status have worse health outcomes across almost every measure'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-091", "subtest": "VR", "difficulty": "easy", "type": "multiple_choice",
+    "passage": "Asthma is a common chronic condition affecting around 5.4 million people in the UK. It causes inflammation and narrowing of the airways, leading to symptoms such as wheezing, breathlessness, and coughing. While asthma cannot be cured, it can be well controlled with appropriate medication. The most common medications are reliever inhalers — taken when symptoms occur — and preventer inhalers, which are used regularly to reduce inflammation.",
+    "question": "How many people in the UK have asthma according to the passage?",
+    "options": ["A. 2.1 million", "B. 3.8 million", "C. 5.4 million", "D. 7.2 million"],
+    "correctAnswer": "C",
+    "explanation": "The passage states asthma affects 'around 5.4 million people in the UK'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-092", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "Asthma is a common chronic condition affecting around 5.4 million people in the UK. It causes inflammation and narrowing of the airways, leading to symptoms such as wheezing, breathlessness, and coughing. While asthma cannot be cured, it can be well controlled with appropriate medication. The most common medications are reliever inhalers — taken when symptoms occur — and preventer inhalers, which are used regularly to reduce inflammation.",
+    "question": "What is the difference between a reliever and a preventer inhaler according to the passage?",
+    "options": ["A. Reliever inhalers are taken daily; preventer inhalers are taken weekly", "B. Reliever inhalers are taken when symptoms occur; preventer inhalers are used regularly to reduce inflammation", "C. Reliever inhalers cure asthma; preventer inhalers manage it", "D. Both inhalers work the same way but differ in strength"],
+    "correctAnswer": "B",
+    "explanation": "Reliever inhalers are 'taken when symptoms occur' and preventer inhalers 'are used regularly to reduce inflammation'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-093", "subtest": "VR", "difficulty": "hard", "type": "multiple_choice",
+    "passage": "Medical error is estimated to be the third leading cause of death in the United States and a significant cause of harm in other healthcare systems. The majority of errors are not caused by incompetent individuals but by flawed systems — poor communication, inadequate handover processes, and organisational pressures. A blame-free culture, in which staff feel safe reporting errors without fear of punishment, is considered essential for improving safety.",
+    "question": "What does the passage say is the primary cause of medical errors?",
+    "options": ["A. Individual incompetence", "B. Lack of medical training", "C. Flawed systems such as poor communication and organisational pressures", "D. Understaffing in hospitals"],
+    "correctAnswer": "C",
+    "explanation": "The passage states 'The majority of errors are not caused by incompetent individuals but by flawed systems — poor communication, inadequate handover processes, and organisational pressures'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-094", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "Medical error is estimated to be the third leading cause of death in the United States and a significant cause of harm in other healthcare systems. The majority of errors are not caused by incompetent individuals but by flawed systems — poor communication, inadequate handover processes, and organisational pressures. A blame-free culture, in which staff feel safe reporting errors without fear of punishment, is considered essential for improving safety.",
+    "question": "Why is a blame-free culture considered important for patient safety?",
+    "options": ["A. It reduces the cost of litigation against hospitals", "B. Staff feel safe reporting errors without fear of punishment", "C. It speeds up the resolution of patient complaints", "D. It allows incompetent staff to continue working"],
+    "correctAnswer": "B",
+    "explanation": "A blame-free culture means 'staff feel safe reporting errors without fear of punishment', enabling learning from mistakes.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-095", "subtest": "VR", "difficulty": "easy", "type": "multiple_choice",
+    "passage": "The General Medical Council (GMC) is the regulatory body for doctors in the UK. Its primary purpose is to protect, promote, and maintain the health and safety of the public by ensuring that doctors have the necessary knowledge and skills to practise safely. The GMC maintains the medical register, investigates fitness to practise concerns, and sets standards for medical education and training.",
+    "question": "What is the primary purpose of the GMC according to the passage?",
+    "options": ["A. To represent doctors in employment disputes", "B. To fund medical research", "C. To protect, promote, and maintain public health and safety", "D. To set NHS pay scales"],
+    "correctAnswer": "C",
+    "explanation": "The GMC's 'primary purpose is to protect, promote, and maintain the health and safety of the public'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-096", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "The General Medical Council (GMC) is the regulatory body for doctors in the UK. Its primary purpose is to protect, promote, and maintain the health and safety of the public by ensuring that doctors have the necessary knowledge and skills to practise safely. The GMC maintains the medical register, investigates fitness to practise concerns, and sets standards for medical education and training.",
+    "question": "Which of the following is a function of the GMC according to the passage?",
+    "options": ["A. Setting NHS budgets", "B. Employing doctors in hospitals", "C. Investigating fitness to practise concerns", "D. Providing medical insurance"],
+    "correctAnswer": "C",
+    "explanation": "The GMC 'investigates fitness to practise concerns'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-097", "subtest": "VR", "difficulty": "hard", "type": "multiple_choice",
+    "passage": "Precision medicine — also known as personalised medicine — aims to tailor medical treatment to the individual characteristics of each patient, including their genetic makeup, lifestyle, and environment. Rather than applying the same treatment to all patients with a given diagnosis, precision medicine seeks to identify which patients will benefit most from specific interventions. This approach has shown particular promise in oncology, where tumour genomics can guide the selection of targeted therapies.",
+    "question": "In which medical field has precision medicine shown particular promise according to the passage?",
+    "options": ["A. Cardiology", "B. Neurology", "C. Oncology", "D. Orthopaedics"],
+    "correctAnswer": "C",
+    "explanation": "The passage states precision medicine 'has shown particular promise in oncology, where tumour genomics can guide the selection of targeted therapies'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-098", "subtest": "VR", "difficulty": "medium", "type": "multiple_choice",
+    "passage": "Precision medicine — also known as personalised medicine — aims to tailor medical treatment to the individual characteristics of each patient, including their genetic makeup, lifestyle, and environment. Rather than applying the same treatment to all patients with a given diagnosis, precision medicine seeks to identify which patients will benefit most from specific interventions. This approach has shown particular promise in oncology, where tumour genomics can guide the selection of targeted therapies.",
+    "question": "What is the aim of precision medicine as described in the passage?",
+    "options": ["A. To reduce the cost of medical treatment", "B. To develop new drug compounds faster", "C. To tailor treatment to individual patient characteristics", "D. To eliminate the need for clinical trials"],
+    "correctAnswer": "C",
+    "explanation": "Precision medicine 'aims to tailor medical treatment to the individual characteristics of each patient'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-099", "subtest": "VR", "difficulty": "easy", "type": "multiple_choice",
+    "passage": "The Hippocratic Oath is one of the oldest and most recognised symbols of medical ethics. Although the original oath is rarely recited today, its principles — including the duty to do no harm (non-maleficence), to act in the patient's best interests, and to maintain confidentiality — continue to underpin modern medical practice. Medical schools around the world often have their own versions of the oath that students take on graduating.",
+    "question": "What Latin principle from the Hippocratic tradition means 'do no harm'?",
+    "options": ["A. Beneficence", "B. Autonomy", "C. Non-maleficence", "D. Justice"],
+    "correctAnswer": "C",
+    "explanation": "The passage refers to 'the duty to do no harm (non-maleficence)'.",
+    "timeRecommended": 60
+  },
+  {
+    "questionId": "VR-100", "subtest": "VR", "difficulty": "hard", "type": "multiple_choice",
+    "passage": "The Hippocratic Oath is one of the oldest and most recognised symbols of medical ethics. Although the original oath is rarely recited today, its principles — including the duty to do no harm (non-maleficence), to act in the patient's best interests, and to maintain confidentiality — continue to underpin modern medical practice. Medical schools around the world often have their own versions of the oath that students take on graduating.",
+    "question": "What does the passage say about the original Hippocratic Oath today?",
+    "options": ["A. It is recited at all UK medical school graduations", "B. It has been replaced by the GMC guidelines", "C. It is rarely recited but its principles still underpin modern practice", "D. It has been updated to reflect advances in technology"],
+    "correctAnswer": "C",
+    "explanation": "The passage states 'the original oath is rarely recited today' but its principles 'continue to underpin modern medical practice'.",
+    "timeRecommended": 60
+  }
+]

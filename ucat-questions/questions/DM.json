@@ -1,0 +1,802 @@
+[
+  {
+    "questionId": "DM-001", "subtest": "DM", "difficulty": "medium", "type": "multiple_choice",
+    "question": "All surgeons are doctors. Some doctors work in A&E. Which conclusion must be true?",
+    "options": ["A. All surgeons work in A&E", "B. Some surgeons work in A&E", "C. No surgeons work in A&E", "D. None of the above can be concluded"],
+    "correctAnswer": "D",
+    "explanation": "The premises do not allow us to conclude anything specific about surgeons and A&E. Some doctors in A&E may or may not be surgeons.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-002", "subtest": "DM", "difficulty": "easy", "type": "multiple_choice",
+    "question": "A hospital has 300 beds. 60% are occupied by medical patients, 30% by surgical patients, and the rest are empty. How many beds are empty?",
+    "options": ["A. 20", "B. 25", "C. 30", "D. 35"],
+    "correctAnswer": "C",
+    "explanation": "Medical: 60% of 300 = 180. Surgical: 30% of 300 = 90. Total occupied = 270. Empty = 300 - 270 = 30.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-003", "subtest": "DM", "difficulty": "hard", "type": "multiple_choice",
+    "question": "In a group of 100 patients, 40 have diabetes, 30 have hypertension, and 10 have both. How many have neither condition?",
+    "options": ["A. 30", "B. 35", "C. 40", "D. 45"],
+    "correctAnswer": "C",
+    "explanation": "Using inclusion-exclusion: diabetes only = 30, hypertension only = 20, both = 10. Total with at least one = 60. Neither = 100 - 60 = 40.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-004", "subtest": "DM", "difficulty": "medium", "type": "multiple_choice",
+    "question": "No nurses are consultants. All consultants are doctors. Sam is a nurse. Which must be true?",
+    "options": ["A. Sam is not a doctor", "B. Sam is not a consultant", "C. Sam is a doctor", "D. Sam may be a consultant"],
+    "correctAnswer": "B",
+    "explanation": "Since no nurses are consultants, and Sam is a nurse, Sam cannot be a consultant. We cannot conclude whether Sam is a doctor from these premises alone.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-005", "subtest": "DM", "difficulty": "medium", "type": "multiple_choice",
+    "question": "A clinical trial has 200 participants. 120 receive the drug and 80 receive placebo. Of those receiving the drug, 90 improve. Of those on placebo, 20 improve. What is the improvement rate in the drug group?",
+    "options": ["A. 65%", "B. 70%", "C. 75%", "D. 80%"],
+    "correctAnswer": "C",
+    "explanation": "Improvement rate in drug group = 90/120 = 0.75 = 75%.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-006", "subtest": "DM", "difficulty": "hard", "type": "multiple_choice",
+    "question": "Either the patient has appendicitis or a urinary tract infection, but not both. The patient does not have appendicitis. What can be concluded?",
+    "options": ["A. The patient has both conditions", "B. The patient has a urinary tract infection", "C. The patient has neither condition", "D. The patient may have appendicitis"],
+    "correctAnswer": "B",
+    "explanation": "Given the exclusive or (either/not both) and that appendicitis is ruled out, the patient must have a UTI.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-007", "subtest": "DM", "difficulty": "easy", "type": "multiple_choice",
+    "question": "A GP sees 8 patients per hour. How many patients can they see in a 7-hour shift?",
+    "options": ["A. 48", "B. 52", "C. 56", "D. 60"],
+    "correctAnswer": "C",
+    "explanation": "8 patients × 7 hours = 56 patients.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-008", "subtest": "DM", "difficulty": "medium", "type": "multiple_choice",
+    "question": "If it is raining, the patient will not walk to the clinic. It is raining. What can be concluded?",
+    "options": ["A. The patient will walk to the clinic", "B. The patient will not walk to the clinic", "C. The patient may or may not walk to the clinic", "D. It will stop raining"],
+    "correctAnswer": "B",
+    "explanation": "The conditional statement says if raining → not walking. Since it is raining, the patient will not walk.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-009", "subtest": "DM", "difficulty": "hard", "type": "multiple_choice",
+    "question": "A study finds that people who eat breakfast are 30% less likely to develop type 2 diabetes than those who skip breakfast. Which statement best evaluates this finding?",
+    "options": ["A. Eating breakfast causes a reduction in type 2 diabetes", "B. The finding shows correlation but not necessarily causation", "C. People who skip breakfast are definitely at higher risk", "D. The study proves breakfast prevents diabetes"],
+    "correctAnswer": "B",
+    "explanation": "Observational studies show correlation, not causation. Confounding factors may explain the association.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-010", "subtest": "DM", "difficulty": "medium", "type": "multiple_choice",
+    "question": "A ward has 5 nurses and each nurse looks after 6 patients. How many patients are on the ward?",
+    "options": ["A. 25", "B. 28", "C. 30", "D. 32"],
+    "correctAnswer": "C",
+    "explanation": "5 nurses × 6 patients each = 30 patients.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-011", "subtest": "DM", "difficulty": "hard", "type": "multiple_choice",
+    "question": "All patients who have fever also have infection. Patient A has infection. What can be concluded?",
+    "options": ["A. Patient A has fever", "B. Patient A does not have fever", "C. Patient A may or may not have fever", "D. Patient A has neither fever nor infection"],
+    "correctAnswer": "C",
+    "explanation": "The statement is fever → infection. Patient A has infection, but infection does not necessarily imply fever (affirming the consequent fallacy).",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-012", "subtest": "DM", "difficulty": "easy", "type": "multiple_choice",
+    "question": "A medication costs £4.50 per dose and a patient takes 3 doses per day. What is the weekly cost of medication?",
+    "options": ["A. £85.50", "B. £94.50", "C. £99.50", "D. £105.00"],
+    "correctAnswer": "B",
+    "explanation": "3 doses/day × £4.50 = £13.50/day. £13.50 × 7 days = £94.50.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-013", "subtest": "DM", "difficulty": "medium", "type": "multiple_choice",
+    "question": "Some antibiotics cause nausea. This antibiotic is not known to cause nausea. Which conclusion is valid?",
+    "options": ["A. This antibiotic will not cause nausea in any patient", "B. This antibiotic definitely causes nausea", "C. Some patients taking this antibiotic may still experience nausea", "D. All antibiotics cause nausea"],
+    "correctAnswer": "C",
+    "explanation": "'Not known to cause nausea' does not mean it never does. Some patients may still experience it.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-014", "subtest": "DM", "difficulty": "hard", "type": "multiple_choice",
+    "question": "In a Venn diagram, circle A represents patients with anaemia, circle B represents patients with fatigue. The overlap represents patients with both. If 50 have anaemia, 70 have fatigue, and 30 have both, how many have anaemia but not fatigue?",
+    "options": ["A. 15", "B. 20", "C. 25", "D. 30"],
+    "correctAnswer": "B",
+    "explanation": "Anaemia only = 50 - 30 (both) = 20 patients have anaemia but not fatigue.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-015", "subtest": "DM", "difficulty": "medium", "type": "multiple_choice",
+    "question": "A hospital reduces its average length of stay from 6 days to 4.5 days. What is the percentage reduction?",
+    "options": ["A. 20%", "B. 25%", "C. 30%", "D. 33%"],
+    "correctAnswer": "B",
+    "explanation": "Reduction = 1.5 days. Percentage = 1.5/6 × 100 = 25%.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-016", "subtest": "DM", "difficulty": "easy", "type": "multiple_choice",
+    "question": "If a patient is allergic to penicillin, they may also react to amoxicillin. Patient B is allergic to penicillin. What is the most appropriate conclusion?",
+    "options": ["A. Patient B will definitely react to amoxicillin", "B. Patient B will not react to amoxicillin", "C. Patient B may react to amoxicillin", "D. Amoxicillin is the same as penicillin"],
+    "correctAnswer": "C",
+    "explanation": "The premise says 'may also react', indicating a possibility, not a certainty.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-017", "subtest": "DM", "difficulty": "hard", "type": "multiple_choice",
+    "question": "A diagnostic test has a sensitivity of 90% and specificity of 80%. If 100 people have a disease and 100 do not, how many true positives would you expect?",
+    "options": ["A. 80", "B. 85", "C. 90", "D. 95"],
+    "correctAnswer": "C",
+    "explanation": "Sensitivity = true positives/those with disease = 90%. So 90% of 100 = 90 true positives.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-018", "subtest": "DM", "difficulty": "medium", "type": "multiple_choice",
+    "question": "Either the lab result is correct or the sample was contaminated. The lab result is correct. What follows?",
+    "options": ["A. The sample was definitely contaminated", "B. The sample was not contaminated", "C. The sample may or may not have been contaminated", "D. Nothing can be concluded"],
+    "correctAnswer": "C",
+    "explanation": "The 'either...or' is inclusive. Both could be true. We cannot conclude the sample was not contaminated.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-019", "subtest": "DM", "difficulty": "easy", "type": "multiple_choice",
+    "question": "A clinic runs 5 days a week. A doctor works there 3 days a week. What fraction of the clinic's operating days does the doctor work?",
+    "options": ["A. 2/5", "B. 3/5", "C. 3/7", "D. 4/5"],
+    "correctAnswer": "B",
+    "explanation": "The doctor works 3 out of 5 clinic days = 3/5.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-020", "subtest": "DM", "difficulty": "hard", "type": "multiple_choice",
+    "question": "Countries with higher healthcare spending have better life expectancy. Country X has higher healthcare spending than Country Y. What can be concluded?",
+    "options": ["A. Country X has better life expectancy than Country Y", "B. Country Y has better life expectancy than Country X", "C. Life expectancy in both countries is the same", "D. Nothing certain can be concluded about life expectancy"],
+    "correctAnswer": "D",
+    "explanation": "The original statement is a general trend, not a universal rule. Individual countries may deviate from this pattern.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-021", "subtest": "DM", "difficulty": "medium", "type": "multiple_choice",
+    "question": "A patient takes two tablets of 500mg paracetamol four times a day. What is the total daily dose in grams?",
+    "options": ["A. 2g", "B. 3g", "C. 4g", "D. 5g"],
+    "correctAnswer": "C",
+    "explanation": "2 tablets × 500mg = 1000mg per dose. 4 times per day = 4000mg = 4g.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-022", "subtest": "DM", "difficulty": "hard", "type": "multiple_choice",
+    "question": "An argument states: 'We should prioritise treating younger patients because they have more life-years ahead of them.' Which statement most weakens this argument?",
+    "options": ["A. Younger patients recover faster", "B. Older patients may have dependents who rely on them", "C. Age-based prioritisation is illegal in most countries", "D. This approach ignores the equal worth of all human lives regardless of age"],
+    "correctAnswer": "D",
+    "explanation": "The strongest counter is an ethical one — that maximising life-years treats human lives as having unequal worth, which challenges the argument's premise.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-023", "subtest": "DM", "difficulty": "medium", "type": "multiple_choice",
+    "question": "A and B are both needed for a diagnosis. A is present. What can be said about the diagnosis?",
+    "options": ["A. The diagnosis can be confirmed", "B. The diagnosis cannot be confirmed yet", "C. The diagnosis is impossible", "D. B is not needed"],
+    "correctAnswer": "B",
+    "explanation": "Both A and B are required. Since only A is confirmed, the diagnosis cannot yet be confirmed.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-024", "subtest": "DM", "difficulty": "easy", "type": "multiple_choice",
+    "question": "A patient's resting heart rate drops from 80 bpm to 64 bpm after starting exercise training. What is the percentage decrease?",
+    "options": ["A. 15%", "B. 18%", "C. 20%", "D. 22%"],
+    "correctAnswer": "C",
+    "explanation": "Decrease = 16 bpm. Percentage = 16/80 × 100 = 20%.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-025", "subtest": "DM", "difficulty": "hard", "type": "multiple_choice",
+    "question": "A health minister argues that banning trans fats in food has reduced heart disease rates. A critic says heart disease rates were already falling before the ban. Which approach best resolves this dispute?",
+    "options": ["A. Accept the minister's argument as it is based on government data", "B. Compare the rate of decline before and after the ban using controlled data", "C. Survey patients about their dietary habits", "D. Introduce more food regulations to test further"],
+    "correctAnswer": "B",
+    "explanation": "To establish causation, you need to compare the rate of change before and after the ban, ideally controlling for other variables.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-026", "subtest": "DM", "difficulty": "medium", "type": "multiple_choice",
+    "question": "All patients on Ward A received Drug X. Some patients on Ward A developed a rash. Which conclusion can be drawn?",
+    "options": ["A. Drug X causes rashes", "B. All patients who developed a rash received Drug X", "C. Some patients who received Drug X developed a rash", "D. Drug X is unsafe"],
+    "correctAnswer": "C",
+    "explanation": "We know some patients on Ward A (who all received Drug X) developed a rash. So some Drug X recipients developed a rash.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-027", "subtest": "DM", "difficulty": "easy", "type": "multiple_choice",
+    "question": "An ICU has 12 beds. 75% are occupied. How many beds are currently free?",
+    "options": ["A. 2", "B. 3", "C. 4", "D. 5"],
+    "correctAnswer": "B",
+    "explanation": "75% of 12 = 9 occupied. 12 - 9 = 3 free beds.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-028", "subtest": "DM", "difficulty": "hard", "type": "multiple_choice",
+    "question": "Argument: 'Doctors who work night shifts make more errors, so night shifts should be abolished.' Which assumption underlies this argument?",
+    "options": ["A. Night shifts are necessary for hospitals to function", "B. Reducing errors is more important than maintaining 24-hour care", "C. Abolishing night shifts would not compromise patient care", "D. All doctors make errors equally"],
+    "correctAnswer": "C",
+    "explanation": "The argument assumes abolishing night shifts is feasible without compromising the continuous care hospitals must provide.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-029", "subtest": "DM", "difficulty": "medium", "type": "multiple_choice",
+    "question": "If a patient has chest pain and shortness of breath, a pulmonary embolism must be investigated. Patient C has shortness of breath only. What follows?",
+    "options": ["A. Pulmonary embolism must be investigated", "B. Pulmonary embolism investigation is not required", "C. Patient C definitely has a pulmonary embolism", "D. Patient C must be admitted to hospital"],
+    "correctAnswer": "B",
+    "explanation": "Both conditions must be present. Patient C only has one, so the rule does not apply.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-030", "subtest": "DM", "difficulty": "easy", "type": "multiple_choice",
+    "question": "A surgeon earns £120,000 per year. What is their monthly salary?",
+    "options": ["A. £8,000", "B. £9,000", "C. £10,000", "D. £11,000"],
+    "correctAnswer": "C",
+    "explanation": "£120,000 ÷ 12 months = £10,000 per month.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-031", "subtest": "DM", "difficulty": "hard", "type": "multiple_choice",
+    "question": "A study shows smokers have a higher rate of lung cancer than non-smokers. A researcher says this proves smoking causes lung cancer. Which is the best evaluation?",
+    "options": ["A. The researcher is correct — correlation proves causation in medicine", "B. The study is invalid because it only looked at one variable", "C. The association is strong evidence but other factors must be ruled out to confirm causation", "D. The sample size determines whether causation can be concluded"],
+    "correctAnswer": "C",
+    "explanation": "Strong associations support causation but confounding variables must be addressed. This is a Bradford Hill criteria consideration.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-032", "subtest": "DM", "difficulty": "medium", "type": "multiple_choice",
+    "question": "Either the MRI shows a tumour or the symptoms are caused by inflammation. The MRI shows no tumour. What follows?",
+    "options": ["A. Nothing can be concluded", "B. The symptoms are caused by inflammation", "C. The symptoms are caused by neither", "D. A second MRI is needed"],
+    "correctAnswer": "B",
+    "explanation": "Given exclusive or (either/not both): if no tumour, then symptoms must be caused by inflammation.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-033", "subtest": "DM", "difficulty": "easy", "type": "multiple_choice",
+    "question": "A blood pressure reading is 140/90 mmHg. The first number (140) is the systolic pressure. If it drops by 15 mmHg, what is the new systolic reading?",
+    "options": ["A. 120", "B. 125", "C. 130", "D. 135"],
+    "correctAnswer": "B",
+    "explanation": "140 - 15 = 125 mmHg.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-034", "subtest": "DM", "difficulty": "hard", "type": "multiple_choice",
+    "question": "An argument states that because most heart attacks occur in the morning, hospitals should staff more cardiologists in the morning. Which best strengthens this argument?",
+    "options": ["A. Morning heart attacks are more severe than evening ones", "B. Cardiologist response time is the most important factor in survival", "C. More cardiologists in the morning would reduce response times during peak risk periods", "D. Evening cardiologist staffing can be maintained at current levels"],
+    "correctAnswer": "C",
+    "explanation": "This directly links the evidence (more morning attacks) to the proposed solution (more morning staff) through improved response times.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-035", "subtest": "DM", "difficulty": "medium", "type": "multiple_choice",
+    "question": "No patients under 18 are on the adult ward. All patients on the adult ward have been seen by a consultant. Patient D is 16 years old. Which must be true?",
+    "options": ["A. Patient D has been seen by a consultant", "B. Patient D is on the adult ward", "C. Patient D is not on the adult ward", "D. Patient D has not been seen by a consultant"],
+    "correctAnswer": "C",
+    "explanation": "Patient D is under 18, so by the first rule, they cannot be on the adult ward.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-036", "subtest": "DM", "difficulty": "easy", "type": "multiple_choice",
+    "question": "A drug trial shows the treatment group had a 40% lower rate of hospitalisation than the control group. The control group had 50 hospitalisations. How many did the treatment group have?",
+    "options": ["A. 20", "B. 25", "C. 30", "D. 35"],
+    "correctAnswer": "C",
+    "explanation": "40% less than 50 = 50 × 0.60 = 30 hospitalisations.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-037", "subtest": "DM", "difficulty": "hard", "type": "multiple_choice",
+    "question": "The argument: 'We should fund cancer research more than heart disease research because more people die from cancer.' Which assumption is being made?",
+    "options": ["A. Heart disease is easier to treat than cancer", "B. Research funding should be proportional to mortality rates", "C. Cancer is a more painful disease than heart disease", "D. Heart disease funding is currently adequate"],
+    "correctAnswer": "B",
+    "explanation": "The argument assumes that mortality rates alone should determine research funding allocation.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-038", "subtest": "DM", "difficulty": "medium", "type": "multiple_choice",
+    "question": "A patient has a BMI of 31. BMI between 25-29.9 is overweight; 30+ is obese. What is this patient's classification?",
+    "options": ["A. Healthy weight", "B. Overweight", "C. Obese", "D. Severely obese"],
+    "correctAnswer": "C",
+    "explanation": "BMI 31 falls in the 30+ range, which is classified as obese.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-039", "subtest": "DM", "difficulty": "easy", "type": "multiple_choice",
+    "question": "If a patient does not respond to first-line treatment, second-line treatment should be started. Patient E did not respond to first-line treatment. What should happen?",
+    "options": ["A. First-line treatment should be repeated", "B. No treatment is needed", "C. Second-line treatment should be started", "D. The patient should be discharged"],
+    "correctAnswer": "C",
+    "explanation": "The condition (no response to first-line) is met, so second-line treatment should begin.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-040", "subtest": "DM", "difficulty": "hard", "type": "multiple_choice",
+    "question": "A news headline states: '90% of people who died in Hospital X last year were over 70.' A campaigner says this proves Hospital X is dangerous for elderly patients. What is the flaw in this reasoning?",
+    "options": ["A. The data is based on a single year only", "B. We do not know the proportion of elderly patients admitted, so the mortality rate may not be unusually high", "C. Elderly patients are expected to die in hospitals", "D. The figure of 90% is not independently verified"],
+    "correctAnswer": "B",
+    "explanation": "Without knowing the denominator (how many elderly patients were admitted), we cannot calculate a meaningful mortality rate.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-041", "subtest": "DM", "difficulty": "medium", "type": "multiple_choice",
+    "question": "Some GPs work part-time. All GPs are registered with the GMC. Dr Jones is a part-time GP. What must be true?",
+    "options": ["A. Dr Jones is not registered with the GMC", "B. Dr Jones is registered with the GMC", "C. All part-time doctors are registered with the GMC", "D. Dr Jones may not be a qualified doctor"],
+    "correctAnswer": "B",
+    "explanation": "All GPs are registered with GMC. Dr Jones is a GP. Therefore Dr Jones is registered.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-042", "subtest": "DM", "difficulty": "easy", "type": "multiple_choice",
+    "question": "A hospital trust employs 4,000 staff. 25% are nurses. How many nurses does the trust employ?",
+    "options": ["A. 800", "B. 900", "C. 1000", "D. 1100"],
+    "correctAnswer": "C",
+    "explanation": "25% of 4,000 = 1,000 nurses.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-043", "subtest": "DM", "difficulty": "hard", "type": "multiple_choice",
+    "question": "A researcher argues that because Country A spends more on healthcare per capita than Country B, and Country A has better health outcomes, increased spending improves health outcomes. What weakens this argument most?",
+    "options": ["A. Country A has a colder climate than Country B", "B. Country B may have other factors such as healthier diet and lifestyle that independently affect outcomes", "C. The data was collected over only two years", "D. Health spending should be measured per hospital, not per capita"],
+    "correctAnswer": "B",
+    "explanation": "Confounding variables — such as diet and lifestyle — could explain the difference in outcomes without spending being the cause.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-044", "subtest": "DM", "difficulty": "medium", "type": "multiple_choice",
+    "question": "All diabetic patients are advised to check their blood glucose daily. Patient F checks their blood glucose daily. What can be concluded?",
+    "options": ["A. Patient F is diabetic", "B. Patient F is not diabetic", "C. Patient F may or may not be diabetic", "D. Patient F is following all diabetic advice"],
+    "correctAnswer": "C",
+    "explanation": "Daily glucose monitoring is advised for diabetics, but others may also monitor glucose. We cannot confirm Patient F is diabetic.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-045", "subtest": "DM", "difficulty": "easy", "type": "multiple_choice",
+    "question": "A prescription is written for 28 days' supply. The patient takes one tablet twice daily. How many tablets will be dispensed?",
+    "options": ["A. 28", "B. 42", "C. 56", "D. 84"],
+    "correctAnswer": "C",
+    "explanation": "2 tablets/day × 28 days = 56 tablets.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-046", "subtest": "DM", "difficulty": "hard", "type": "multiple_choice",
+    "question": "An argument: 'Mandatory vaccinations are justified because herd immunity protects vulnerable people who cannot be vaccinated.' Which statement most strengthens this argument?",
+    "options": ["A. Vaccines have side effects that can be serious", "B. The protection of vulnerable individuals is an important societal obligation", "C. Voluntary vaccination rates are currently sufficient", "D. Mandatory policies are difficult to enforce"],
+    "correctAnswer": "B",
+    "explanation": "This directly supports the ethical premise of the argument — that protecting the vulnerable justifies the intervention.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-047", "subtest": "DM", "difficulty": "medium", "type": "multiple_choice",
+    "question": "No patients with penicillin allergy should receive amoxicillin. Patient G has a penicillin allergy. What follows?",
+    "options": ["A. Patient G should receive amoxicillin", "B. Patient G should not receive amoxicillin", "C. Patient G may receive amoxicillin in low doses", "D. Patient G's allergy must be confirmed first"],
+    "correctAnswer": "B",
+    "explanation": "The rule is clear: no penicillin-allergic patients should receive amoxicillin. Patient G has this allergy.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-048", "subtest": "DM", "difficulty": "easy", "type": "multiple_choice",
+    "question": "A patient's temperature is 38.5°C. Normal body temperature is 37°C. By how much is their temperature elevated?",
+    "options": ["A. 0.5°C", "B. 1.0°C", "C. 1.5°C", "D. 2.0°C"],
+    "correctAnswer": "C",
+    "explanation": "38.5 - 37.0 = 1.5°C above normal.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-049", "subtest": "DM", "difficulty": "hard", "type": "multiple_choice",
+    "question": "A policy maker argues: 'We should close rural hospitals to save money and direct patients to larger urban centres.' What assumption is being made?",
+    "options": ["A. Rural patients can easily access urban centres", "B. Larger hospitals always provide better care", "C. Money saved outweighs patient access issues", "D. Rural hospitals are unsafe"],
+    "correctAnswer": "A",
+    "explanation": "The argument assumes patients can and will travel to urban centres — ignoring transport barriers for rural populations.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-050", "subtest": "DM", "difficulty": "medium", "type": "multiple_choice",
+    "question": "If a test is positive, the patient must be isolated. If the patient is isolated, they cannot attend outpatient appointments. Patient H has tested positive. What follows?",
+    "options": ["A. Patient H can attend outpatient appointments", "B. Patient H must be isolated but can attend appointments", "C. Patient H cannot attend outpatient appointments", "D. Patient H does not need to be isolated"],
+    "correctAnswer": "C",
+    "explanation": "Positive test → isolation. Isolation → cannot attend appointments. Therefore, positive test → cannot attend appointments.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-051", "subtest": "DM", "difficulty": "easy", "type": "multiple_choice",
+    "question": "An ambulance travels 60 miles in 45 minutes. What is its average speed in miles per hour?",
+    "options": ["A. 70 mph", "B. 75 mph", "C. 80 mph", "D. 85 mph"],
+    "correctAnswer": "C",
+    "explanation": "Speed = distance/time. 60 miles / (45/60) hours = 60/0.75 = 80 mph.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-052", "subtest": "DM", "difficulty": "hard", "type": "multiple_choice",
+    "question": "A study shows that areas with more fast food restaurants have higher obesity rates. A journalist concludes that fast food restaurants cause obesity. What is wrong with this conclusion?",
+    "options": ["A. The study did not measure calorie intake", "B. Correlation does not imply causation — other socioeconomic factors may explain both", "C. The study was too short to be meaningful", "D. Obesity rates cannot be measured accurately"],
+    "correctAnswer": "B",
+    "explanation": "Correlation ≠ causation. Deprived areas have both more fast food restaurants and higher obesity, but socioeconomic factors may explain this.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-053", "subtest": "DM", "difficulty": "medium", "type": "multiple_choice",
+    "question": "Some operations require a general anaesthetic. This operation does not require a general anaesthetic. What can be concluded?",
+    "options": ["A. This operation requires local anaesthesia", "B. This operation requires no anaesthesia at all", "C. No conclusion can be drawn about what anaesthetic is needed", "D. All operations require a general anaesthetic"],
+    "correctAnswer": "C",
+    "explanation": "Knowing this operation doesn't require general anaesthesia tells us nothing certain about what it does require.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-054", "subtest": "DM", "difficulty": "easy", "type": "multiple_choice",
+    "question": "A hospital sees 240 patients per day. If 15% are admitted, how many patients are admitted daily?",
+    "options": ["A. 30", "B. 36", "C. 40", "D. 48"],
+    "correctAnswer": "B",
+    "explanation": "15% of 240 = 0.15 × 240 = 36 admissions.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-055", "subtest": "DM", "difficulty": "hard", "type": "multiple_choice",
+    "question": "Argument: 'Medical students should be required to spend a year working in a deprived area before qualifying, to ensure they understand health inequalities.' Which is the strongest objection?",
+    "options": ["A. Students may not want to live in deprived areas", "B. This adds cost and time to medical training without guaranteed learning outcomes", "C. Health inequalities are covered in university curricula", "D. Deprived areas already have enough doctors"],
+    "correctAnswer": "B",
+    "explanation": "This challenges the practical effectiveness of the proposal — the cost, delay to qualification, and whether the objective would be achieved.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-056", "subtest": "DM", "difficulty": "medium", "type": "multiple_choice",
+    "question": "All emergency calls must be responded to within 8 minutes. Call received at 14:23. What is the latest time the response should arrive?",
+    "options": ["A. 14:29", "B. 14:30", "C. 14:31", "D. 14:32"],
+    "correctAnswer": "C",
+    "explanation": "14:23 + 8 minutes = 14:31.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-057", "subtest": "DM", "difficulty": "hard", "type": "multiple_choice",
+    "question": "If the patient's pain score is above 7, give morphine. If morphine is given, monitor oxygen saturation every 15 minutes. Patient I has a pain score of 8. What must happen?",
+    "options": ["A. Monitor oxygen every hour", "B. Give morphine only", "C. Give morphine and monitor oxygen saturation every 15 minutes", "D. Do not give morphine — assess pain again"],
+    "correctAnswer": "C",
+    "explanation": "Score above 7 → give morphine. Morphine given → monitor oxygen every 15 min. Both rules apply.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-058", "subtest": "DM", "difficulty": "medium", "type": "multiple_choice",
+    "question": "Most side effects of Drug Y are mild. Patient J experiences a serious side effect after taking Drug Y. Which conclusion is valid?",
+    "options": ["A. Drug Y does not cause serious side effects", "B. Patient J had an unusual reaction", "C. Drug Y is unsafe for all patients", "D. Patient J should take more Drug Y to build tolerance"],
+    "correctAnswer": "B",
+    "explanation": "If most side effects are mild, a serious one is unusual or atypical — but not impossible.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-059", "subtest": "DM", "difficulty": "easy", "type": "multiple_choice",
+    "question": "A blood test result must be reviewed within 24 hours of receipt. A result arrives at 09:00 on Monday. By what time must it be reviewed?",
+    "options": ["A. 09:00 Monday", "B. 17:00 Monday", "C. 09:00 Tuesday", "D. 17:00 Tuesday"],
+    "correctAnswer": "C",
+    "explanation": "Within 24 hours of 09:00 Monday = by 09:00 Tuesday.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-060", "subtest": "DM", "difficulty": "hard", "type": "multiple_choice",
+    "question": "A pharmaceutical company claims their new drug reduces cholesterol by 20% more than existing drugs. A critic says this ignores absolute versus relative risk reduction. What does the critic mean?",
+    "options": ["A. The 20% figure is statistically insignificant", "B. The 20% improvement should be expressed as a percentage of all patients", "C. A relative reduction sounds impressive but the absolute benefit may be small", "D. Cholesterol reduction should not be a primary endpoint"],
+    "correctAnswer": "C",
+    "explanation": "Relative risk reduction (20% better than existing) can be misleading if the absolute risk reduction (actual lives saved) is small.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-061", "subtest": "DM", "difficulty": "medium", "type": "multiple_choice",
+    "question": "A nurse works 3 shifts of 12 hours per week. How many hours does she work in a 4-week period?",
+    "options": ["A. 120", "B. 136", "C. 144", "D. 156"],
+    "correctAnswer": "C",
+    "explanation": "3 shifts × 12 hours = 36 hours/week. 36 × 4 weeks = 144 hours.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-062", "subtest": "DM", "difficulty": "hard", "type": "multiple_choice",
+    "question": "Argument: 'Sugar taxes have reduced sugary drink consumption in Mexico, so the UK should introduce one.' What is the weakest part of this argument?",
+    "options": ["A. Sugar taxes are difficult to administer", "B. Mexico's results may not generalise to the UK due to cultural and economic differences", "C. The UK already has a sugar tax on some drinks", "D. Sugar taxes only affect poor people"],
+    "correctAnswer": "B",
+    "explanation": "Evidence from one country may not transfer to another with different consumer behaviour, income levels, or food culture.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-063", "subtest": "DM", "difficulty": "medium", "type": "multiple_choice",
+    "question": "A surgical team performs 6 operations per day, 5 days a week. How many operations do they perform in 4 weeks?",
+    "options": ["A. 100", "B. 110", "C. 120", "D. 130"],
+    "correctAnswer": "C",
+    "explanation": "6 ops/day × 5 days = 30/week. 30 × 4 weeks = 120 operations.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-064", "subtest": "DM", "difficulty": "easy", "type": "multiple_choice",
+    "question": "Only patients who have been assessed by a doctor can be prescribed medication. Patient K has not been assessed. What follows?",
+    "options": ["A. Patient K can be prescribed medication", "B. Patient K cannot be prescribed medication", "C. Patient K needs a nurse assessment first", "D. Patient K should self-prescribe"],
+    "correctAnswer": "B",
+    "explanation": "Assessment by a doctor is a prerequisite for prescribing. Patient K has not been assessed, so cannot be prescribed.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-065", "subtest": "DM", "difficulty": "hard", "type": "multiple_choice",
+    "question": "A study finds that patients treated by female doctors have slightly better outcomes than those treated by male doctors. A commentator says female doctors are better. What is the most significant flaw?",
+    "options": ["A. The study did not account for hospital size", "B. Gender differences in outcomes may reflect case mix — female doctors may be assigned different types of patients", "C. The sample was too small", "D. Doctor gender should not be studied"],
+    "correctAnswer": "B",
+    "explanation": "Confounding by case mix is critical — if female doctors treat less complex cases, the outcome difference would be explained by patient characteristics, not doctor quality.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-066", "subtest": "DM", "difficulty": "medium", "type": "multiple_choice",
+    "question": "All inpatients receive a daily ward round. Patient L has not had a ward round today. What can be concluded?",
+    "options": ["A. Patient L is definitely not an inpatient", "B. Patient L is an inpatient who missed today's ward round", "C. Today's ward round has not yet taken place for all patients", "D. Either A or C could be true"],
+    "correctAnswer": "D",
+    "explanation": "Either Patient L is not an inpatient (A), or the ward round hasn't happened yet (C). Both are logically possible.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-067", "subtest": "DM", "difficulty": "easy", "type": "multiple_choice",
+    "question": "A patient needs 500ml of IV fluid over 4 hours. What is the infusion rate in ml per hour?",
+    "options": ["A. 100 ml/hr", "B. 115 ml/hr", "C. 125 ml/hr", "D. 150 ml/hr"],
+    "correctAnswer": "C",
+    "explanation": "500ml ÷ 4 hours = 125 ml/hr.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-068", "subtest": "DM", "difficulty": "hard", "type": "multiple_choice",
+    "question": "If the waiting list exceeds 18 weeks, the trust must report to the regulator. If the trust reports to the regulator, an inspection may be triggered. The waiting list has exceeded 18 weeks. What must happen?",
+    "options": ["A. An inspection must be triggered", "B. The trust must report to the regulator", "C. The waiting list must be reduced immediately", "D. The trust must close admissions"],
+    "correctAnswer": "B",
+    "explanation": "List > 18 weeks → must report. Reporting may (not definitely) trigger inspection. So only reporting is certain.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-069", "subtest": "DM", "difficulty": "medium", "type": "multiple_choice",
+    "question": "A hospital has 500 staff. 40% are clinical and 60% are non-clinical. Of the clinical staff, 50% are nurses. How many nurses work at the hospital?",
+    "options": ["A. 90", "B. 100", "C. 110", "D. 120"],
+    "correctAnswer": "B",
+    "explanation": "Clinical staff = 40% of 500 = 200. Nurses = 50% of 200 = 100.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-070", "subtest": "DM", "difficulty": "hard", "type": "multiple_choice",
+    "question": "Argument: 'Increasing the number of medical school places will solve the NHS staffing crisis.' What is the main weakness?",
+    "options": ["A. Medical schools do not have enough lecturers", "B. The staffing crisis will be resolved in other ways", "C. There is a 10+ year lag between training a doctor and them being in practice, so this does not solve immediate shortages", "D. Many new doctors move abroad after qualifying"],
+    "correctAnswer": "C",
+    "explanation": "The training pipeline means increasing places now will not address current shortages for many years.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-071", "subtest": "DM", "difficulty": "medium", "type": "multiple_choice",
+    "question": "Some hospitals have waiting times over 52 weeks. This hospital has a waiting time of 40 weeks. What can be concluded?",
+    "options": ["A. This hospital is performing well", "B. This hospital's waiting time exceeds national standards", "C. This hospital is not one of those with waiting times over 52 weeks", "D. Waiting times at this hospital are decreasing"],
+    "correctAnswer": "C",
+    "explanation": "40 weeks is less than 52 weeks. Therefore this hospital is not among those with waiting times over 52 weeks.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-072", "subtest": "DM", "difficulty": "easy", "type": "multiple_choice",
+    "question": "A doctor prescribes a dose of 10mg/kg for a patient weighing 70kg. What is the total dose?",
+    "options": ["A. 500mg", "B. 600mg", "C. 700mg", "D. 800mg"],
+    "correctAnswer": "C",
+    "explanation": "10mg/kg × 70kg = 700mg.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-073", "subtest": "DM", "difficulty": "hard", "type": "multiple_choice",
+    "question": "A health economist argues that spending £30,000 per QALY is the right threshold for approving new treatments. A patient advocate says rare disease treatments that cost £100,000 per QALY should still be approved. Which best supports the advocate's position?",
+    "options": ["A. Rare diseases affect very few people so the total cost is low", "B. The QALY measure disadvantages patients with severe conditions who gain fewer quality life years", "C. The NHS can afford to spend more on rare diseases", "D. All patients deserve the same treatment regardless of cost"],
+    "correctAnswer": "B",
+    "explanation": "Patients with severe conditions may gain fewer QALYs even if the treatment is highly beneficial — making the QALY threshold systematically disadvantageous to them.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-074", "subtest": "DM", "difficulty": "medium", "type": "multiple_choice",
+    "question": "All patients admitted with chest pain must have an ECG. Patient M was admitted with chest pain and had an ECG. Patient N was admitted without chest pain and did not have an ECG. Which conclusion is valid?",
+    "options": ["A. Patient M followed the protocol", "B. Patient N violated the protocol", "C. Both patients followed the protocol", "D. The protocol applies to all patients"],
+    "correctAnswer": "C",
+    "explanation": "Patient M (chest pain + ECG) follows the rule. Patient N (no chest pain, no ECG) is not subject to the rule, so also compliant.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-075", "subtest": "DM", "difficulty": "easy", "type": "multiple_choice",
+    "question": "A ward round starts at 8:00 AM and takes 12 minutes per patient. If there are 10 patients, when does the round finish?",
+    "options": ["A. 9:50 AM", "B. 10:00 AM", "C. 10:10 AM", "D. 10:20 AM"],
+    "correctAnswer": "B",
+    "explanation": "12 minutes × 10 patients = 120 minutes = 2 hours. 8:00 AM + 2 hours = 10:00 AM.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-076", "subtest": "DM", "difficulty": "hard", "type": "multiple_choice",
+    "question": "A health manager says: 'We should use AI to triage patients in A&E to reduce waiting times.' A critic responds: 'AI systems have been shown to have racial bias in their diagnostic outputs.' Which is the most relevant concern raised by the critic?",
+    "options": ["A. AI cannot replace human clinical judgement", "B. Implementing AI systems is expensive", "C. Biased AI could lead to inequitable care for ethnic minority patients", "D. AI systems may malfunction in busy environments"],
+    "correctAnswer": "C",
+    "explanation": "The critic's concern is directly about equity — racial bias in AI could worsen health inequalities in A&E triage decisions.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-077", "subtest": "DM", "difficulty": "medium", "type": "multiple_choice",
+    "question": "If a patient is dehydrated, they should receive IV fluids. If they receive IV fluids, their electrolytes should be monitored. Patient O is dehydrated. What should happen?",
+    "options": ["A. Electrolytes should be monitored only", "B. IV fluids given and electrolytes monitored", "C. IV fluids given but no monitoring needed", "D. Patient O should be discharged"],
+    "correctAnswer": "B",
+    "explanation": "Dehydration → IV fluids. IV fluids → monitor electrolytes. Both apply.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-078", "subtest": "DM", "difficulty": "easy", "type": "multiple_choice",
+    "question": "A GP practice has 6,000 patients. The average consultation rate is 3 consultations per patient per year. How many consultations occur annually?",
+    "options": ["A. 15,000", "B. 16,000", "C. 18,000", "D. 20,000"],
+    "correctAnswer": "C",
+    "explanation": "6,000 patients × 3 consultations = 18,000 consultations per year.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-079", "subtest": "DM", "difficulty": "hard", "type": "multiple_choice",
+    "question": "A newspaper reports that a hospital has a 2% surgical mortality rate, compared to the national average of 1.5%. A manager says the hospital is more dangerous. What must be considered before drawing this conclusion?",
+    "options": ["A. Whether the hospital is a teaching hospital", "B. Whether the hospital treats more complex and high-risk cases than average", "C. Whether the hospital employs enough surgeons", "D. Whether the reporting period is accurate"],
+    "correctAnswer": "B",
+    "explanation": "Case mix adjustment is essential — hospitals dealing with more complex cases will have higher mortality rates even if they perform well.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-080", "subtest": "DM", "difficulty": "medium", "type": "multiple_choice",
+    "question": "If consent is not documented, treatment cannot proceed. Consent is documented. What follows?",
+    "options": ["A. Treatment cannot proceed", "B. Treatment can proceed", "C. Consent must be obtained again", "D. Nothing follows from this alone"],
+    "correctAnswer": "D",
+    "explanation": "Documented consent is necessary but may not be sufficient — other conditions may also need to be met before treatment can proceed.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-081", "subtest": "DM", "difficulty": "easy", "type": "multiple_choice",
+    "question": "A tablet contains 250mg of ibuprofen. A patient takes 3 tablets. What is the total dose in grams?",
+    "options": ["A. 0.5g", "B. 0.65g", "C. 0.75g", "D. 1.0g"],
+    "correctAnswer": "C",
+    "explanation": "3 × 250mg = 750mg = 0.75g.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-082", "subtest": "DM", "difficulty": "hard", "type": "multiple_choice",
+    "question": "A doctor states: 'I told the patient the operation carries a 1 in 100 risk of serious complication.' The patient says they did not understand the risk. From an ethical standpoint, what is the key issue?",
+    "options": ["A. The doctor used the wrong risk figure", "B. Informed consent requires that the patient understands the information, not just that it was disclosed", "C. The patient should have asked more questions", "D. The risk is too low to require detailed explanation"],
+    "correctAnswer": "B",
+    "explanation": "Informed consent requires understanding. Disclosure alone is not sufficient if the patient did not comprehend the information.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-083", "subtest": "DM", "difficulty": "medium", "type": "multiple_choice",
+    "question": "Some patients with high cholesterol have no symptoms. This patient has no symptoms. What can be concluded?",
+    "options": ["A. This patient has high cholesterol", "B. This patient does not have high cholesterol", "C. This patient may or may not have high cholesterol", "D. Cholesterol should not be tested in asymptomatic patients"],
+    "correctAnswer": "C",
+    "explanation": "Many conditions are asymptomatic. Lack of symptoms does not confirm or rule out high cholesterol.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-084", "subtest": "DM", "difficulty": "easy", "type": "multiple_choice",
+    "question": "A patient needs 1.5 litres of fluid daily. They have already had 600ml. How much more do they need?",
+    "options": ["A. 750ml", "B. 850ml", "C. 900ml", "D. 1000ml"],
+    "correctAnswer": "C",
+    "explanation": "1500ml - 600ml = 900ml remaining.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-085", "subtest": "DM", "difficulty": "hard", "type": "multiple_choice",
+    "question": "Argument: 'Doctors should be paid more to incentivise the best graduates to enter medicine.' Which assumption is this argument making?",
+    "options": ["A. Doctors are currently underpaid relative to other professions", "B. Pay is the primary motivator for the best graduates choosing a career", "C. Medicine attracts candidates of lower academic ability than other professions", "D. Medical salaries are set by the government"],
+    "correctAnswer": "B",
+    "explanation": "The argument assumes pay drives career choice for high achievers — overlooking other motivators such as vocation, prestige, and work conditions.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-086", "subtest": "DM", "difficulty": "medium", "type": "multiple_choice",
+    "question": "If a patient's potassium level is below 3.5 mmol/L, supplement with potassium. Patient P's potassium is 3.2 mmol/L. What should happen?",
+    "options": ["A. No action required", "B. Supplement with potassium", "C. Check potassium again in 24 hours", "D. Patient P should be discharged"],
+    "correctAnswer": "B",
+    "explanation": "3.2 mmol/L is below 3.5 mmol/L — the threshold for supplementation is met.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-087", "subtest": "DM", "difficulty": "easy", "type": "multiple_choice",
+    "question": "A pharmacy dispenses prescriptions from 09:00 to 17:00, Monday to Friday. How many hours per week is it open?",
+    "options": ["A. 35", "B. 40", "C. 45", "D. 50"],
+    "correctAnswer": "B",
+    "explanation": "8 hours/day × 5 days = 40 hours per week.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-088", "subtest": "DM", "difficulty": "hard", "type": "multiple_choice",
+    "question": "A health authority argues that screening all adults for hypertension would save lives. A health economist argues the cost per life saved is too high. Which framework best helps resolve this dispute?",
+    "options": ["A. Ask patients whether they want to be screened", "B. Use cost-effectiveness analysis comparing cost per QALY gained against accepted thresholds", "C. Commission a new screening study", "D. Compare with other countries' approaches"],
+    "correctAnswer": "B",
+    "explanation": "Cost-effectiveness analysis using QALYs provides a structured framework for comparing the value of health interventions against established thresholds.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-089", "subtest": "DM", "difficulty": "medium", "type": "multiple_choice",
+    "question": "All referrals to specialists must include a GP letter. Referral Q included a GP letter. Referral R did not include a GP letter. Which conclusion is valid?",
+    "options": ["A. Referral Q complied with the requirement", "B. Referral R complied with the requirement", "C. Both referrals complied", "D. Referral Q did not comply"],
+    "correctAnswer": "A",
+    "explanation": "Referral Q included the required letter — it complied. Referral R did not — it failed to comply.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-090", "subtest": "DM", "difficulty": "easy", "type": "multiple_choice",
+    "question": "A scan costs £350 and a follow-up appointment costs £120. A patient needs both. What is the total cost?",
+    "options": ["A. £440", "B. £450", "C. £460", "D. £470"],
+    "correctAnswer": "D",
+    "explanation": "£350 + £120 = £470.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-091", "subtest": "DM", "difficulty": "hard", "type": "multiple_choice",
+    "question": "A doctor says: 'We should always tell patients the full truth about their diagnosis.' A colleague argues: 'Sometimes the full truth causes more harm than good.' This is a conflict between which two ethical principles?",
+    "options": ["A. Justice and non-maleficence", "B. Autonomy and beneficence/non-maleficence", "C. Beneficence and justice", "D. Confidentiality and autonomy"],
+    "correctAnswer": "B",
+    "explanation": "Telling the full truth supports patient autonomy; withholding information to prevent harm reflects beneficence/non-maleficence.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-092", "subtest": "DM", "difficulty": "medium", "type": "multiple_choice",
+    "question": "In a hospital, 70% of doctors are consultants and 30% are junior doctors. There are 200 doctors in total. How many junior doctors are there?",
+    "options": ["A. 50", "B. 55", "C. 60", "D. 65"],
+    "correctAnswer": "C",
+    "explanation": "30% of 200 = 60 junior doctors.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-093", "subtest": "DM", "difficulty": "hard", "type": "multiple_choice",
+    "question": "A report shows that GP practices in deprived areas have shorter consultation times than those in affluent areas. A researcher concludes that GPs in deprived areas care less about their patients. What is the most significant flaw?",
+    "options": ["A. The researcher did not interview the GPs", "B. GPs in deprived areas may face higher patient demand and workload, reducing available time per patient", "C. Consultation time is not a valid measure of care quality", "D. The data may be inaccurate"],
+    "correctAnswer": "B",
+    "explanation": "Higher patient volume in deprived areas is the most likely explanation — not motivation or care quality.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-094", "subtest": "DM", "difficulty": "medium", "type": "multiple_choice",
+    "question": "No patients with active infection should undergo elective surgery. Patient Q has an active chest infection. What follows?",
+    "options": ["A. Patient Q can have elective surgery", "B. Patient Q cannot have elective surgery", "C. Patient Q needs a second opinion", "D. Patient Q should be given antibiotics before surgery"],
+    "correctAnswer": "B",
+    "explanation": "The rule is clear: active infection → no elective surgery. Patient Q has active infection.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-095", "subtest": "DM", "difficulty": "easy", "type": "multiple_choice",
+    "question": "A health campaign reduces smoking rates from 20% to 15% of adults. In a population of 500,000 adults, how many fewer smokers are there?",
+    "options": ["A. 20,000", "B. 22,500", "C. 25,000", "D. 27,500"],
+    "correctAnswer": "C",
+    "explanation": "Before: 20% of 500,000 = 100,000. After: 15% of 500,000 = 75,000. Difference = 25,000.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-096", "subtest": "DM", "difficulty": "hard", "type": "multiple_choice",
+    "question": "Argument: 'We should extend GP surgery hours to weekends to reduce pressure on A&E.' A critic says this misunderstands why people attend A&E. Which evidence would most support the critic?",
+    "options": ["A. Weekend A&E attendances are lower than weekday", "B. Most weekend A&E attendances are genuine emergencies that would not be suitable for GP care", "C. GP practices are already open on Saturdays", "D. A&E doctors prefer to see more complex cases"],
+    "correctAnswer": "B",
+    "explanation": "If most A&E weekend attendances are genuine emergencies, extending GP hours would not divert those patients — undermining the argument.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-097", "subtest": "DM", "difficulty": "medium", "type": "multiple_choice",
+    "question": "A study recruits patients from a single hospital. Results show Drug Z is highly effective. A doctor wants to apply these findings to their own patients. What concern should they have?",
+    "options": ["A. The study may have been too short", "B. Results from a single hospital may not be generalisable to other patient populations", "C. Drug Z may have been incorrectly measured", "D. All drugs should be tested in multiple countries"],
+    "correctAnswer": "B",
+    "explanation": "Single-centre studies have limited generalisability — patient populations, practices, and settings may differ significantly.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-098", "subtest": "DM", "difficulty": "easy", "type": "multiple_choice",
+    "question": "A patient requires an IV infusion at 50ml/hr. The bag contains 500ml. How many hours will the bag last?",
+    "options": ["A. 8 hours", "B. 9 hours", "C. 10 hours", "D. 11 hours"],
+    "correctAnswer": "C",
+    "explanation": "500ml ÷ 50ml/hr = 10 hours.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-099", "subtest": "DM", "difficulty": "hard", "type": "multiple_choice",
+    "question": "A hospital introduces mandatory staff influenza vaccination. A nurse refuses, citing bodily autonomy. The hospital argues this protects vulnerable patients. Which ethical principle most supports the hospital's position?",
+    "options": ["A. Justice", "B. Non-maleficence — preventing harm to patients", "C. Autonomy of healthcare workers", "D. Beneficence towards the nurse"],
+    "correctAnswer": "B",
+    "explanation": "The hospital's position is grounded in non-maleficence — preventing harm to patients who could be infected by unvaccinated staff.",
+    "timeRecommended": 90
+  },
+  {
+    "questionId": "DM-100", "subtest": "DM", "difficulty": "medium", "type": "multiple_choice",
+    "question": "Some patients prescribed opioids become dependent. This patient is prescribed opioids. What is the most appropriate conclusion?",
+    "options": ["A. This patient will become dependent", "B. This patient will not become dependent", "C. This patient is at some risk of dependence and should be monitored", "D. Opioids should be immediately discontinued"],
+    "correctAnswer": "C",
+    "explanation": "Since some opioid patients become dependent, there is a risk. The appropriate response is monitoring — not assumption of dependence or immediate cessation.",
+    "timeRecommended": 90
+  }
+]
