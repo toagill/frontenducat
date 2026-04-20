@@ -105,7 +105,7 @@ export function QuizPlay({ id }: { id: string }) {
         if (subtest === "FULL") {
           const all: UCATQuestion[] = [];
           for (const st of ["VR","DM","QR","AR","SJT"]) {
-            const r = await fetch(`${base}/api/exam/questions/${st}`, {
+            const r = await fetch(`${base}/exam/questions/${st}`, {
               headers: { Authorization: `Bearer ${token}` },
             });
             if (r.ok) { const d = await r.json(); all.push(...(d.data?.questions||[])); }
@@ -113,7 +113,7 @@ export function QuizPlay({ id }: { id: string }) {
           if (all.length === 0) throw new Error("No questions found");
           dispatch({ type: "SET_QUESTIONS", payload: all });
         } else {
-          const r = await fetch(`${base}/api/exam/questions/${subtest}`, {
+          const r = await fetch(`${base}/exam/questions/${subtest}`, {
             headers: { Authorization: `Bearer ${token}` },
           });
           if (!r.ok) { const e = await r.json(); throw new Error(e.message||"Failed"); }
@@ -143,7 +143,7 @@ export function QuizPlay({ id }: { id: string }) {
       try {
         const token = localStorage.getItem("medexam_token");
         const base = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000/api";
-        const sr = await fetch(`${base}/api/exam/session`, {
+        const sr = await fetch(`${base}/exam/session`, {
           method: "POST",
           headers: { "Content-Type":"application/json", Authorization:`Bearer ${token}` },
           body: JSON.stringify({ examType: subtest === "FULL" ? "full" : subtest }),
@@ -156,7 +156,7 @@ export function QuizPlay({ id }: { id: string }) {
           if (state.answers[q.questionId]) formatted[q.subtest][q.questionId] = state.answers[q.questionId];
         });
         if (sessionId) {
-          await fetch(`${base}/api/exam/submit/${sessionId}`, {
+          await fetch(`${base}/exam/submit/${sessionId}`, {
             method: "POST",
             headers: { "Content-Type":"application/json", Authorization:`Bearer ${token}` },
             body: JSON.stringify({ answers: formatted }),
