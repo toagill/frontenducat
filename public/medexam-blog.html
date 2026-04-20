@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Medical Exam UCAT</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0B1F3A;--teal:#00A896;--teal2:#02C39A;--gold:#F4A261;--light:#F8FAFB;--mid:#6B7A8D;--white:#ffffff;--border:#E2E8F0;}
+*{margin:0;padding:0;box-sizing:border-box;}body{font-family:'DM Sans',sans-serif;color:var(--navy);background:var(--white);}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;height:70px;display:flex;align-items:center;justify-content:space-between;}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.logo-icon{width:38px;height:38px;background:var(--teal);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;}
+.logo-text span:first-child{display:block;font-size:15px;font-weight:700;color:var(--teal);}
+.logo-text span:last-child{display:block;font-size:10px;color:var(--mid);letter-spacing:3px;text-transform:uppercase;}
+.nav-links{display:flex;align-items:center;gap:28px;}
+.nav-links a{text-decoration:none;font-size:14px;font-weight:500;color:var(--navy);transition:color .2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--teal);}
+.dropdown{position:relative;}
+.dropdown-menu{position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%);background:var(--white);border:1px solid var(--border);border-radius:12px;padding:8px;min-width:200px;box-shadow:0 8px 32px rgba(0,0,0,0.12);display:none;z-index:200;}
+.dropdown:hover .dropdown-menu{display:block;}
+.dropdown-menu a{display:block;padding:10px 14px;font-size:14px;color:var(--navy);text-decoration:none;border-radius:8px;transition:background .2s;}
+.dropdown-menu a:hover{background:var(--light);color:var(--teal);}
+.nav-ctas{display:flex;gap:10px;}
+.btn-ghost{padding:9px 20px;border:2px solid var(--navy);border-radius:8px;font-size:14px;font-weight:600;color:var(--navy);text-decoration:none;transition:all .2s;}
+.btn-ghost:hover{background:var(--navy);color:var(--white);}
+.btn-primary{padding:9px 20px;background:var(--teal);border-radius:8px;font-size:14px;font-weight:600;color:var(--white);text-decoration:none;border:2px solid var(--teal);}
+.page-hero{padding:120px 24px 80px;background:linear-gradient(135deg,#0B1F3A,#1a3a5c);text-align:center;}
+.page-hero-tag{display:inline-block;background:rgba(0,168,150,0.2);color:var(--teal);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 14px;border-radius:100px;margin-bottom:16px;}
+.page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(36px,5vw,56px);color:var(--white);font-weight:900;margin-bottom:16px;}
+.page-hero p{font-size:18px;color:rgba(255,255,255,0.65);max-width:560px;margin:0 auto;line-height:1.7;}
+.section{padding:72px 24px;}
+.inner{max-width:1100px;margin:0 auto;}
+.blog-layout{display:grid;grid-template-columns:1fr 320px;gap:48px;align-items:start;}
+
+/* Featured post */
+.featured-post{background:var(--light);border-radius:20px;overflow:hidden;margin-bottom:48px;}
+.featured-img{background:linear-gradient(135deg,#0B1F3A,#1a3a5c);padding:60px 40px;display:flex;align-items:center;justify-content:center;}
+.featured-img span{font-size:80px;}
+.featured-body{padding:36px;}
+.post-category{display:inline-block;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:100px;margin-bottom:12px;}
+.featured-body h2{font-family:'Playfair Display',serif;font-size:28px;font-weight:900;margin-bottom:12px;line-height:1.3;}
+.featured-body p{font-size:15px;color:var(--mid);line-height:1.7;margin-bottom:20px;}
+.post-meta{display:flex;align-items:center;gap:16px;font-size:13px;color:var(--mid);}
+.post-meta span{display:flex;align-items:center;gap:4px;}
+.read-more{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;color:var(--teal);text-decoration:none;border:2px solid var(--teal);padding:10px 20px;border-radius:8px;transition:all .2s;}
+.read-more:hover{background:var(--teal);color:var(--white);}
+
+/* Blog grid */
+.blog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
+.blog-card{background:var(--white);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:all .3s;cursor:pointer;}
+.blog-card:hover{box-shadow:0 12px 32px rgba(0,0,0,0.08);transform:translateY(-4px);border-color:var(--teal);}
+.blog-card-img{padding:32px;display:flex;align-items:center;justify-content:center;font-size:48px;}
+.blog-card-body{padding:22px;}
+.blog-card-body h3{font-size:17px;font-weight:700;margin-bottom:8px;line-height:1.4;}
+.blog-card-body p{font-size:13px;color:var(--mid);line-height:1.6;margin-bottom:14px;}
+.blog-card-footer{display:flex;align-items:center;justify-content:space-between;font-size:12px;color:var(--mid);}
+
+/* Sidebar */
+.sidebar-widget{background:var(--light);border-radius:14px;padding:24px;margin-bottom:24px;}
+.sidebar-widget h3{font-size:15px;font-weight:700;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--border);}
+.sidebar-post{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--border);}
+.sidebar-post:last-child{border:none;padding-bottom:0;}
+.sidebar-post-icon{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
+.sidebar-post-title{font-size:13px;font-weight:600;margin-bottom:3px;line-height:1.4;}
+.sidebar-post-meta{font-size:11px;color:var(--mid);}
+.tag-cloud{display:flex;flex-wrap:wrap;gap:8px;}
+.tag{display:inline-block;padding:5px 12px;background:var(--white);border:1px solid var(--border);border-radius:100px;font-size:12px;font-weight:500;color:var(--mid);cursor:pointer;transition:all .2s;}
+.tag:hover{border-color:var(--teal);color:var(--teal);}
+.newsletter-form input{width:100%;padding:10px 14px;border:2px solid var(--border);border-radius:8px;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;margin-bottom:10px;transition:border-color .2s;}
+.newsletter-form input:focus{border-color:var(--teal);}
+.newsletter-form button{width:100%;padding:10px;background:var(--teal);color:var(--white);border:none;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:background .2s;}
+.newsletter-form button:hover{background:var(--teal2);}
+
+/* Single post view */
+.post-content{max-width:720px;margin:0 auto;line-height:1.8;}
+.post-content h2{font-family:'Playfair Display',serif;font-size:26px;font-weight:900;margin:36px 0 14px;}
+.post-content h3{font-size:19px;font-weight:700;margin:28px 0 10px;}
+.post-content p{font-size:16px;color:#374151;margin-bottom:18px;line-height:1.85;}
+.post-content ul{margin:0 0 18px 20px;}
+.post-content ul li{font-size:16px;color:#374151;margin-bottom:8px;line-height:1.7;}
+.post-content .highlight{background:var(--light);border-left:4px solid var(--teal);padding:18px 22px;border-radius:0 10px 10px 0;margin:24px 0;}
+.post-content .highlight p{margin:0;font-size:15px;}
+
+footer{background:var(--navy);padding:40px 24px;text-align:center;}
+footer p{font-size:13px;color:rgba(255,255,255,0.4);}
+footer a{color:var(--teal);text-decoration:none;margin:0 10px;}
+@media(max-width:900px){.blog-layout{grid-template-columns:1fr;}.blog-grid{grid-template-columns:1fr;}.nav-links{display:none;}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="/home" class="logo">
+      <div class="logo-icon">⚕</div>
+      <div class="logo-text"><span>Medical Exam</span><span>UCAT</span></div>
+    </a>
+    <div class="nav-links">
+      <a href="/home">Home</a>
+      <div class="dropdown"><a href="/about">About ▾</a>
+        <div class="dropdown-menu"><a href="/about">Our Story</a><a href="about.html#team">Our Team</a></div>
+      </div>
+      <div class="dropdown"><a href="/med-school">Applying to Med School ▾</a>
+        <div class="dropdown-menu"><a href="/med-school">Application Guide</a><a href="med-school.html#ucat">UCAT Overview</a><a href="med-school.html#interviews">Interviews</a></div>
+      </div>
+      <a href="/resources">Free Resources</a>
+      <a href="/blog" class="active">Blog</a>
+      <a href="index.html#pricing">Pricing</a>
+    </div>
+    <div class="nav-ctas">
+      <a href="/home" class="btn-ghost">Login</a>
+      <a href="/home" class="btn-primary">Try Free</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-tag">Insights &amp; Advice</div>
+  <h1>The UCAT Blog</h1>
+  <p>Expert tips, student stories, and everything you need to know about applying to medical school in the UK.</p>
+</div>
+
+<section class="section">
+  <div class="inner">
+
+    <!-- FEATURED POST -->
+    <div class="featured-post">
+      <div style="display:grid;grid-template-columns:1fr 1fr">
+        <div class="featured-img"><span>🎯</span></div>
+        <div class="featured-body">
+          <div class="post-category" style="background:#E8F8F5;color:#117A65">📌 Featured</div>
+          <h2>How to Score 700+ in Every UCAT Subtest: A Complete Strategy Guide</h2>
+          <p>Scoring 700+ in each cognitive subtest puts you in roughly the top 25% of all UCAT candidates — a position that will make your application competitive at most UK medical schools. Here's exactly how to get there.</p>
+          <div class="post-meta" style="margin-bottom:20px">
+            <span>✍️ Sarah K.</span>
+            <span>📅 April 2026</span>
+            <span>⏱ 12 min read</span>
+          </div>
+          <a href="#post-700" class="read-more" onclick="showPost('post-700');return false;">Read Article →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="blog-layout">
+      <div>
+        <h2 style="font-size:20px;font-weight:700;margin-bottom:24px">Latest Articles</h2>
+        <div class="blog-grid">
+          <div class="blog-card" onclick="showPost('post-1')">
+            <div class="blog-card-img" style="background:#EBF5FB">📖</div>
+            <div class="blog-card-body">
+              <div class="post-category" style="background:#EBF5FB;color:#1B4F72;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 10px;border-radius:100px;display:inline-block;margin-bottom:8px">VR Strategy</div>
+              <h3>The Only VR Strategy You'll Ever Need: How to Tackle True/False/Can't Tell</h3>
+              <p>Most students lose points in VR by overthinking. Here's the simple framework that gets you to the right answer every time.</p>
+              <div class="blog-card-footer"><span>Sarah K. · April 2026</span><span>7 min read</span></div>
+            </div>
+          </div>
+
+          <div class="blog-card" onclick="showPost('post-2')">
+            <div class="blog-card-img" style="background:#F5EEF8">👁️</div>
+            <div class="blog-card-body">
+              <div class="post-category" style="background:#F5EEF8;color:#512E5F;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 10px;border-radius:100px;display:inline-block;margin-bottom:8px">AR Strategy</div>
+              <h3>Abstract Reasoning: The SCANS Method That Gets You 700+ in 12 Minutes</h3>
+              <p>AR only gives you ~14 seconds per question. This systematic approach means you never waste time searching aimlessly for patterns.</p>
+              <div class="blog-card-footer"><span>Adil J. · March 2026</span><span>9 min read</span></div>
+            </div>
+          </div>
+
+          <div class="blog-card" onclick="showPost('post-3')">
+            <div class="blog-card-img" style="background:#FDEDEC">⚖️</div>
+            <div class="blog-card-body">
+              <div class="post-category" style="background:#FDEDEC;color:#922B21;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 10px;border-radius:100px;display:inline-block;margin-bottom:8px">SJT Guide</div>
+              <h3>SJT Band 1: How to Think Like a Doctor in the Situational Judgement Test</h3>
+              <p>The SJT tests your professional values, not your clinical knowledge. Here's what medical schools are actually looking for.</p>
+              <div class="blog-card-footer"><span>Sarah K. · March 2026</span><span>8 min read</span></div>
+            </div>
+          </div>
+
+          <div class="blog-card" onclick="showPost('post-4')">
+            <div class="blog-card-img" style="background:#E8F8F5">🩺</div>
+            <div class="blog-card-body">
+              <div class="post-category" style="background:#E8F8F5;color:#117A65;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 10px;border-radius:100px;display:inline-block;margin-bottom:8px">Application</div>
+              <h3>Work Experience for Medicine: What Actually Counts and How to Get It</h3>
+              <p>Medical schools want evidence of genuine insight into medicine. Here's how to get meaningful work experience — even if you don't know any doctors.</p>
+              <div class="blog-card-footer"><span>Adil J. · February 2026</span><span>10 min read</span></div>
+            </div>
+          </div>
+
+          <div class="blog-card" onclick="showPost('post-5')">
+            <div class="blog-card-img" style="background:#FEF9EC">📊</div>
+            <div class="blog-card-body">
+              <div class="post-category" style="background:#FEF9EC;color:#784212;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 10px;border-radius:100px;display:inline-block;margin-bottom:8px">QR Strategy</div>
+              <h3>Quantitative Reasoning Without a Calculator: Speed Tricks That Actually Work</h3>
+              <p>The on-screen calculator is slow. These mental maths shortcuts will save you precious seconds on every QR question.</p>
+              <div class="blog-card-footer"><span>Raj P. · February 2026</span><span>6 min read</span></div>
+            </div>
+          </div>
+
+          <div class="blog-card" onclick="showPost('post-6')">
+            <div class="blog-card-img" style="background:#EBF5FB">💬</div>
+            <div class="blog-card-body">
+              <div class="post-category" style="background:#EBF5FB;color:#1B4F72;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 10px;border-radius:100px;display:inline-block;margin-bottom:8px">Interviews</div>
+              <h3>MMI Interview Guide: How to Ace Every Station at Medical School Interviews</h3>
+              <p>Multiple Mini Interviews are unlike any interview you've done before. Here's exactly how to prepare and what assessors are looking for at each station.</p>
+              <div class="blog-card-footer"><span>Sarah K. · January 2026</span><span>11 min read</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <div>
+        <div class="sidebar-widget">
+          <h3>📬 Newsletter</h3>
+          <p style="font-size:13px;color:var(--mid);margin-bottom:14px">Get UCAT tips and medical school advice delivered weekly.</p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="your@email.com">
+            <button onclick="alert('Thank you! You\'ve been subscribed.')">Subscribe Free</button>
+          </div>
+        </div>
+
+        <div class="sidebar-widget">
+          <h3>🔥 Popular Posts</h3>
+          <div class="sidebar-post">
+            <div class="sidebar-post-icon" style="background:#EBF5FB">📖</div>
+            <div><div class="sidebar-post-title">The Only VR Strategy You'll Ever Need</div><div class="sidebar-post-meta">7 min · VR Strategy</div></div>
+          </div>
+          <div class="sidebar-post">
+            <div class="sidebar-post-icon" style="background:#F5EEF8">👁️</div>
+            <div><div class="sidebar-post-title">SCANS Method for Abstract Reasoning</div><div class="sidebar-post-meta">9 min · AR Strategy</div></div>
+          </div>
+          <div class="sidebar-post">
+            <div class="sidebar-post-icon" style="background:#E8F8F5">🩺</div>
+            <div><div class="sidebar-post-title">Work Experience for Medicine</div><div class="sidebar-post-meta">10 min · Application</div></div>
+          </div>
+          <div class="sidebar-post">
+            <div class="sidebar-post-icon" style="background:#FDEDEC">⚖️</div>
+            <div><div class="sidebar-post-title">SJT Band 1: Think Like a Doctor</div><div class="sidebar-post-meta">8 min · SJT</div></div>
+          </div>
+        </div>
+
+        <div class="sidebar-widget">
+          <h3>🏷️ Topics</h3>
+          <div class="tag-cloud">
+            <span class="tag">VR Strategy</span>
+            <span class="tag">Decision Making</span>
+            <span class="tag">Quantitative</span>
+            <span class="tag">Abstract Reasoning</span>
+            <span class="tag">SJT</span>
+            <span class="tag">Full Mock</span>
+            <span class="tag">Personal Statement</span>
+            <span class="tag">Work Experience</span>
+            <span class="tag">MMI Interviews</span>
+            <span class="tag">UCAS</span>
+            <span class="tag">Time Management</span>
+            <span class="tag">Score Analysis</span>
+          </div>
+        </div>
+
+        <div style="background:var(--navy);border-radius:14px;padding:24px;text-align:center">
+          <div style="font-size:32px;margin-bottom:12px">🚀</div>
+          <h3 style="color:var(--white);font-size:16px;margin-bottom:8px">Ready to Practise?</h3>
+          <p style="font-size:13px;color:rgba(255,255,255,0.6);margin-bottom:16px">500+ questions across all 5 UCAT subtests. Free 2-day trial.</p>
+          <a href="/home" style="display:block;background:var(--teal);color:var(--white);padding:12px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;">Start Free Trial →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ARTICLE: How to score 700+ -->
+<div id="post-700" style="display:none;padding:100px 24px 72px;max-width:780px;margin:0 auto">
+  <a href="#" onclick="hidePosts();return false;" style="display:inline-flex;align-items:center;gap:6px;color:var(--teal);font-weight:600;text-decoration:none;margin-bottom:32px;font-size:14px">← Back to Blog</a>
+  <div class="post-category" style="background:#E8F8F5;color:#117A65;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:100px;display:inline-block;margin-bottom:14px">Featured Guide</div>
+  <h1 style="font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,42px);font-weight:900;margin-bottom:16px;line-height:1.2">How to Score 700+ in Every UCAT Subtest</h1>
+  <div style="display:flex;gap:16px;font-size:13px;color:var(--mid);margin-bottom:36px;flex-wrap:wrap">
+    <span>✍️ Sarah K., Head of Content</span><span>📅 April 2026</span><span>⏱ 12 min read</span>
+  </div>
+  <div class="post-content">
+    <p>A score of 700+ in each cognitive subtest places you in approximately the top 25% of all UCAT candidates — a position that opens doors at the vast majority of UK medical schools. But achieving this consistently across all four cognitive subtests (VR, DM, QR, and AR) requires a different approach for each one.</p>
+    <p>This guide breaks down exactly what 700+ requires in each subtest, and the specific strategies that get you there.</p>
+    <div class="highlight"><p>💡 <strong>Key insight:</strong> The UCAT is not an intelligence test. It is a speed-and-accuracy test. The students who score highest are those who have practised the right strategies until they are automatic.</p></div>
+    <h2>Verbal Reasoning: 700+</h2>
+    <p>The average VR score is around 590–610. To reach 700+, you need to answer at least 35 of 44 questions correctly. The key? Stop reading the whole passage first.</p>
+    <ul>
+      <li><strong>Read the question first, then scan the passage</strong> — VR is about locating information, not comprehension.</li>
+      <li><strong>For True/False/Can't Tell</strong> — if the passage neither confirms nor denies the statement, it's always Can't Tell. Never use outside knowledge.</li>
+      <li><strong>Aim for ~30 seconds per question</strong> — any question taking more than 45 seconds should be flagged and skipped.</li>
+    </ul>
+    <h2>Decision Making: 700+</h2>
+    <p>DM is the most varied subtest — it covers syllogisms, probability, statistical reasoning, and argument evaluation. The average score is around 610–630.</p>
+    <ul>
+      <li><strong>Syllogisms:</strong> Always draw a Venn diagram. Don't try to solve them in your head — errors are almost inevitable without a diagram.</li>
+      <li><strong>Probability:</strong> Set up the calculation before selecting an answer. Read carefully — questions often give you data in a format that requires converting before calculating.</li>
+      <li><strong>Argument strength:</strong> Identify the conclusion, then ask whether the evidence directly supports it or whether there's a gap in the logic.</li>
+    </ul>
+    <h2>Quantitative Reasoning: 700+</h2>
+    <p>QR tests numerical problem-solving, not advanced maths. The key skill is reading graphs and tables accurately and calculating quickly.</p>
+    <ul>
+      <li><strong>Estimate first</strong> — many QR questions can be answered with an estimate. If the answer choices are spread apart, don't calculate precisely.</li>
+      <li><strong>Learn the on-screen calculator</strong> — practice using it at speed. Many students lose time fumbling with it during the real exam.</li>
+      <li><strong>Percentage change formula</strong> — (new − old) / old × 100. This appears in almost every QR section.</li>
+    </ul>
+    <h2>Abstract Reasoning: 700+</h2>
+    <p>AR is the most time-pressured subtest — approximately 14 seconds per question. The students who perform best here have drilled pattern recognition until it's instinctive.</p>
+    <ul>
+      <li><strong>Use SCANS:</strong> Shape, Colour, Arrangement, Number, Size — check each systematically in 10 seconds. If no pattern is obvious, guess and move on.</li>
+      <li><strong>The most common rules</strong> are: number of shapes, number of sides, colour/shading, rotation, and position. Start with these.</li>
+      <li><strong>Daily short practice beats weekly long sessions</strong> — 15 minutes every day builds pattern recognition faster than 2 hours once a week.</li>
+    </ul>
+    <div class="highlight"><p>🎯 <strong>The bottom line:</strong> 700+ is achievable for most students with 6–8 weeks of consistent, structured practice using real exam-style questions. Start with our free trial today.</p></div>
+    <div style="text-align:center;margin-top:32px">
+      <a href="/home" style="display:inline-block;background:var(--teal);color:var(--white);padding:14px 32px;border-radius:10px;font-size:15px;font-weight:700;text-decoration:none;">Start Practising Free →</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Medical Exam UCAT &nbsp;·&nbsp;<a href="/home">Home</a><a href="/about">About</a><a href="/med-school">Applying to Med School</a><a href="/resources">Free Resources</a><a href="mailto:support@medicalexamucat.co.uk">Contact</a></p>
+</footer>
+
+<script>
+function showPost(id) {
+  document.querySelector('.section').style.display='none';
+  document.querySelector('.page-hero').style.display='none';
+  document.getElementById(id).style.display='block';
+  window.scrollTo(0,0);
+}
+function hidePosts() {
+  document.querySelector('.section').style.display='block';
+  document.querySelector('.page-hero').style.display='block';
+  document.querySelectorAll('[id^="post-"]').forEach(p=>p.style.display='none');
+  window.scrollTo(0,0);
+}
+</script>
+</body>
+</html>

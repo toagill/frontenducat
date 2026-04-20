@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Applying to Medical School — Medical Exam UCAT</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0B1F3A;--teal:#00A896;--teal2:#02C39A;--gold:#F4A261;--light:#F8FAFB;--mid:#6B7A8D;--white:#ffffff;--border:#E2E8F0;}
+*{margin:0;padding:0;box-sizing:border-box;}body{font-family:'DM Sans',sans-serif;color:var(--navy);background:var(--white);}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;height:70px;display:flex;align-items:center;justify-content:space-between;}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.logo-icon{width:38px;height:38px;background:var(--teal);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;}
+.logo-text span:first-child{display:block;font-size:15px;font-weight:700;color:var(--teal);}
+.logo-text span:last-child{display:block;font-size:10px;color:var(--mid);letter-spacing:3px;text-transform:uppercase;}
+.nav-links{display:flex;align-items:center;gap:28px;}
+.nav-links a{text-decoration:none;font-size:14px;font-weight:500;color:var(--navy);transition:color .2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--teal);}
+.dropdown{position:relative;}
+.dropdown-menu{position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%);background:var(--white);border:1px solid var(--border);border-radius:12px;padding:8px;min-width:200px;box-shadow:0 8px 32px rgba(0,0,0,0.12);display:none;z-index:200;}
+.dropdown:hover .dropdown-menu{display:block;}
+.dropdown-menu a{display:block;padding:10px 14px;font-size:14px;color:var(--navy);text-decoration:none;border-radius:8px;transition:background .2s;}
+.dropdown-menu a:hover{background:var(--light);color:var(--teal);}
+.nav-ctas{display:flex;gap:10px;}
+.btn-ghost{padding:9px 20px;border:2px solid var(--navy);border-radius:8px;font-size:14px;font-weight:600;color:var(--navy);text-decoration:none;transition:all .2s;}
+.btn-ghost:hover{background:var(--navy);color:var(--white);}
+.btn-primary{padding:9px 20px;background:var(--teal);border-radius:8px;font-size:14px;font-weight:600;color:var(--white);text-decoration:none;border:2px solid var(--teal);transition:all .2s;}
+.page-hero{padding:120px 24px 80px;background:linear-gradient(135deg,#0B1F3A,#1a3a5c);text-align:center;}
+.page-hero-tag{display:inline-block;background:rgba(0,168,150,0.2);color:var(--teal);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 14px;border-radius:100px;margin-bottom:16px;}
+.page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(36px,5vw,58px);color:var(--white);font-weight:900;margin-bottom:16px;line-height:1.15;}
+.page-hero p{font-size:18px;color:rgba(255,255,255,0.65);max-width:640px;margin:0 auto;line-height:1.7;}
+.section{padding:72px 24px;}
+.inner{max-width:1100px;margin:0 auto;}
+.inner-narrow{max-width:780px;margin:0 auto;}
+.section-tag{display:inline-block;background:rgba(0,168,150,0.1);color:var(--teal);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 14px;border-radius:100px;margin-bottom:14px;}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(28px,3.5vw,40px);font-weight:900;margin-bottom:14px;line-height:1.2;}
+.section-sub{font-size:17px;color:var(--mid);line-height:1.8;}
+
+/* Timeline */
+.timeline{position:relative;padding-left:40px;}
+.timeline::before{content:'';position:absolute;left:14px;top:8px;bottom:8px;width:2px;background:linear-gradient(to bottom,var(--teal),var(--navy));}
+.tl-item{position:relative;margin-bottom:48px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-34px;top:4px;width:20px;height:20px;background:var(--teal);border-radius:50%;border:3px solid var(--white);box-shadow:0 0 0 3px var(--teal);}
+.tl-year{font-size:12px;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;}
+.tl-title{font-size:20px;font-weight:700;margin-bottom:8px;}
+.tl-desc{font-size:15px;color:var(--mid);line-height:1.7;}
+.tl-tips{margin-top:14px;background:var(--light);border-left:3px solid var(--teal);padding:14px 18px;border-radius:0 8px 8px 0;}
+.tl-tips p{font-size:13px;color:var(--mid);line-height:1.7;}
+.tl-tips strong{color:var(--navy);}
+
+/* Requirements table */
+.req-table{width:100%;border-collapse:collapse;border-radius:12px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);}
+.req-table th{background:var(--navy);color:var(--white);padding:14px 20px;text-align:left;font-size:13px;font-weight:600;}
+.req-table td{padding:14px 20px;font-size:14px;border-bottom:1px solid var(--border);color:var(--mid);}
+.req-table td:first-child{font-weight:600;color:var(--navy);}
+.req-table tr:last-child td{border:none;}
+.req-table tr:nth-child(even) td{background:var(--light);}
+.badge{display:inline-block;padding:3px 10px;border-radius:100px;font-size:11px;font-weight:700;}
+.badge.essential{background:#E8F8F5;color:#117A65;}
+.badge.important{background:#FEF9EC;color:#784212;}
+.badge.optional{background:#F5EEF8;color:#512E5F;}
+
+/* Info cards */
+.info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+.info-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:24px;transition:box-shadow .2s;}
+.info-card:hover{box-shadow:0 8px 24px rgba(0,0,0,0.08);}
+.info-card-icon{font-size:28px;margin-bottom:12px;}
+.info-card-title{font-size:16px;font-weight:700;margin-bottom:8px;}
+.info-card-desc{font-size:14px;color:var(--mid);line-height:1.7;}
+
+/* Score table */
+.score-table{width:100%;border-collapse:collapse;}
+.score-table th{background:var(--navy);color:var(--white);padding:12px 16px;text-align:left;font-size:13px;}
+.score-table td{padding:12px 16px;font-size:14px;border-bottom:1px solid var(--border);}
+.score-table tr:nth-child(even) td{background:var(--light);}
+.score-bar{height:8px;border-radius:4px;background:var(--teal);}
+
+/* Checklist */
+.checklist{list-style:none;}
+.checklist li{display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-bottom:1px solid var(--border);font-size:15px;}
+.checklist li:last-child{border:none;}
+.checklist li::before{content:'✓';width:22px;height:22px;background:var(--teal);color:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;margin-top:1px;}
+.cta-banner{background:var(--navy);border-radius:20px;padding:48px;text-align:center;margin-top:48px;}
+.cta-banner h2{font-family:'Playfair Display',serif;font-size:34px;color:var(--white);margin-bottom:12px;}
+.cta-banner p{font-size:16px;color:rgba(255,255,255,0.6);margin-bottom:28px;}
+.btn-cta{display:inline-block;padding:14px 32px;background:var(--teal);color:var(--white);border-radius:10px;font-size:15px;font-weight:700;text-decoration:none;}
+footer{background:var(--navy);padding:40px 24px;text-align:center;}
+footer p{font-size:13px;color:rgba(255,255,255,0.4);}
+footer a{color:var(--teal);text-decoration:none;margin:0 10px;}
+@media(max-width:768px){.info-grid{grid-template-columns:1fr;}.nav-links{display:none;}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="/home" class="logo">
+      <div class="logo-icon">⚕</div>
+      <div class="logo-text"><span>Medical Exam</span><span>UCAT</span></div>
+    </a>
+    <div class="nav-links">
+      <a href="/home">Home</a>
+      <div class="dropdown"><a href="/about">About ▾</a>
+        <div class="dropdown-menu"><a href="/about">Our Story</a><a href="about.html#team">Our Team</a></div>
+      </div>
+      <div class="dropdown"><a href="/med-school" class="active">Applying to Med School ▾</a>
+        <div class="dropdown-menu">
+          <a href="/med-school">Application Guide</a>
+          <a href="med-school.html#ucas">UCAS Process</a>
+          <a href="med-school.html#ucat">UCAT Overview</a>
+          <a href="med-school.html#interviews">Interviews</a>
+        </div>
+      </div>
+      <a href="/resources">Free Resources</a>
+      <a href="/blog">Blog</a>
+      <a href="index.html#pricing">Pricing</a>
+    </div>
+    <div class="nav-ctas">
+      <a href="/home" class="btn-ghost">Login</a>
+      <a href="/home" class="btn-primary">Try Free</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-tag">Complete Guide</div>
+  <h1>How to Apply to<br>Medical School in the UK</h1>
+  <p>A step-by-step guide covering everything from GCSEs to your first day at medical school — written for aspiring UK medical students.</p>
+</div>
+
+<!-- OVERVIEW -->
+<section class="section">
+  <div class="inner">
+    <div class="section-tag">The Big Picture</div>
+    <h2 class="section-title">The UK Medical School Application Journey</h2>
+    <p class="section-sub" style="margin-bottom:40px">Applying to medical school in the UK is a multi-year process that begins well before your A-Level results. Here's everything you need to know.</p>
+    <div class="info-grid">
+      <div class="info-card"><div class="info-card-icon">📚</div><div class="info-card-title">Academic Requirements</div><div class="info-card-desc">Most medical schools require A*AA or AAA at A-Level, typically including Chemistry and one other science (Biology, Physics, or Maths). GCSEs also matter — most schools look for at least 7 GCSEs at grade 7/A or above.</div></div>
+      <div class="info-card"><div class="info-card-icon">🧪</div><div class="info-card-title">Admissions Tests</div><div class="info-card-desc">Almost all UK medical schools require the UCAT (University Clinical Aptitude Test) or BMAT (BioMedical Admissions Test). The UCAT is required by the majority of schools and is sat in the summer before UCAS applications open.</div></div>
+      <div class="info-card"><div class="info-card-icon">📝</div><div class="info-card-title">UCAS Application</div><div class="info-card-desc">You apply through UCAS and can apply to a maximum of 4 medical schools (plus one non-medicine choice). The deadline for medical applications is 15 October of your application year.</div></div>
+      <div class="info-card"><div class="info-card-icon">🎤</div><div class="info-card-title">Interviews</div><div class="info-card-desc">Most medical schools conduct interviews — typically MMI (Multiple Mini Interviews) or traditional panel interviews. Interview invitations are usually sent between November and January.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="section" style="background:var(--light)">
+  <div class="inner-narrow">
+    <div class="section-tag">Year by Year</div>
+    <h2 class="section-title" style="margin-bottom:40px">Your Application Timeline</h2>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">Years 10–11 (Age 14–16)</div>
+        <div class="tl-title">GCSEs — Building Your Foundation</div>
+        <div class="tl-desc">Medical schools review your GCSE results as part of shortlisting. Most competitive schools expect 7–9 GCSEs at grade 7 (A) or above, with particular attention to Science and Maths.</div>
+        <div class="tl-tips"><p><strong>Key action:</strong> Prioritise Science, Maths, and English. Aim for at least grade 7 in Biology and Chemistry if you take separate sciences. If you take combined science, aim for grade 7-7 or above.</p></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">Years 12–13 (Age 16–18)</div>
+        <div class="tl-title">A-Levels — The Core Requirements</div>
+        <div class="tl-desc">Almost all medical schools require Chemistry as one of your A-Levels. The second science subject is usually Biology but may be Physics or Maths at some universities. Most schools require AAA or A*AA.</div>
+        <div class="tl-tips"><p><strong>Key subjects:</strong> Chemistry (essential at most schools), Biology, Physics, or Maths. Check each school's individual requirements — they vary. Extended Project Qualification (EPQ) can strengthen your personal statement.</p></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">Summer Before Year 13 (June–September)</div>
+        <div class="tl-title">UCAT Registration &amp; Sitting</div>
+        <div class="tl-desc">UCAT registration opens in May/June. The test window is typically July to September. You must sit the UCAT before the UCAS deadline in October. You can only sit the UCAT once per admissions cycle.</div>
+        <div class="tl-tips"><p><strong>Preparation tip:</strong> Begin practising at least 6–8 weeks before your test date. Focus on time management — the UCAT is extremely time-pressured. Use our platform to practise all 5 subtests under timed conditions.</p></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">October (Year 13)</div>
+        <div class="tl-title">UCAS Application — 15 October Deadline</div>
+        <div class="tl-desc">Submit your UCAS application including your personal statement, reference, and predicted grades. You can apply to a maximum of 4 medical schools plus one non-medicine choice.</div>
+        <div class="tl-tips"><p><strong>Personal statement:</strong> 4,000 characters covering your motivation for medicine, work experience, extracurricular activities, and personal qualities. Start drafting at least 3 months before the deadline.</p></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">November–February</div>
+        <div class="tl-title">Interview Invitations &amp; Interviews</div>
+        <div class="tl-desc">Medical schools shortlist applicants based on academic grades, UCAT scores, and personal statement. Interview invitations are sent between November and January, with interviews typically running to February.</div>
+        <div class="tl-tips"><p><strong>MMI vs Panel:</strong> Most UK medical schools now use Multiple Mini Interviews (MMI) — a circuit of short stations testing different competencies. Some schools still use traditional panel interviews. Research your chosen schools' formats in advance.</p></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">March–May</div>
+        <div class="tl-title">Offers &amp; Decisions</div>
+        <div class="tl-desc">Medical schools release decisions, usually as conditional offers (subject to A-Level results). You accept one firm and one insurance choice through UCAS. Unconditional offers are rare in medicine.</div>
+        <div class="tl-tips"><p><strong>Realistic insurance:</strong> Choose your insurance offer carefully — it should be a school you'd genuinely be happy to attend, with grade requirements you're confident of meeting.</p></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">August (A-Level Results Day)</div>
+        <div class="tl-title">Results Day &amp; Confirmation</div>
+        <div class="tl-desc">If you meet your conditions, your place is confirmed. If you narrowly miss, contact your university immediately — many will still accept you. UCAS Clearing is available for medicine in rare circumstances.</div>
+        <div class="tl-tips"><p><strong>If unsuccessful:</strong> Consider resitting, a gap year, or alternative pathways (graduate medicine, international study). Many successful doctors were not accepted on their first application.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- UCAT OVERVIEW -->
+<section class="section" id="ucat">
+  <div class="inner">
+    <div style="text-align:center;margin-bottom:40px">
+      <div class="section-tag">UCAT Explained</div>
+      <h2 class="section-title">Understanding the UCAT</h2>
+      <p class="section-sub" style="margin:0 auto">The UCAT is a 2-hour computer-based exam sat at Pearson VUE test centres. Here is the full breakdown of each subtest.</p>
+    </div>
+    <table class="req-table">
+      <tr><th>Subtest</th><th>Questions</th><th>Time</th><th>Scoring</th><th>What it Tests</th></tr>
+      <tr><td>Verbal Reasoning (VR)</td><td>44</td><td>22 min</td><td>300–900</td><td>Ability to evaluate written information and draw logical conclusions from text</td></tr>
+      <tr><td>Decision Making (DM)</td><td>29</td><td>31 min</td><td>300–900</td><td>Logical reasoning, syllogisms, statistical reasoning, and argument evaluation</td></tr>
+      <tr><td>Quantitative Reasoning (QR)</td><td>36</td><td>25 min</td><td>300–900</td><td>Numerical problem-solving using data presented in tables, graphs and charts</td></tr>
+      <tr><td>Abstract Reasoning (AR)</td><td>50</td><td>12 min</td><td>300–900</td><td>Identifying patterns between abstract shapes — the most time-pressured subtest</td></tr>
+      <tr><td>Situational Judgement (SJT)</td><td>69</td><td>26 min</td><td>Band 1–4</td><td>Understanding real-world situations and identifying appropriate professional behaviours</td></tr>
+      <tr><td><strong>Total / Full Exam</strong></td><td><strong>228</strong></td><td><strong>2h 16min</strong></td><td><strong>Max 3,600</strong></td><td>Comprehensive assessment of cognitive abilities and professional attitudes</td></tr>
+    </table>
+
+    <div style="background:var(--light);border-radius:14px;padding:28px;margin-top:28px">
+      <h3 style="font-size:18px;font-weight:700;margin-bottom:14px">What is a Good UCAT Score?</h3>
+      <p style="font-size:14px;color:var(--mid);margin-bottom:16px;line-height:1.7">UCAT scores vary by year and by medical school. As a general guide:</p>
+      <table class="score-table" style="border-radius:8px;overflow:hidden">
+        <tr><th>Score Range</th><th>Percentile (approx)</th><th>Competitiveness</th></tr>
+        <tr><td>2,900 – 3,600</td><td>Top 10%</td><td>Very competitive at most schools</td></tr>
+        <tr><td>2,700 – 2,900</td><td>Top 25%</td><td>Competitive at many schools</td></tr>
+        <tr><td>2,500 – 2,700</td><td>Top 50%</td><td>Average — borderline at competitive schools</td></tr>
+        <tr><td>Below 2,500</td><td>Bottom 50%</td><td>May limit choices — consider resitting next year</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- WORK EXPERIENCE -->
+<section class="section" style="background:var(--light)">
+  <div class="inner-narrow">
+    <div class="section-tag">Essential Preparation</div>
+    <h2 class="section-title">Work Experience &amp; Extracurriculars</h2>
+    <p class="section-sub" style="margin-bottom:32px">Medical schools expect evidence that you understand what a career in medicine actually involves. Work experience is essential.</p>
+    <ul class="checklist">
+      <li><strong>Clinical shadowing</strong> — shadow a doctor (GP, hospital doctor, or specialist) to understand the day-to-day realities of clinical medicine. Even 1–2 weeks is valuable. Arrange this through your GP surgery or local hospital.</li>
+      <li><strong>Caring experience</strong> — volunteering in a care home, hospice, or with vulnerable populations demonstrates compassion and commitment to others. This is distinct from clinical work and valued separately.</li>
+      <li><strong>Healthcare volunteering</strong> — St John Ambulance, first aid volunteering, or hospital volunteer programmes all demonstrate commitment to healthcare.</li>
+      <li><strong>Research or science projects</strong> — any engagement with scientific research, even a school-level Extended Project, demonstrates intellectual curiosity and academic ability.</li>
+      <li><strong>Leadership &amp; teamwork</strong> — sports captaincy, music, Duke of Edinburgh, school council — medical schools want well-rounded individuals who can work in teams and lead.</li>
+      <li><strong>Reflection is key</strong> — it's not just about what you did, but what you learned. Be prepared to reflect deeply on every experience in your personal statement and at interview.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- PERSONAL STATEMENT -->
+<section class="section" id="personal-statement">
+  <div class="inner-narrow">
+    <div class="section-tag">UCAS Application</div>
+    <h2 class="section-title">Writing Your Personal Statement</h2>
+    <p class="section-sub" style="margin-bottom:32px">Your personal statement (4,000 characters, ~600 words) is your opportunity to explain why you want to study medicine and what makes you a strong candidate.</p>
+    <div class="info-grid">
+      <div class="info-card"><div class="info-card-icon">💡</div><div class="info-card-title">Structure (Suggested)</div><div class="info-card-desc"><strong>Opening (10%):</strong> A compelling hook — why medicine specifically?<br><br><strong>Motivation (25%):</strong> What drew you to medicine? Specific experiences that confirmed this.<br><br><strong>Work experience (30%):</strong> What you did, what you observed, what you reflected on.<br><br><strong>Academic (20%):</strong> Relevant A-Level topics, super-curricular reading, research.<br><br><strong>Extracurricular (15%):</strong> Key activities and what they taught you about teamwork, leadership, communication.</div></div>
+      <div class="info-card"><div class="info-card-icon">🚫</div><div class="info-card-title">Common Mistakes to Avoid</div><div class="info-card-desc">
+        • Don't open with a quote or cliché ("Ever since I was young...")<br><br>
+        • Don't just list experiences — reflect on what each one taught you<br><br>
+        • Don't use the word "passion" excessively<br><br>
+        • Don't make claims you can't back up at interview<br><br>
+        • Don't write about wanting to "help people" without evidence<br><br>
+        • Don't forget the word limit — every word counts</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- INTERVIEWS -->
+<section class="section" style="background:var(--light)" id="interviews">
+  <div class="inner">
+    <div style="text-align:center;margin-bottom:40px">
+      <div class="section-tag">Interview Preparation</div>
+      <h2 class="section-title">Medical School Interviews</h2>
+    </div>
+    <div class="info-grid">
+      <div class="info-card"><div class="info-card-icon">🔄</div><div class="info-card-title">Multiple Mini Interviews (MMI)</div><div class="info-card-desc">Used by most UK medical schools. A circuit of 6–10 short stations (usually 5–8 minutes each), each testing a different competency: ethical reasoning, communication, role-play, problem-solving, motivation for medicine. You rotate between stations with an assessor at each. No single station can make or break your application.</div></div>
+      <div class="info-card"><div class="info-card-icon">👥</div><div class="info-card-title">Traditional Panel Interview</div><div class="info-card-desc">Used by some medical schools including Oxford and Cambridge. Typically 2–3 interviewers asking questions over 20–30 minutes. Covers motivation, work experience, ethics, and academic knowledge. Oxbridge interviews also include academic questions stretching your scientific thinking beyond A-Level.</div></div>
+      <div class="info-card"><div class="info-card-icon">⚕️</div><div class="info-card-title">Common Interview Themes</div><div class="info-card-desc">
+        • <strong>Why medicine?</strong> — Be specific and evidence-based<br>
+        • <strong>Why this school?</strong> — Research the curriculum and ethos<br>
+        • <strong>Ethical scenarios</strong> — Autonomy, consent, resource allocation<br>
+        • <strong>NHS challenges</strong> — Funding, staffing, waiting lists<br>
+        • <strong>Work experience reflection</strong> — What did you observe and learn?<br>
+        • <strong>Teamwork/communication</strong> — Give specific examples
+      </div></div>
+      <div class="info-card"><div class="info-card-icon">📖</div><div class="info-card-title">Essential Pre-Interview Reading</div><div class="info-card-desc">
+        • <strong>GMC Good Medical Practice</strong> — understand the duties of a doctor<br>
+        • <strong>NHS Constitution</strong> — values and patient rights<br>
+        • <strong>Current NHS news</strong> — major challenges and recent developments<br>
+        • <strong>Medical ethics principles</strong> — autonomy, beneficence, non-maleficence, justice<br>
+        • <strong>The Doctor Will See You Now</strong> by Amir Khan — recommended reading
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="inner">
+    <div class="cta-banner">
+      <h2>Start Your UCAT Preparation Today</h2>
+      <p>The UCAT is one of the most important parts of your application. Begin practising with our 500+ question bank.</p>
+      <a href="/home" class="btn-cta">Start Free Trial →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Medical Exam UCAT &nbsp;·&nbsp;<a href="/home">Home</a><a href="/about">About</a><a href="/resources">Free Resources</a><a href="/blog">Blog</a><a href="mailto:support@medicalexamucat.co.uk">Contact</a></p>
+</footer>
+</body>
+</html>

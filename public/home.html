@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medical Exam UCAT — UK's #1 UCAT Preparation Platform</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy:   #0B1F3A;
+  --teal:   #00A896;
+  --teal2:  #02C39A;
+  --gold:   #F4A261;
+  --red:    #E63946;
+  --light:  #F8FAFB;
+  --mid:    #6B7A8D;
+  --white:  #ffffff;
+  --border: #E2E8F0;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;color:var(--navy);background:var(--white);overflow-x:hidden;}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);transition:all .3s;}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;height:70px;display:flex;align-items:center;justify-content:space-between;}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.logo-icon{width:38px;height:38px;background:var(--teal);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;}
+.logo-text{display:flex;flex-direction:column;line-height:1.1;}
+.logo-text span:first-child{font-size:15px;font-weight:700;color:var(--teal);}
+.logo-text span:last-child{font-size:10px;color:var(--mid);letter-spacing:3px;text-transform:uppercase;}
+.nav-links{display:flex;align-items:center;gap:32px;}
+.nav-links a{text-decoration:none;font-size:14px;font-weight:500;color:var(--navy);transition:color .2s;}
+.nav-links a:hover{color:var(--teal);}
+.nav-ctas{display:flex;align-items:center;gap:12px;}
+.btn-ghost{padding:9px 20px;border:2px solid var(--navy);border-radius:8px;font-size:14px;font-weight:600;color:var(--navy);text-decoration:none;transition:all .2s;background:transparent;}
+.btn-ghost:hover{background:var(--navy);color:var(--white);}
+.btn-primary{padding:9px 20px;background:var(--teal);border-radius:8px;font-size:14px;font-weight:600;color:var(--white);text-decoration:none;transition:all .2s;border:2px solid var(--teal);}
+.btn-primary:hover{background:var(--teal2);border-color:var(--teal2);}
+
+/* ── HERO ── */
+.hero{padding:140px 24px 80px;background:linear-gradient(135deg,#0B1F3A 0%,#1a3a5c 60%,#0d2d4a 100%);position:relative;overflow:hidden;min-height:92vh;display:flex;align-items:center;}
+.hero::before{content:'';position:absolute;top:-100px;right:-200px;width:700px;height:700px;background:radial-gradient(circle,rgba(0,168,150,0.15) 0%,transparent 70%);pointer-events:none;}
+.hero::after{content:'';position:absolute;bottom:-100px;left:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(244,162,97,0.08) 0%,transparent 70%);pointer-events:none;}
+.hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;position:relative;z-index:1;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,168,150,0.15);border:1px solid rgba(0,168,150,0.3);color:var(--teal);padding:8px 16px;border-radius:100px;font-size:13px;font-weight:600;margin-bottom:24px;letter-spacing:.5px;}
+.hero-badge span{width:6px;height:6px;background:var(--teal);border-radius:50%;animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.5;transform:scale(1.3);}}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(42px,5vw,68px);line-height:1.05;color:var(--white);margin-bottom:20px;font-weight:900;}
+.hero h1 em{font-style:normal;color:var(--teal);position:relative;}
+.hero h1 em::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:3px;background:var(--teal);border-radius:2px;opacity:.5;}
+.hero p{font-size:18px;line-height:1.7;color:rgba(255,255,255,0.7);margin-bottom:36px;max-width:520px;}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:48px;}
+.btn-hero-primary{padding:15px 32px;background:var(--teal);border-radius:10px;font-size:16px;font-weight:700;color:var(--white);text-decoration:none;transition:all .3s;display:flex;align-items:center;gap:8px;box-shadow:0 8px 30px rgba(0,168,150,0.35);}
+.btn-hero-primary:hover{background:var(--teal2);transform:translateY(-2px);box-shadow:0 12px 40px rgba(0,168,150,0.45);}
+.btn-hero-secondary{padding:15px 32px;border:2px solid rgba(255,255,255,0.3);border-radius:10px;font-size:16px;font-weight:600;color:var(--white);text-decoration:none;transition:all .3s;}
+.btn-hero-secondary:hover{border-color:rgba(255,255,255,0.6);background:rgba(255,255,255,0.08);}
+.hero-stats{display:flex;gap:32px;}
+.stat{text-align:left;}
+.stat strong{display:block;font-size:28px;font-weight:700;color:var(--white);}
+.stat span{font-size:13px;color:rgba(255,255,255,0.5);}
+
+/* Hero card visual */
+.hero-visual{position:relative;}
+.hero-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);backdrop-filter:blur(20px);border-radius:20px;padding:32px;animation:float 6s ease-in-out infinite;}
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-12px);}}
+.hero-card-title{color:rgba(255,255,255,0.5);font-size:12px;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px;}
+.subtest-row{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.07);}
+.subtest-row:last-child{border:none;}
+.subtest-info{display:flex;align-items:center;gap:12px;}
+.subtest-dot{width:10px;height:10px;border-radius:50%;}
+.subtest-name{font-size:14px;color:rgba(255,255,255,0.8);font-weight:500;}
+.subtest-count{font-size:12px;color:rgba(255,255,255,0.4);}
+.subtest-bar-wrap{flex:1;margin:0 16px;height:4px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;}
+.subtest-bar{height:100%;border-radius:2px;animation:grow 2s ease-out forwards;}
+@keyframes grow{from{width:0;}to{width:var(--w);}}
+.subtest-score{font-size:13px;font-weight:700;color:var(--white);}
+
+/* floating badges */
+.float-badge{position:absolute;background:var(--white);border-radius:12px;padding:10px 14px;box-shadow:0 8px 32px rgba(0,0,0,0.2);display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--navy);}
+.float-badge.top-right{top:-20px;right:-20px;animation:float 4s ease-in-out infinite 1s;}
+.float-badge.bottom-left{bottom:-15px;left:-15px;animation:float 5s ease-in-out infinite 0.5s;}
+.float-badge .fb-icon{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;}
+
+/* ── TRUST BAR ── */
+.trust-bar{background:var(--light);border-bottom:1px solid var(--border);padding:20px 24px;}
+.trust-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap;}
+.trust-item{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--mid);font-weight:500;}
+.trust-item span:first-child{font-size:20px;}
+
+/* ── SECTIONS ── */
+.section{padding:96px 24px;}
+.section-inner{max-width:1200px;margin:0 auto;}
+.section-tag{display:inline-block;background:rgba(0,168,150,0.1);color:var(--teal);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 14px;border-radius:100px;margin-bottom:16px;}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,48px);font-weight:900;line-height:1.15;margin-bottom:16px;}
+.section-sub{font-size:18px;color:var(--mid);line-height:1.7;max-width:580px;}
+.section-header{margin-bottom:56px;}
+.section-header.centered{text-align:center;}
+.section-header.centered .section-sub{margin:0 auto;}
+
+/* ── SUBTESTS ── */
+.subtests-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
+.subtest-card{background:var(--white);border:2px solid var(--border);border-radius:16px;padding:28px;transition:all .3s;cursor:pointer;position:relative;overflow:hidden;}
+.subtest-card::before{content:'';position:absolute;inset:0;background:var(--color);opacity:0;transition:opacity .3s;}
+.subtest-card:hover{border-color:var(--color);transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,0.1);}
+.subtest-card:hover::before{opacity:.04;}
+.sc-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:16px;}
+.sc-code{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;}
+.sc-name{font-size:17px;font-weight:700;margin-bottom:8px;}
+.sc-desc{font-size:13px;color:var(--mid);line-height:1.6;margin-bottom:16px;}
+.sc-meta{display:flex;gap:12px;}
+.sc-meta span{font-size:12px;color:var(--mid);background:var(--light);padding:4px 10px;border-radius:100px;}
+.sc-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;text-decoration:none;margin-top:16px;}
+
+/* ── HOW IT WORKS ── */
+.hiw-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;}
+.hiw-step{text-align:center;padding:40px 24px;}
+.hiw-num{width:56px;height:56px;background:var(--navy);color:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:22px;font-weight:900;margin:0 auto 20px;}
+.hiw-icon{font-size:36px;margin-bottom:16px;}
+.hiw-title{font-size:20px;font-weight:700;margin-bottom:10px;}
+.hiw-desc{font-size:15px;color:var(--mid);line-height:1.7;}
+.hiw-connector{display:flex;align-items:center;justify-content:center;padding-top:28px;}
+.hiw-connector::after{content:'→';font-size:24px;color:var(--teal);}
+
+/* ── PRICING ── */
+.pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:800px;margin:0 auto;}
+.price-card{border:2px solid var(--border);border-radius:20px;overflow:hidden;transition:all .3s;}
+.price-card.featured{border-color:var(--teal);box-shadow:0 20px 60px rgba(0,168,150,0.15);transform:scale(1.02);}
+.price-header{padding:32px;background:var(--light);}
+.price-card.featured .price-header{background:var(--navy);}
+.price-badge{display:inline-block;background:var(--teal);color:var(--white);font-size:11px;font-weight:700;letter-spacing:1px;padding:4px 12px;border-radius:100px;margin-bottom:12px;}
+.price-name{font-size:22px;font-weight:700;margin-bottom:4px;}
+.price-card.featured .price-name,.price-card.featured .price-amount,.price-card.featured .price-period{color:var(--white);}
+.price-amount{font-family:'Playfair Display',serif;font-size:52px;font-weight:900;line-height:1;}
+.price-amount sup{font-size:24px;vertical-align:top;margin-top:12px;display:inline-block;}
+.price-period{font-size:14px;color:var(--mid);margin-top:4px;}
+.price-card.featured .price-period{color:rgba(255,255,255,0.6);}
+.price-body{padding:32px;}
+.price-features{list-style:none;margin-bottom:28px;}
+.price-features li{display:flex;align-items:flex-start;gap:10px;font-size:14px;padding:8px 0;border-bottom:1px solid var(--border);}
+.price-features li:last-child{border:none;}
+.price-features li::before{content:'✓';color:var(--teal);font-weight:700;flex-shrink:0;margin-top:1px;}
+.btn-price-primary{display:block;width:100%;padding:14px;background:var(--teal);color:var(--white);font-size:15px;font-weight:700;text-align:center;border-radius:10px;text-decoration:none;transition:all .3s;border:2px solid var(--teal);}
+.btn-price-primary:hover{background:var(--teal2);}
+.btn-price-secondary{display:block;width:100%;padding:14px;border:2px solid var(--navy);color:var(--navy);font-size:15px;font-weight:700;text-align:center;border-radius:10px;text-decoration:none;transition:all .3s;}
+.btn-price-secondary:hover{background:var(--navy);color:var(--white);}
+
+/* ── TESTIMONIALS ── */
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.testi-card{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:28px;transition:all .3s;}
+.testi-card:hover{box-shadow:0 12px 40px rgba(0,0,0,0.08);transform:translateY(-4px);}
+.testi-stars{color:#F59E0B;font-size:16px;margin-bottom:14px;letter-spacing:2px;}
+.testi-text{font-size:15px;line-height:1.7;color:#374151;margin-bottom:20px;font-style:italic;}
+.testi-author{display:flex;align-items:center;gap:12px;}
+.testi-avatar{width:40px;height:40px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;color:var(--white);font-weight:700;font-size:15px;flex-shrink:0;}
+.testi-name{font-size:14px;font-weight:700;}
+.testi-role{font-size:12px;color:var(--mid);}
+
+/* ── FAQ ── */
+.faq-list{max-width:720px;margin:0 auto;}
+.faq-item{border-bottom:1px solid var(--border);}
+.faq-q{width:100%;text-align:left;padding:22px 0;font-size:16px;font-weight:600;color:var(--navy);background:none;border:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;transition:color .2s;}
+.faq-q:hover{color:var(--teal);}
+.faq-q .icon{font-size:20px;flex-shrink:0;transition:transform .3s;color:var(--teal);}
+.faq-q.open .icon{transform:rotate(45deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s;}
+.faq-a.open{max-height:300px;padding-bottom:20px;}
+.faq-a p{font-size:15px;color:var(--mid);line-height:1.8;}
+
+/* ── CTA SECTION ── */
+.cta-section{background:linear-gradient(135deg,var(--navy) 0%,#1a3a5c 100%);padding:96px 24px;position:relative;overflow:hidden;}
+.cta-section::before{content:'';position:absolute;top:-50%;right:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(0,168,150,0.12) 0%,transparent 70%);pointer-events:none;}
+.cta-inner{max-width:700px;margin:0 auto;text-align:center;position:relative;z-index:1;}
+.cta-inner h2{font-family:'Playfair Display',serif;font-size:clamp(36px,4vw,52px);color:var(--white);margin-bottom:16px;font-weight:900;}
+.cta-inner p{font-size:18px;color:rgba(255,255,255,0.65);margin-bottom:36px;line-height:1.7;}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+
+/* ── FOOTER ── */
+footer{background:var(--navy);padding:64px 24px 32px;color:rgba(255,255,255,0.6);}
+.footer-inner{max-width:1200px;margin:0 auto;}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;}
+.footer-brand p{font-size:14px;line-height:1.8;margin-top:12px;max-width:280px;}
+.footer-col h4{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--white);margin-bottom:16px;}
+.footer-col a{display:block;font-size:14px;margin-bottom:10px;color:rgba(255,255,255,0.5);text-decoration:none;transition:color .2s;}
+.footer-col a:hover{color:var(--teal);}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.footer-bottom p{font-size:13px;}
+.footer-bottom-links{display:flex;gap:20px;}
+.footer-bottom-links a{font-size:13px;color:rgba(255,255,255,0.4);text-decoration:none;}
+.footer-bottom-links a:hover{color:var(--teal);}
+
+/* ── MODAL ── */
+.modal-overlay{position:fixed;inset:0;background:rgba(11,31,58,0.7);backdrop-filter:blur(8px);z-index:1000;display:none;align-items:center;justify-content:center;padding:20px;}
+.modal-overlay.open{display:flex;}
+.modal{background:var(--white);border-radius:20px;overflow:hidden;width:100%;max-width:960px;display:grid;grid-template-columns:1fr 1fr;box-shadow:0 40px 100px rgba(0,0,0,0.3);animation:modalIn .3s ease;}
+@keyframes modalIn{from{opacity:0;transform:scale(.95);}to{opacity:1;transform:scale(1);}}
+.modal-left{background:linear-gradient(135deg,var(--navy),#1a3a5c);padding:48px 40px;display:flex;flex-direction:column;justify-content:space-between;}
+.modal-left h2{font-family:'Playfair Display',serif;font-size:32px;color:var(--white);font-weight:900;line-height:1.2;margin-bottom:12px;}
+.modal-left p{font-size:15px;color:rgba(255,255,255,0.6);line-height:1.7;margin-bottom:32px;}
+.modal-left-features{list-style:none;}
+.modal-left-features li{display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,0.8);padding:8px 0;}
+.modal-left-features li::before{content:'✓';width:20px;height:20px;background:var(--teal);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--white);flex-shrink:0;}
+.modal-right{padding:48px 40px;}
+.modal-close{position:absolute;top:20px;right:20px;width:36px;height:36px;background:var(--light);border:none;border-radius:50%;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;z-index:10;}
+.modal-relative{position:relative;}
+.modal-tabs{display:flex;gap:4px;background:var(--light);border-radius:10px;padding:4px;margin-bottom:28px;}
+.tab-btn{flex:1;padding:10px;border:none;background:transparent;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;color:var(--mid);}
+.tab-btn.active{background:var(--white);color:var(--navy);box-shadow:0 2px 8px rgba(0,0,0,0.08);}
+.form-group{margin-bottom:18px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px;}
+.form-group label{display:block;font-size:13px;font-weight:600;color:var(--navy);margin-bottom:6px;}
+.form-group input{width:100%;padding:12px 16px;border:2px solid var(--border);border-radius:10px;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;transition:border-color .2s;color:var(--navy);}
+.form-group input:focus{border-color:var(--teal);}
+.form-forgot{font-size:13px;color:var(--teal);text-decoration:none;float:right;margin-top:-14px;display:block;margin-bottom:18px;}
+.btn-form{width:100%;padding:14px;background:var(--teal);color:var(--white);border:none;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer;transition:all .3s;font-family:'DM Sans',sans-serif;}
+.btn-form:hover{background:var(--teal2);transform:translateY(-1px);}
+.form-divider{text-align:center;font-size:13px;color:var(--mid);margin:16px 0;}
+.form-switch{text-align:center;font-size:13px;color:var(--mid);margin-top:16px;}
+.form-switch a{color:var(--teal);font-weight:600;text-decoration:none;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .hero-inner,.footer-top,.modal{grid-template-columns:1fr;}
+  .modal-left{display:none;}
+  .hiw-grid,.testi-grid{grid-template-columns:1fr 1fr;}
+  .pricing-grid{grid-template-columns:1fr;}
+  .price-card.featured{transform:none;}
+  .nav-links{display:none;}
+}
+@media(max-width:600px){
+  .hiw-grid,.testi-grid{grid-template-columns:1fr;}
+  .hero-stats{gap:20px;}
+  .trust-inner{gap:24px;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="logo">
+      <div class="logo-icon">⚕</div>
+      <div class="logo-text">
+        <span>Medical Exam</span>
+        <span>UCAT</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="#subtests">UCAT Subtests</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="nav-ctas">
+      <a href="#" class="btn-ghost" onclick="openModal('login');return false;">Login</a>
+      <a href="#" class="btn-primary" onclick="openModal('register');return false;">Try Free</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span></span>
+        UK's #1 UCAT Preparation Platform
+      </div>
+      <h1>Ace Your UCAT.<br>Get Into <em>Medical School</em>.</h1>
+      <p>500+ carefully crafted practice questions, full timed mock exams, and detailed explanations across all 5 UCAT subtests. Built specifically for UK medical school applicants.</p>
+      <div class="hero-ctas">
+        <a href="#" class="btn-hero-primary" onclick="openModal('register');return false;">
+          Start Free Trial →
+        </a>
+        <a href="#how-it-works" class="btn-hero-secondary">See How It Works</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>500+</strong><span>Practice Questions</span></div>
+        <div class="stat"><strong>5</strong><span>UCAT Subtests</span></div>
+        <div class="stat"><strong>£29.99</strong><span>Per Year</span></div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="float-badge top-right">
+        <div class="fb-icon" style="background:#E8F8F5">✓</div>
+        <span>Free 2-day trial</span>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-title">Your UCAT Progress</div>
+        <div class="subtest-row">
+          <div class="subtest-info">
+            <div class="subtest-dot" style="background:#1B4F72"></div>
+            <div>
+              <div class="subtest-name">Verbal Reasoning</div>
+              <div class="subtest-count">44 questions · 22 min</div>
+            </div>
+          </div>
+          <div class="subtest-bar-wrap"><div class="subtest-bar" style="background:#1B4F72;--w:82%"></div></div>
+          <div class="subtest-score">720</div>
+        </div>
+        <div class="subtest-row">
+          <div class="subtest-info">
+            <div class="subtest-dot" style="background:#117A65"></div>
+            <div>
+              <div class="subtest-name">Decision Making</div>
+              <div class="subtest-count">29 questions · 31 min</div>
+            </div>
+          </div>
+          <div class="subtest-bar-wrap"><div class="subtest-bar" style="background:#117A65;--w:74%"></div></div>
+          <div class="subtest-score">690</div>
+        </div>
+        <div class="subtest-row">
+          <div class="subtest-info">
+            <div class="subtest-dot" style="background:#784212"></div>
+            <div>
+              <div class="subtest-name">Quantitative Reasoning</div>
+              <div class="subtest-count">36 questions · 25 min</div>
+            </div>
+          </div>
+          <div class="subtest-bar-wrap"><div class="subtest-bar" style="background:#784212;--w:91%"></div></div>
+          <div class="subtest-score">760</div>
+        </div>
+        <div class="subtest-row">
+          <div class="subtest-info">
+            <div class="subtest-dot" style="background:#512E5F"></div>
+            <div>
+              <div class="subtest-name">Abstract Reasoning</div>
+              <div class="subtest-count">50 questions · 12 min</div>
+            </div>
+          </div>
+          <div class="subtest-bar-wrap"><div class="subtest-bar" style="background:#512E5F;--w:68%"></div></div>
+          <div class="subtest-score">660</div>
+        </div>
+        <div class="subtest-row">
+          <div class="subtest-info">
+            <div class="subtest-dot" style="background:#922B21"></div>
+            <div>
+              <div class="subtest-name">Situational Judgement</div>
+              <div class="subtest-count">69 questions · 26 min</div>
+            </div>
+          </div>
+          <div class="subtest-bar-wrap"><div class="subtest-bar" style="background:#922B21;--w:88%"></div></div>
+          <div class="subtest-score">Band 1</div>
+        </div>
+      </div>
+      <div class="float-badge bottom-left">
+        <div class="fb-icon" style="background:#FEF3C7">🏆</div>
+        <span>Total: 2,830 / 3,600</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item"><span>✅</span> 500+ Practice Questions</div>
+    <div class="trust-item"><span>⏱</span> Real Exam Timing</div>
+    <div class="trust-item"><span>📊</span> Detailed Analytics</div>
+    <div class="trust-item"><span>🎓</span> All 5 UCAT Subtests</div>
+    <div class="trust-item"><span>💳</span> Cancel Anytime</div>
+  </div>
+</div>
+
+<!-- SUBTESTS -->
+<section class="section" id="subtests">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-tag">What We Cover</div>
+      <h2 class="section-title">All 5 UCAT Subtests</h2>
+      <p class="section-sub">Comprehensive practice for every section of the UCAT exam, with real exam-style questions and full explanations.</p>
+    </div>
+    <div class="subtests-grid">
+      <div class="subtest-card" style="--color:#1B4F72">
+        <div class="sc-icon" style="background:#EBF5FB;font-size:22px">📖</div>
+        <div class="sc-code" style="color:#1B4F72">VR</div>
+        <div class="sc-name">Verbal Reasoning</div>
+        <div class="sc-desc">Evaluate written information, distinguish between facts and opinions, and draw logical conclusions from text.</div>
+        <div class="sc-meta"><span>44 questions</span><span>22 min</span><span>300–900</span></div>
+        <a href="#" class="sc-link" style="color:#1B4F72" onclick="openModal('register');return false;">Practice VR →</a>
+      </div>
+      <div class="subtest-card" style="--color:#117A65">
+        <div class="sc-icon" style="background:#E8F8F5;font-size:22px">🧠</div>
+        <div class="sc-code" style="color:#117A65">DM</div>
+        <div class="sc-name">Decision Making</div>
+        <div class="sc-desc">Use logic to evaluate arguments, analyse data, and make sound decisions with complex information.</div>
+        <div class="sc-meta"><span>29 questions</span><span>31 min</span><span>300–900</span></div>
+        <a href="#" class="sc-link" style="color:#117A65" onclick="openModal('register');return false;">Practice DM →</a>
+      </div>
+      <div class="subtest-card" style="--color:#784212">
+        <div class="sc-icon" style="background:#FEF9EC;font-size:22px">🔢</div>
+        <div class="sc-code" style="color:#784212">QR</div>
+        <div class="sc-name">Quantitative Reasoning</div>
+        <div class="sc-desc">Solve numerical problems using tables, charts, and graphs. No advanced maths required.</div>
+        <div class="sc-meta"><span>36 questions</span><span>25 min</span><span>300–900</span></div>
+        <a href="#" class="sc-link" style="color:#784212" onclick="openModal('register');return false;">Practice QR →</a>
+      </div>
+      <div class="subtest-card" style="--color:#512E5F">
+        <div class="sc-icon" style="background:#F5EEF8;font-size:22px">👁️</div>
+        <div class="sc-code" style="color:#512E5F">AR</div>
+        <div class="sc-name">Abstract Reasoning</div>
+        <div class="sc-desc">Identify patterns and relationships between abstract shapes. The most time-pressured subtest.</div>
+        <div class="sc-meta"><span>50 questions</span><span>12 min</span><span>300–900</span></div>
+        <a href="#" class="sc-link" style="color:#512E5F" onclick="openModal('register');return false;">Practice AR →</a>
+      </div>
+      <div class="subtest-card" style="--color:#922B21">
+        <div class="sc-icon" style="background:#FDEDEC;font-size:22px">⚕️</div>
+        <div class="sc-code" style="color:#922B21">SJT</div>
+        <div class="sc-name">Situational Judgement</div>
+        <div class="sc-desc">Assess real-world medical scenarios and identify the most appropriate responses to ethical dilemmas.</div>
+        <div class="sc-meta"><span>69 questions</span><span>26 min</span><span>Band 1–4</span></div>
+        <a href="#" class="sc-link" style="color:#922B21" onclick="openModal('register');return false;">Practice SJT →</a>
+      </div>
+      <div class="subtest-card" style="--color:#00A896;background:linear-gradient(135deg,#0B1F3A,#1a3a5c);border-color:#0B1F3A;">
+        <div class="sc-icon" style="background:rgba(0,168,150,0.2);font-size:22px">📋</div>
+        <div class="sc-code" style="color:var(--teal)">FULL</div>
+        <div class="sc-name" style="color:white">Full Mock Exam</div>
+        <div class="sc-desc" style="color:rgba(255,255,255,0.6)">Simulate the complete 2-hour UCAT exam with all 5 subtests under real exam conditions.</div>
+        <div class="sc-meta"><span style="background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.7)">228 questions</span><span style="background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.7)">2h 16min</span></div>
+        <a href="#" class="sc-link" style="color:var(--teal)" onclick="openModal('register');return false;">Start Mock →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section" id="how-it-works" style="background:var(--light)">
+  <div class="section-inner">
+    <div class="section-header centered">
+      <div class="section-tag">Simple Process</div>
+      <h2 class="section-title">How It Works</h2>
+      <p class="section-sub">Get from sign-up to exam-ready in three simple steps.</p>
+    </div>
+    <div class="hiw-grid">
+      <div class="hiw-step">
+        <div class="hiw-num">1</div>
+        <div class="hiw-icon">✍️</div>
+        <div class="hiw-title">Create Your Account</div>
+        <div class="hiw-desc">Sign up in 60 seconds and start your 2-day free trial. Card required — you won't be charged until your trial ends.</div>
+      </div>
+      <div class="hiw-step">
+        <div class="hiw-num">2</div>
+        <div class="hiw-icon">📚</div>
+        <div class="hiw-title">Practise Daily</div>
+        <div class="hiw-desc">Work through practice questions for each subtest with detailed explanations. Use our daily challenge to stay consistent.</div>
+      </div>
+      <div class="hiw-step">
+        <div class="hiw-num">3</div>
+        <div class="hiw-icon">🎯</div>
+        <div class="hiw-title">Track & Improve</div>
+        <div class="hiw-desc">Review your analytics, identify weak areas, and simulate the full exam with our timed mock tests before exam day.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section" id="pricing">
+  <div class="section-inner">
+    <div class="section-header centered">
+      <div class="section-tag">Simple Pricing</div>
+      <h2 class="section-title">One Plan, Full Access</h2>
+      <p class="section-sub">No hidden fees. No tiers. Just everything you need to ace the UCAT.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-header">
+          <div class="price-name">Free Trial</div>
+          <div class="price-amount"><sup>£</sup>0</div>
+          <div class="price-period">2 days · card required</div>
+        </div>
+        <div class="price-body">
+          <ul class="price-features">
+            <li>20 practice questions per day</li>
+            <li>All 5 UCAT subtests</li>
+            <li>Detailed answer explanations</li>
+            <li>Performance tracking</li>
+            <li>Daily challenge access</li>
+          </ul>
+          <a href="#" class="btn-price-secondary" onclick="openModal('register');return false;">Start Free Trial</a>
+        </div>
+      </div>
+      <div class="price-card featured">
+        <div class="price-header">
+          <div class="price-badge">★ Most Popular</div>
+          <div class="price-name">Annual Plan</div>
+          <div class="price-amount"><sup>£</sup>29<span style="font-size:28px;font-family:'DM Sans'">.99</span></div>
+          <div class="price-period">per year · that's just £2.50/month</div>
+        </div>
+        <div class="price-body">
+          <ul class="price-features">
+            <li>Unlimited practice questions</li>
+            <li>All 5 UCAT subtests</li>
+            <li>Full timed mock exams</li>
+            <li>Detailed answer explanations</li>
+            <li>Performance analytics dashboard</li>
+            <li>Daily challenges</li>
+            <li>12 months full access</li>
+            <li>Cancel anytime</li>
+          </ul>
+          <a href="#" class="btn-price-primary" onclick="openModal('register');return false;">Get Full Access — £29.99</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section" style="background:var(--light)">
+  <div class="section-inner">
+    <div class="section-header centered">
+      <div class="section-tag">Student Reviews</div>
+      <h2 class="section-title">What Students Say</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-text">"The questions are incredibly well-written and closely match the real UCAT style. The explanations helped me understand exactly where I was going wrong. Scored 2,920 on exam day!"</div>
+        <div class="testi-author">
+          <div class="testi-avatar">AK</div>
+          <div><div class="testi-name">Aisha K.</div><div class="testi-role">Accepted to King's College London</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-text">"At £29.99 for the whole year this is incredible value. I used it every day for 6 weeks and improved my score by 400 points. The daily challenge feature kept me motivated."</div>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:#1B4F72">JM</div>
+          <div><div class="testi-name">James M.</div><div class="testi-role">Accepted to University of Edinburgh</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-text">"The SJT section was what worried me most. The practice questions here are the most realistic I found anywhere. Ended up with Band 1 on exam day — absolutely delighted."</div>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:#922B21">PS</div>
+          <div><div class="testi-name">Priya S.</div><div class="testi-role">Accepted to UCL Medical School</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="section-inner">
+    <div class="section-header centered">
+      <div class="section-tag">FAQ</div>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          How does the free trial work?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-a"><p>Your 2-day free trial gives you access to 20 practice questions per day across all 5 UCAT subtests. A card is required to start — you will NOT be charged unless you choose to upgrade after your trial ends.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          How many questions are available?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-a"><p>We currently have 500+ questions — 100 per subtest across VR, DM, QR, AR, and SJT. We are continuously adding new questions. Subscribers get access to every question available.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Is the content aligned with the real UCAT?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-a"><p>Yes. All questions are written to match the style, difficulty, and format of the official UCAT exam. Our timed mock exams mirror the exact structure of the real exam including question counts and time limits for each subtest.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Can I cancel my subscription?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-a"><p>Yes, you can cancel at any time. Your access will continue until the end of your billing period. To cancel, contact us at support@medicalexamucat.co.uk or manage your subscription in the account settings.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What is the UCAT scoring system?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-a"><p>VR, DM, QR and AR are each scored 300–900. SJT is scored in bands from Band 1 (highest) to Band 4. Your total cognitive score is the sum of the four cognitive subtests (max 3,600). Most competitive medical schools look for total cognitive scores above 2,700.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          How much does it cost after the trial?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-a"><p>Our annual plan is £29.99 per year — that's just £2.50 per month. This gives you unlimited access to all questions, mock exams, analytics, and daily challenges for 12 months.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <h2>Ready to Ace Your UCAT?</h2>
+    <p>Join students preparing for UK medical school. Start your 2-day free trial today — no commitment required.</p>
+    <div class="cta-btns">
+      <a href="#" class="btn-hero-primary" onclick="openModal('register');return false;">Start Free Trial →</a>
+      <a href="#" class="btn-hero-secondary" onclick="openModal('login');return false;">Already have an account? Login</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="logo">
+          <div class="logo-icon">⚕</div>
+          <div class="logo-text">
+            <span>Medical Exam</span>
+            <span>UCAT</span>
+          </div>
+        </a>
+        <p>The most effective UCAT preparation platform for UK medical school applicants. 500+ practice questions, full mock exams, and detailed analytics.</p>
+      </div>
+      <div class="footer-col">
+        <h4>UCAT</h4>
+        <a href="#">Verbal Reasoning</a>
+        <a href="#">Decision Making</a>
+        <a href="#">Quantitative Reasoning</a>
+        <a href="#">Abstract Reasoning</a>
+        <a href="#">Situational Judgement</a>
+      </div>
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <a href="#">Practice Questions</a>
+        <a href="#">Full Mock Exams</a>
+        <a href="#">Daily Challenge</a>
+        <a href="#">Analytics</a>
+        <a href="#">Pricing</a>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <a href="#">Help & FAQ</a>
+        <a href="mailto:support@medicalexamucat.co.uk">support@medicalexamucat.co.uk</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Medical Exam UCAT · medicalexamucat.co.uk</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal" onclick="handleOverlayClick(event)">
+  <div class="modal modal-relative">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-left" id="modal-left">
+      <div>
+        <div class="logo" style="margin-bottom:32px">
+          <div class="logo-icon">⚕</div>
+          <div class="logo-text">
+            <span>Medical Exam</span>
+            <span style="color:rgba(255,255,255,0.5)">UCAT</span>
+          </div>
+        </div>
+        <h2 id="modal-left-title">Start your free<br>2-day trial today.</h2>
+        <p id="modal-left-desc">Get instant access to 500+ UCAT practice questions. Card required — cancel anytime.</p>
+        <ul class="modal-left-features">
+          <li>20 practice questions per day on trial</li>
+          <li>All 5 UCAT subtests included</li>
+          <li>Detailed explanations for every answer</li>
+          <li>Performance analytics dashboard</li>
+          <li>Full mock exams available</li>
+        </ul>
+      </div>
+      <div style="margin-top:32px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.1)">
+        <p style="font-size:13px;color:rgba(255,255,255,0.4)">Upgrade to full access for just £29.99/year after your trial.</p>
+      </div>
+    </div>
+    <div class="modal-right">
+      <div class="modal-tabs">
+        <button class="tab-btn active" id="tab-login" onclick="switchTab('login')">Sign In</button>
+        <button class="tab-btn" id="tab-register" onclick="switchTab('register')">Create Account</button>
+      </div>
+
+      <!-- LOGIN FORM -->
+      <div id="form-login">
+        <div class="form-group">
+          <label>Email address</label>
+          <input type="email" id="login-email" placeholder="you@example.com">
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" id="login-password" placeholder="••••••••">
+        </div>
+        <a href="/forgot-password" class="form-forgot">Forgot your password?</a>
+        <div id="login-error" style="color:#E63946;font-size:13px;margin-bottom:12px;display:none;background:#FEF2F2;padding:10px 14px;border-radius:8px;border:1px solid #FCA5A5;"></div>
+        <button class="btn-form" onclick="handleLogin()">Sign In</button>
+        <div class="form-switch">Don't have an account? <a href="#" onclick="switchTab('register');return false;">Create one free</a></div>
+      </div>
+
+      <!-- REGISTER FORM -->
+      <div id="form-register" style="display:none">
+        <div class="form-row">
+          <div class="form-group">
+            <label>First name</label>
+            <input type="text" id="reg-first" placeholder="John">
+          </div>
+          <div class="form-group">
+            <label>Last name</label>
+            <input type="text" id="reg-last" placeholder="Smith">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email address</label>
+          <input type="email" id="reg-email" placeholder="you@example.com">
+        </div>
+        <div class="form-group">
+          <label>Password <span style="color:var(--mid);font-weight:400">(min. 8 characters)</span></label>
+          <input type="password" id="reg-password" placeholder="Choose a strong password">
+        </div>
+        <div id="reg-error" style="color:#E63946;font-size:13px;margin-bottom:12px;display:none;background:#FEF2F2;padding:10px 14px;border-radius:8px;border:1px solid #FCA5A5;"></div>
+        <div id="reg-success" style="display:none;background:#F0FFF4;border:1px solid #86EFAC;padding:14px;border-radius:10px;margin-bottom:12px;">
+          <p style="font-size:14px;color:#166534;font-weight:600">📬 Check your inbox!</p>
+          <p style="font-size:13px;color:#15803D;margin-top:4px">We've sent a verification link to your email. Click it to activate your account.</p>
+        </div>
+        <button class="btn-form" onclick="handleRegister()">Start Free Trial</button>
+        <div class="form-switch">Already have an account? <a href="#" onclick="switchTab('login');return false;">Sign in</a></div>
+        <p style="font-size:11px;color:var(--mid);text-align:center;margin-top:12px;line-height:1.6">By creating an account you agree to our <a href="/terms" style="color:var(--teal)">Terms</a> and <a href="/privacy" style="color:var(--teal)">Privacy Policy</a>. A card is required for the free trial.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const API = (window.location.hostname === 'localhost')
+  ? 'http://localhost:4000/api'
+  : 'https://iwav64juaj.execute-api.eu-west-2.amazonaws.com/prod/api';
+
+function openModal(tab) {
+  document.getElementById('modal').classList.add('open');
+  switchTab(tab);
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  document.getElementById('modal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function handleOverlayClick(e) {
+  if (e.target === document.getElementById('modal')) closeModal();
+}
+function switchTab(tab) {
+  document.getElementById('form-login').style.display    = tab==='login'    ? 'block' : 'none';
+  document.getElementById('form-register').style.display = tab==='register' ? 'block' : 'none';
+  document.getElementById('tab-login').className    = 'tab-btn' + (tab==='login'    ? ' active' : '');
+  document.getElementById('tab-register').className = 'tab-btn' + (tab==='register' ? ' active' : '');
+  if (tab === 'register') {
+    document.getElementById('modal-left-title').innerHTML = 'Start your free<br>2-day trial today.';
+    document.getElementById('modal-left-desc').textContent = 'Get instant access to 500+ UCAT practice questions. Card required — cancel anytime.';
+  } else {
+    document.getElementById('modal-left-title').innerHTML = 'Welcome back.<br>Keep practising.';
+    document.getElementById('modal-left-desc').textContent = 'Sign in to continue your UCAT preparation journey.';
+  }
+}
+function toggleFaq(btn) {
+  const answer = btn.nextElementSibling;
+  const isOpen = answer.classList.contains('open');
+  document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+  document.querySelectorAll('.faq-q').forEach(q => q.classList.remove('open'));
+  if (!isOpen) { answer.classList.add('open'); btn.classList.add('open'); }
+}
+
+async function handleLogin() {
+  const email    = document.getElementById('login-email').value;
+  const password = document.getElementById('login-password').value;
+  const errEl    = document.getElementById('login-error');
+  errEl.style.display = 'none';
+  if (!email || !password) { errEl.textContent='Please enter your email and password'; errEl.style.display='block'; return; }
+  try {
+    const res  = await fetch(`${API}/auth/login`, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({email,password}) });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.message||'Login failed');
+    localStorage.setItem('medexam_token', data.data.token);
+    localStorage.setItem('medexam_user', JSON.stringify(data.data.user));
+    window.location.href = '/dashboard';
+  } catch(e) { errEl.textContent=e.message; errEl.style.display='block'; }
+}
+
+async function handleRegister() {
+  const firstName= document.getElementById('reg-first').value;
+  const lastName = document.getElementById('reg-last').value;
+  const email    = document.getElementById('reg-email').value;
+  const password = document.getElementById('reg-password').value;
+  const errEl    = document.getElementById('reg-error');
+  const sucEl    = document.getElementById('reg-success');
+  errEl.style.display='none';
+  if (!firstName||!lastName||!email||!password) { errEl.textContent='All fields are required'; errEl.style.display='block'; return; }
+  if (password.length<8) { errEl.textContent='Password must be at least 8 characters'; errEl.style.display='block'; return; }
+  try {
+    const res  = await fetch(`${API}/auth/register`, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({firstName,lastName,email,password}) });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.message||'Registration failed');
+    localStorage.setItem('medexam_token', data.data.token);
+    localStorage.setItem('medexam_user', JSON.stringify(data.data.user));
+    sucEl.style.display='block';
+    document.querySelector('#form-register .btn-form').disabled=true;
+    setTimeout(() => { window.location.href='/dashboard'; }, 3000);
+  } catch(e) { errEl.textContent=e.message; errEl.style.display='block'; }
+}
+
+// Keyboard close
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeModal(); });
+
+// Nav scroll effect
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('nav');
+  nav.style.boxShadow = window.scrollY > 20 ? '0 2px 20px rgba(0,0,0,0.1)' : 'none';
+});
+</script>
+</body>
+</html>

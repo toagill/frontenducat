@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free UCAT Resources — Medical Exam UCAT</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0B1F3A;--teal:#00A896;--teal2:#02C39A;--gold:#F4A261;--light:#F8FAFB;--mid:#6B7A8D;--white:#ffffff;--border:#E2E8F0;}
+*{margin:0;padding:0;box-sizing:border-box;}body{font-family:'DM Sans',sans-serif;color:var(--navy);background:var(--white);}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;height:70px;display:flex;align-items:center;justify-content:space-between;}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.logo-icon{width:38px;height:38px;background:var(--teal);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;}
+.logo-text span:first-child{display:block;font-size:15px;font-weight:700;color:var(--teal);}
+.logo-text span:last-child{display:block;font-size:10px;color:var(--mid);letter-spacing:3px;text-transform:uppercase;}
+.nav-links{display:flex;align-items:center;gap:28px;}
+.nav-links a{text-decoration:none;font-size:14px;font-weight:500;color:var(--navy);transition:color .2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--teal);}
+.dropdown{position:relative;}
+.dropdown-menu{position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%);background:var(--white);border:1px solid var(--border);border-radius:12px;padding:8px;min-width:200px;box-shadow:0 8px 32px rgba(0,0,0,0.12);display:none;z-index:200;}
+.dropdown:hover .dropdown-menu{display:block;}
+.dropdown-menu a{display:block;padding:10px 14px;font-size:14px;color:var(--navy);text-decoration:none;border-radius:8px;transition:background .2s;}
+.dropdown-menu a:hover{background:var(--light);color:var(--teal);}
+.nav-ctas{display:flex;gap:10px;}
+.btn-ghost{padding:9px 20px;border:2px solid var(--navy);border-radius:8px;font-size:14px;font-weight:600;color:var(--navy);text-decoration:none;transition:all .2s;}
+.btn-ghost:hover{background:var(--navy);color:var(--white);}
+.btn-primary{padding:9px 20px;background:var(--teal);border-radius:8px;font-size:14px;font-weight:600;color:var(--white);text-decoration:none;border:2px solid var(--teal);}
+.page-hero{padding:120px 24px 80px;background:linear-gradient(135deg,#0B1F3A,#1a3a5c);text-align:center;}
+.page-hero-tag{display:inline-block;background:rgba(0,168,150,0.2);color:var(--teal);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 14px;border-radius:100px;margin-bottom:16px;}
+.page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(36px,5vw,56px);color:var(--white);font-weight:900;margin-bottom:16px;}
+.page-hero p{font-size:18px;color:rgba(255,255,255,0.65);max-width:600px;margin:0 auto;line-height:1.7;}
+.section{padding:72px 24px;}
+.inner{max-width:1100px;margin:0 auto;}
+.section-tag{display:inline-block;background:rgba(0,168,150,0.1);color:var(--teal);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 14px;border-radius:100px;margin-bottom:14px;}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(28px,3.5vw,40px);font-weight:900;margin-bottom:14px;}
+.resource-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.resource-card{background:var(--white);border:2px solid var(--border);border-radius:16px;padding:28px;transition:all .3s;display:flex;flex-direction:column;}
+.resource-card:hover{border-color:var(--teal);transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,0.08);}
+.resource-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 10px;border-radius:100px;margin-bottom:14px;}
+.resource-icon{font-size:32px;margin-bottom:12px;}
+.resource-title{font-size:17px;font-weight:700;margin-bottom:8px;}
+.resource-desc{font-size:14px;color:var(--mid);line-height:1.7;flex:1;margin-bottom:20px;}
+.resource-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--teal);text-decoration:none;}
+.resource-link:hover{text-decoration:underline;}
+.tip-list{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.tip-card{background:var(--light);border-radius:12px;padding:22px;display:flex;gap:16px;}
+.tip-num{width:36px;height:36px;background:var(--navy);color:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;flex-shrink:0;}
+.tip-title{font-size:15px;font-weight:700;margin-bottom:4px;}
+.tip-desc{font-size:13px;color:var(--mid);line-height:1.6;}
+.subtest-tips{display:grid;grid-template-columns:1fr;gap:16px;}
+.st-tip{border:1px solid var(--border);border-radius:12px;overflow:hidden;}
+.st-tip-header{display:flex;align-items:center;gap:12px;padding:16px 20px;cursor:pointer;}
+.st-code{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:var(--white);flex-shrink:0;}
+.st-name{font-size:15px;font-weight:700;}
+.st-meta{font-size:12px;color:var(--mid);}
+.st-tips-body{padding:0 20px 20px;display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.st-tip-item{background:var(--light);border-radius:8px;padding:12px;font-size:13px;color:var(--mid);line-height:1.5;}
+.st-tip-item strong{display:block;color:var(--navy);margin-bottom:2px;}
+.cta-banner{background:var(--navy);border-radius:20px;padding:48px;text-align:center;}
+.cta-banner h2{font-family:'Playfair Display',serif;font-size:34px;color:var(--white);margin-bottom:12px;}
+.cta-banner p{font-size:16px;color:rgba(255,255,255,0.6);margin-bottom:28px;}
+.btn-cta{display:inline-block;padding:14px 32px;background:var(--teal);color:var(--white);border-radius:10px;font-size:15px;font-weight:700;text-decoration:none;}
+footer{background:var(--navy);padding:40px 24px;text-align:center;}
+footer p{font-size:13px;color:rgba(255,255,255,0.4);}
+footer a{color:var(--teal);text-decoration:none;margin:0 10px;}
+@media(max-width:768px){.resource-grid,.tip-list{grid-template-columns:1fr;}.st-tips-body{grid-template-columns:1fr;}.nav-links{display:none;}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="/home" class="logo">
+      <div class="logo-icon">⚕</div>
+      <div class="logo-text"><span>Medical Exam</span><span>UCAT</span></div>
+    </a>
+    <div class="nav-links">
+      <a href="/home">Home</a>
+      <div class="dropdown"><a href="/about">About ▾</a>
+        <div class="dropdown-menu"><a href="/about">Our Story</a><a href="about.html#team">Our Team</a></div>
+      </div>
+      <div class="dropdown"><a href="/med-school">Applying to Med School ▾</a>
+        <div class="dropdown-menu"><a href="/med-school">Application Guide</a><a href="med-school.html#ucat">UCAT Overview</a><a href="med-school.html#interviews">Interviews</a></div>
+      </div>
+      <a href="/resources" class="active">Free Resources</a>
+      <a href="/blog">Blog</a>
+      <a href="index.html#pricing">Pricing</a>
+    </div>
+    <div class="nav-ctas">
+      <a href="/home" class="btn-ghost">Login</a>
+      <a href="/home" class="btn-primary">Try Free</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-tag">100% Free</div>
+  <h1>Free UCAT Resources</h1>
+  <p>Everything you need to understand the UCAT, plan your preparation, and improve your score — completely free.</p>
+</div>
+
+<section class="section">
+  <div class="inner">
+    <div class="section-tag">Study Materials</div>
+    <h2 class="section-title" style="margin-bottom:32px">Free Resources &amp; Guides</h2>
+    <div class="resource-grid">
+      <div class="resource-card">
+        <div class="resource-badge" style="background:#EBF5FB;color:#1B4F72">📖 Guide</div>
+        <div class="resource-icon">🧭</div>
+        <div class="resource-title">Complete UCAT Guide 2026</div>
+        <div class="resource-desc">Everything you need to know about the UCAT exam — structure, scoring, registration, what to expect on test day, and how to prepare effectively.</div>
+        <a href="med-school.html#ucat" class="resource-link">Read Guide →</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-badge" style="background:#E8F8F5;color:#117A65">🧪 Tips</div>
+        <div class="resource-icon">⏱️</div>
+        <div class="resource-title">Time Management in the UCAT</div>
+        <div class="resource-desc">The UCAT is ruthlessly time-pressured. Learn proven strategies to manage your time across all 5 subtests, including when to skip and come back.</div>
+        <a href="#time-tips" class="resource-link">Read Tips →</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-badge" style="background:#FEF9EC;color:#784212">📊 Data</div>
+        <div class="resource-icon">📈</div>
+        <div class="resource-title">UCAT Score Calculator 2026</div>
+        <div class="resource-desc">Understand what your UCAT score means, how it compares to national averages, and which medical schools your score makes you competitive for.</div>
+        <a href="#scores" class="resource-link">View Scores →</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-badge" style="background:#F5EEF8;color:#512E5F">🎯 Strategy</div>
+        <div class="resource-icon">🧠</div>
+        <div class="resource-title">VR Strategy Guide</div>
+        <div class="resource-desc">Verbal Reasoning tricks, passage-reading strategies, and how to spot the difference between True, False, and Can't Tell — without reading every word.</div>
+        <a href="#vr-tips" class="resource-link">Read Strategy →</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-badge" style="background:#FDEDEC;color:#922B21">⚕️ Ethics</div>
+        <div class="resource-icon">⚖️</div>
+        <div class="resource-title">SJT Ethics Framework</div>
+        <div class="resource-desc">The four pillars of medical ethics, GMC Good Medical Practice principles, and how to apply them to SJT scenarios. Essential reading for Band 1.</div>
+        <a href="#sjt-ethics" class="resource-link">Read Guide →</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-badge" style="background:#E8F8F5;color:#117A65">📅 Plan</div>
+        <div class="resource-icon">🗓️</div>
+        <div class="resource-title">6-Week Study Plan</div>
+        <div class="resource-desc">A structured 6-week preparation plan broken down week by week and subtest by subtest. Includes daily practice targets and mock exam schedule.</div>
+        <a href="#study-plan" class="resource-link">Get Plan →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GENERAL TIPS -->
+<section class="section" style="background:var(--light)" id="time-tips">
+  <div class="inner">
+    <div class="section-tag">Top Tips</div>
+    <h2 class="section-title" style="margin-bottom:32px">10 Essential UCAT Tips</h2>
+    <div class="tip-list">
+      <div class="tip-card"><div class="tip-num">1</div><div><div class="tip-title">Start early — 6–8 weeks minimum</div><div class="tip-desc">The UCAT tests cognitive abilities that improve with practice. Most students who score in the top quartile began practising at least 6 weeks before their test date.</div></div></div>
+      <div class="tip-card"><div class="tip-num">2</div><div><div class="tip-title">Always attempt every question</div><div class="tip-desc">There is no negative marking in the UCAT. A blank answer is always wrong — a guess gives you a chance. Never leave a question blank, especially in AR.</div></div></div>
+      <div class="tip-card"><div class="tip-num">3</div><div><div class="tip-title">Practice under timed conditions</div><div class="tip-desc">Many students improve dramatically once they switch from untimed to timed practice. Use our platform's timed mode from week 3 onwards to build speed.</div></div></div>
+      <div class="tip-card"><div class="tip-num">4</div><div><div class="tip-title">Understand what each subtest tests</div><div class="tip-desc">VR tests reading comprehension, not general knowledge. QR tests data interpretation, not advanced maths. AR tests pattern recognition, not art. Tailor your approach to each.</div></div></div>
+      <div class="tip-card"><div class="tip-num">5</div><div><div class="tip-title">Review your wrong answers carefully</div><div class="tip-desc">Don't just do questions — understand why you got them wrong. Our platform provides detailed explanations for every answer. This is where most improvement happens.</div></div></div>
+      <div class="tip-card"><div class="tip-num">6</div><div><div class="tip-title">Flag and move on</div><div class="tip-desc">The UCAT has a flagging feature. If a question is taking too long, flag it, move on, and come back at the end. Never spend more than 90 seconds on any single question.</div></div></div>
+      <div class="tip-card"><div class="tip-num">7</div><div><div class="tip-title">Do at least 2 full mock exams</div><div class="tip-desc">The stamina required to maintain focus for 2+ hours is underestimated. Practise the full exam under realistic conditions at least twice before test day.</div></div></div>
+      <div class="tip-card"><div class="tip-num">8</div><div><div class="tip-title">Use the on-screen calculator for QR</div><div class="tip-desc">You must use the UCAT's on-screen calculator — no physical calculators are allowed. Practise using it for speed. Learn keyboard shortcuts if possible.</div></div></div>
+      <div class="tip-card"><div class="tip-num">9</div><div><div class="tip-title">Maintain wellbeing during prep</div><div class="tip-desc">Sleep, exercise, and mental breaks are not wasted time — they are essential for cognitive performance. Burnout before the exam will hurt your score.</div></div></div>
+      <div class="tip-card"><div class="tip-num">10</div><div><div class="tip-title">Know the test centre rules</div><div class="tip-desc">Arrive 30 minutes early. Bring valid photo ID. No notes, phones, or revision materials. You will be given a laminated notepad and pen for working. Know what to expect.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SUBTEST TIPS -->
+<section class="section" id="vr-tips">
+  <div class="inner">
+    <div class="section-tag">Subtest Strategies</div>
+    <h2 class="section-title" style="margin-bottom:32px">Strategies by Subtest</h2>
+    <div class="subtest-tips">
+      <div class="st-tip">
+        <div class="st-tip-header">
+          <div class="st-code" style="background:#1B4F72">VR</div>
+          <div><div class="st-name">Verbal Reasoning</div><div class="st-meta">44 questions · 22 min · ~30 sec per question</div></div>
+        </div>
+        <div class="st-tips-body">
+          <div class="st-tip-item"><strong>Read the question first</strong>It tells you what to look for in the passage. Don't read the whole passage first.</div>
+          <div class="st-tip-item"><strong>True / False / Can't Tell</strong>Can't Tell means the passage neither confirms nor denies. Don't use outside knowledge.</div>
+          <div class="st-tip-item"><strong>Use keyword scanning</strong>Find the relevant sentence in the passage using keywords from the question. Read just that part.</div>
+          <div class="st-tip-item"><strong>Don't overthink</strong>VR answers are always directly supported by the text. If it's not in the passage, it's Can't Tell.</div>
+        </div>
+      </div>
+      <div class="st-tip">
+        <div class="st-tip-header">
+          <div class="st-code" style="background:#117A65">DM</div>
+          <div><div class="st-name">Decision Making</div><div class="st-meta">29 questions · 31 min · ~64 sec per question</div></div>
+        </div>
+        <div class="st-tips-body">
+          <div class="st-tip-item"><strong>Syllogisms</strong>Draw Venn diagrams for all/some/no questions. This prevents logical errors.</div>
+          <div class="st-tip-item"><strong>Probability questions</strong>Set up the calculation before answering. Don't rely on intuition for numbers.</div>
+          <div class="st-tip-item"><strong>Argument evaluation</strong>Identify the conclusion and premises. Does the new information weaken or strengthen the logic?</div>
+          <div class="st-tip-item"><strong>Statistical reasoning</strong>Watch for averages vs totals, percentages vs raw numbers — common trick question types.</div>
+        </div>
+      </div>
+      <div class="st-tip">
+        <div class="st-tip-header">
+          <div class="st-code" style="background:#784212">QR</div>
+          <div><div class="st-name">Quantitative Reasoning</div><div class="st-meta">36 questions · 25 min · ~42 sec per question</div></div>
+        </div>
+        <div class="st-tips-body">
+          <div class="st-tip-item"><strong>Read the table/graph first</strong>Understand what units are used and what each column/row represents before answering.</div>
+          <div class="st-tip-item"><strong>Estimate where possible</strong>Many QR questions can be answered with an estimate. Don't calculate precisely unless the answer choices are close.</div>
+          <div class="st-tip-item"><strong>Check your units</strong>Conversion errors (kg to g, miles to km) are a common source of mistakes in QR.</div>
+          <div class="st-tip-item"><strong>Percentage questions</strong>Know: percentage change = (new - old)/old × 100. This formula appears very frequently.</div>
+        </div>
+      </div>
+      <div class="st-tip">
+        <div class="st-tip-header">
+          <div class="st-code" style="background:#512E5F">AR</div>
+          <div><div class="st-name">Abstract Reasoning</div><div class="st-meta">50 questions · 12 min · ~14 sec per question</div></div>
+        </div>
+        <div class="st-tips-body">
+          <div class="st-tip-item"><strong>SCANS method</strong>Check Shape, Colour, Arrangement, Number, Size systematically for each set.</div>
+          <div class="st-tip-item"><strong>Never spend more than 20 seconds</strong>If you don't see the pattern quickly, guess and move on. Come back if time allows.</div>
+          <div class="st-tip-item"><strong>Look for the simplest rule first</strong>AR rules are usually simple (e.g. number of shapes = always 3). Don't overthink.</div>
+          <div class="st-tip-item"><strong>Practise daily</strong>AR improves faster than any other subtest with regular short practice sessions. 15 min/day is ideal.</div>
+        </div>
+      </div>
+      <div class="st-tip">
+        <div class="st-tip-header">
+          <div class="st-code" style="background:#922B21">SJT</div>
+          <div><div class="st-name">Situational Judgement</div><div class="st-meta">69 questions · 26 min · ~23 sec per question</div></div>
+        </div>
+        <div class="st-tips-body">
+          <div class="st-tip-item"><strong>Patient safety first</strong>In any scenario involving patient harm, this always takes priority over everything else.</div>
+          <div class="st-tip-item"><strong>Know GMC Good Medical Practice</strong>Most SJT scenarios test the values in this document. Read it before your exam.</div>
+          <div class="st-tip-item"><strong>Appropriateness vs importance</strong>Know the difference between rating how appropriate an action is vs how important it is.</div>
+          <div class="st-tip-item"><strong>Don't pick extremes by default</strong>Many appropriate responses are "appropriate but not ideal" — not "very appropriate" or "very inappropriate".</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 WEEK PLAN -->
+<section class="section" style="background:var(--light)" id="study-plan">
+  <div class="inner">
+    <div class="section-tag">Study Schedule</div>
+    <h2 class="section-title" style="margin-bottom:8px">6-Week UCAT Study Plan</h2>
+    <p style="font-size:16px;color:var(--mid);margin-bottom:32px">Assuming 1–2 hours of study per day. Adjust based on your timeline.</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+      <div style="background:var(--white);border-radius:12px;padding:22px;border:1px solid var(--border)"><div style="font-size:12px;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">Week 1</div><div style="font-size:16px;font-weight:700;margin-bottom:8px">Verbal Reasoning</div><div style="font-size:13px;color:var(--mid);line-height:1.6">Learn True/False/Can't Tell logic. Practice 20 untimed passages. Study keyword scanning technique. Do 1 timed VR session by end of week.</div></div>
+      <div style="background:var(--white);border-radius:12px;padding:22px;border:1px solid var(--border)"><div style="font-size:12px;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">Week 2</div><div style="font-size:16px;font-weight:700;margin-bottom:8px">Decision Making</div><div style="font-size:13px;color:var(--mid);line-height:1.6">Study syllogism and Venn diagram methods. Practice probability and statistical reasoning. Work through 30 DM questions with full review of explanations.</div></div>
+      <div style="background:var(--white);border-radius:12px;padding:22px;border:1px solid var(--border)"><div style="font-size:12px;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">Week 3</div><div style="font-size:16px;font-weight:700;margin-bottom:8px">Quantitative Reasoning</div><div style="font-size:13px;color:var(--mid);line-height:1.6">Practise on-screen calculator. Learn to read tables and graphs quickly. Focus on percentage change, ratios, and unit conversions. Do 1 timed QR session.</div></div>
+      <div style="background:var(--white);border-radius:12px;padding:22px;border:1px solid var(--border)"><div style="font-size:12px;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">Week 4</div><div style="font-size:16px;font-weight:700;margin-bottom:8px">Abstract &amp; SJT</div><div style="font-size:13px;color:var(--mid);line-height:1.6">Learn SCANS method for AR. Do 15 min daily AR practice. Read GMC Good Medical Practice. Work through 30 SJT questions with detailed review.</div></div>
+      <div style="background:var(--white);border-radius:12px;padding:22px;border:1px solid var(--border)"><div style="font-size:12px;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">Week 5</div><div style="font-size:16px;font-weight:700;margin-bottom:8px">Mixed Practice &amp; Weak Areas</div><div style="font-size:13px;color:var(--mid);line-height:1.6">Do mixed questions across all subtests daily. Identify your 2 weakest subtests from analytics. Dedicate extra time to those. Complete Mock Exam 1 this week.</div></div>
+      <div style="background:var(--white);border-radius:12px;padding:22px;border:1px solid var(--border)"><div style="font-size:12px;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">Week 6</div><div style="font-size:16px;font-weight:700;margin-bottom:8px">Full Mock &amp; Final Polish</div><div style="font-size:13px;color:var(--mid);line-height:1.6">Complete Mock Exam 2 under full exam conditions. Review errors. Maintain stamina with daily practice. Reduce volume 2 days before exam. Rest the day before.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="inner">
+    <div class="cta-banner">
+      <h2>Put It Into Practice</h2>
+      <p>Start your free trial and apply these strategies to real UCAT-style questions today.</p>
+      <a href="/home" class="btn-cta">Start Free Trial →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Medical Exam UCAT &nbsp;·&nbsp;<a href="/home">Home</a><a href="/about">About</a><a href="/med-school">Applying to Med School</a><a href="/blog">Blog</a><a href="mailto:support@medicalexamucat.co.uk">Contact</a></p>
+</footer>
+</body>
+</html>
