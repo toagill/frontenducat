@@ -3,8 +3,8 @@ import { useWindowSize } from "@/hooks/use-window";
 import { cn } from "@/lib/utils";
 import {
   BarChart3, BookOpen, Brain, Calculator, Clock,
-  CreditCard, Eye, HelpCircle, Home, LifeBuoy,
-  LogOut, Stethoscope, Trophy, Users, X, Zap, FileText
+  CreditCard, Eye, FileText, Home, LifeBuoy,
+  LogOut, Stethoscope, Users, X, Zap
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -12,18 +12,17 @@ import type React from "react";
 import { useSidebar } from "./sidebar-context";
 
 const UCAT_SECTIONS = [
-  { href: "/explore?subtest=VR", icon: <BookOpen className="size-4" />, label: "Verbal Reasoning",        short: "VR",  color: "text-blue-400" },
-  { href: "/explore?subtest=DM", icon: <Brain className="size-4" />,    label: "Decision Making",         short: "DM",  color: "text-purple-400" },
-  { href: "/explore?subtest=QR", icon: <Calculator className="size-4" />,label: "Quantitative Reasoning", short: "QR",  color: "text-amber-400" },
-  { href: "/explore?subtest=AR", icon: <Eye className="size-4" />,       label: "Abstract Reasoning",     short: "AR",  color: "text-rose-400" },
-  { href: "/explore?subtest=SJT",icon: <Users className="size-4" />,     label: "Situational Judgement",  short: "SJT", color: "text-teal-400" },
+  { href: "/explore?subtest=VR",  icon: <BookOpen className="size-4" />,    label: "Verbal Reasoning",        short: "VR",  color: "text-blue-400"   },
+  { href: "/explore?subtest=DM",  icon: <Brain className="size-4" />,        label: "Decision Making",         short: "DM",  color: "text-purple-400" },
+  { href: "/explore?subtest=QR",  icon: <Calculator className="size-4" />,   label: "Quantitative Reasoning",  short: "QR",  color: "text-amber-400"  },
+  { href: "/explore?subtest=AR",  icon: <Eye className="size-4" />,           label: "Abstract Reasoning",      short: "AR",  color: "text-rose-400"   },
+  { href: "/explore?subtest=SJT", icon: <Users className="size-4" />,         label: "Situational Judgement",   short: "SJT", color: "text-teal-400"   },
 ];
 
 export function AppSidebar() {
   const pathname = usePathname();
   const { collapsed, setCollapsed } = useSidebar();
   const isActive = (path: string) => pathname === path || pathname.startsWith(`${path}/`);
-  const isSubtest = (href: string) => pathname + (typeof window !== "undefined" ? window.location.search : "") === href;
 
   return (
     <aside className={cn(
@@ -94,9 +93,9 @@ export function AppSidebar() {
           )}
           {collapsed && <div className="my-2 border-t" />}
 
-          <NavItem href="/battle"       icon={<FileText className="size-5" />} label="Full Mock Exam"    active={isActive("/battle")}       collapsed={collapsed} setCollapsed={setCollapsed} />
-          <NavItem href="/tournaments"  icon={<Clock className="size-5" />}    label="Timed Practice"    active={isActive("/tournaments")}   collapsed={collapsed} setCollapsed={setCollapsed} />
-          <NavItem href="/daily-challenge" icon={<Zap className="size-5" />}  label="Daily Challenge"   active={isActive("/daily-challenge")} collapsed={collapsed} setCollapsed={setCollapsed} />
+          <NavItem href="/battle"          icon={<FileText className="size-5" />} label="Full Mock Exam"  active={isActive("/battle")}          collapsed={collapsed} setCollapsed={setCollapsed} />
+          <NavItem href="/quiz/subtest-VR/play" icon={<Clock className="size-5" />}    label="Timed Practice" active={isActive("/quiz/subtest-VR")}  collapsed={collapsed} setCollapsed={setCollapsed} />
+          <NavItem href="/daily-challenge" icon={<Zap className="size-5" />}       label="Daily Challenge" active={isActive("/daily-challenge")}  collapsed={collapsed} setCollapsed={setCollapsed} />
 
           {/* My Progress */}
           {!collapsed && (
@@ -106,8 +105,7 @@ export function AppSidebar() {
           )}
           {collapsed && <div className="my-2 border-t" />}
 
-          <NavItem href="/dashboard"    icon={<BarChart3 className="size-5" />} label="My Analytics"   active={isActive("/dashboard")}     collapsed={collapsed} setCollapsed={setCollapsed} />
-          <NavItem href="/leaderboard"  icon={<Trophy className="size-5" />}   label="Leaderboard"     active={isActive("/leaderboard")}   collapsed={collapsed} setCollapsed={setCollapsed} />
+          <NavItem href="/dashboard/user" icon={<BarChart3 className="size-5" />} label="My Analytics" active={isActive("/dashboard/user")} collapsed={collapsed} setCollapsed={setCollapsed} />
 
           {/* Account */}
           {!collapsed && (
@@ -117,9 +115,9 @@ export function AppSidebar() {
           )}
           {collapsed && <div className="my-2 border-t" />}
 
-          <NavItem href="/pricing"      icon={<CreditCard className="size-5" />} label="Subscription"  active={isActive("/pricing")}       collapsed={collapsed} setCollapsed={setCollapsed} />
-          <NavItem href="/support"      icon={<LifeBuoy className="size-5" />}  label="Help & Support" active={isActive("/support")}       collapsed={collapsed} setCollapsed={setCollapsed} />
-          <NavItem href="/quiz-discussions" icon={<HelpCircle className="size-5" />} label="Q&A Forum" active={isActive("/quiz-discussions")} collapsed={collapsed} setCollapsed={setCollapsed} />
+          <NavItem href="/pricing" icon={<CreditCard className="size-5" />} label="Subscription"  active={isActive("/pricing")} collapsed={collapsed} setCollapsed={setCollapsed} />
+          <NavItem href="/support" icon={<LifeBuoy className="size-5" />}   label="Help & Support" active={isActive("/support")} collapsed={collapsed} setCollapsed={setCollapsed} />
+
         </nav>
       </div>
 
