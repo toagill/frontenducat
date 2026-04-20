@@ -1,461 +1,360 @@
 "use client";
-import { QuizHeader } from "@/components/quiz/quiz-header";
-import { QuizQuestion } from "@/components/quiz/quiz-question";
-import { QuizResults } from "@/components/quiz/quiz-results";
-import { QuizTimer } from "@/components/quiz/quiz-timer";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { Answer, currentQuiz, Quiz } from "@/data/currentQuiz";
-import { AnimatePresence, motion } from "framer-motion";
-import { AlertTriangle, ChevronLeft, ChevronRight, Loader2 } from "lucide-react";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useReducer, useRef } from "react";
+import { Loader2, ChevronLeft, ChevronRight, AlertTriangle, Clock, CheckCircle } from "lucide-react";
 
-// Types for the quiz state
+interface UCATQuestion {
+  questionId: string;
+  subtest: string;
+  difficulty: string;
+  passage?: string;
+  question: string;
+  options: string[];
+  timeRecommended: number;
+}
+
 interface QuizState {
-  quiz: Quiz | null;
+  questions: UCATQuestion[];
   loading: boolean;
   error: string | null;
-  currentQuestionIndex: number;
-  answers: Answer[];
-  quizStartTime: number | null;
-  quizEndTime: number | null;
-  questionStartTime: number | null;
-  timeRemaining: number | null;
-  isQuizCompleted: boolean;
+  currentIndex: number;
+  answers: Record<string, string>;
+  timeRemaining: number;
+  isCompleted: boolean;
   isReviewMode: boolean;
-  showFeedback: boolean;
-  lastAnswerCorrect: boolean | null;
-  direction: number;
+  correctAnswers: Record<string, string>;
+  explanations: Record<string, string>;
+  score: number | null;
 }
 
-// Action types
-type QuizAction =
+type Action =
   | { type: "SET_LOADING"; payload: boolean }
-  | { type: "SET_ERROR"; payload: string | null }
-  | { type: "SET_QUIZ"; payload: Quiz }
-  | { type: "SET_CURRENT_QUESTION_INDEX"; payload: number }
-  | { type: "SET_DIRECTION"; payload: number }
-  | { type: "SET_QUIZ_START_TIME"; payload: number }
-  | { type: "SET_QUIZ_END_TIME"; payload: number }
-  | { type: "SET_QUESTION_START_TIME"; payload: number }
-  | { type: "SET_TIME_REMAINING"; payload: number | null }
-  | { type: "DECREMENT_TIME" }
-  | { type: "SET_QUIZ_COMPLETED"; payload: boolean }
-  | { type: "SET_REVIEW_MODE"; payload: boolean }
-  | { type: "SET_SHOW_FEEDBACK"; payload: boolean }
-  | { type: "SET_LAST_ANSWER_CORRECT"; payload: boolean | null }
-  | { type: "ADD_ANSWER"; payload: Answer }
-  | { type: "UPDATE_ANSWER"; payload: { index: number; answer: Answer } }
-  | { type: "NAVIGATE_QUESTION"; payload: { direction: number; index: number } }
-  | { type: "TIMEOUT_QUIZ" }
-  | { type: "RESTART_QUIZ"; payload: { timeLimit: number | null } }
+  | { type: "SET_ERROR"; payload: string }
+  | { type: "SET_QUESTIONS"; payload: UCATQuestion[] }
+  | { type: "TICK" }
+  | { type: "ANSWER"; payload: { questionId: string; option: string } }
+  | { type: "NEXT" }
+  | { type: "PREV" }
+  | { type: "GOTO"; payload: number }
+  | { type: "COMPLETE"; payload: { correctAnswers: Record<string, string>; explanations: Record<string, string>; score: number } }
   | { type: "START_REVIEW" };
 
-// Initial state
-const initialState: QuizState = {
-  quiz: null,
-  loading: true,
-  error: null,
-  currentQuestionIndex: 0,
-  answers: [],
-  quizStartTime: null,
-  quizEndTime: null,
-  questionStartTime: null,
-  timeRemaining: null,
-  isQuizCompleted: false,
-  isReviewMode: false,
-  showFeedback: false,
-  lastAnswerCorrect: null,
-  direction: 0,
+const SUBTEST_CONFIG: Record<string, { name: string; color: string; time: number }> = {
+  VR:  { name: "Verbal Reasoning",       color: "#1B4F72", time: 22 * 60 },
+  DM:  { name: "Decision Making",        color: "#117A65", time: 31 * 60 },
+  QR:  { name: "Quantitative Reasoning", color: "#784212", time: 25 * 60 },
+  AR:  { name: "Abstract Reasoning",     color: "#512E5F", time: 12 * 60 },
+  SJT: { name: "Situational Judgement",  color: "#922B21", time: 26 * 60 },
 };
 
-// Reducer function
-function quizReducer(state: QuizState, action: QuizAction): QuizState {
+function getSubtest(id: string): string {
+  const u = id.toUpperCase();
+  if (u.includes("VR")  || u.includes("VERBAL"))      return "VR";
+  if (u.includes("DM")  || u.includes("DECISION"))    return "DM";
+  if (u.includes("QR")  || u.includes("QUANT"))       return "QR";
+  if (u.includes("AR")  || u.includes("ABSTRACT"))    return "AR";
+  if (u.includes("SJT") || u.includes("SITUATION"))   return "SJT";
+  if (u.includes("FULL")|| u.includes("MOCK"))        return "FULL";
+  return "VR";
+}
+
+function reducer(state: QuizState, action: Action): QuizState {
   switch (action.type) {
-    case "SET_LOADING":
-      return { ...state, loading: action.payload };
-
-    case "SET_ERROR":
-      return { ...state, error: action.payload, loading: false };
-
-    case "SET_QUIZ":
-      return {
-        ...state,
-        quiz: action.payload,
-        timeRemaining: action.payload.timeLimit,
-        loading: false,
-      };
-
-    case "SET_CURRENT_QUESTION_INDEX":
-      return { ...state, currentQuestionIndex: action.payload };
-
-    case "SET_DIRECTION":
-      return { ...state, direction: action.payload };
-
-    case "SET_QUIZ_START_TIME":
-      return { ...state, quizStartTime: action.payload };
-
-    case "SET_QUIZ_END_TIME":
-      return { ...state, quizEndTime: action.payload };
-
-    case "SET_QUESTION_START_TIME":
-      return { ...state, questionStartTime: action.payload };
-
-    case "SET_TIME_REMAINING":
-      return { ...state, timeRemaining: action.payload };
-
-    case "DECREMENT_TIME":
-      return {
-        ...state,
-        timeRemaining: state.timeRemaining ? state.timeRemaining - 1 : null,
-      };
-
-    case "SET_QUIZ_COMPLETED":
-      return { ...state, isQuizCompleted: action.payload };
-
-    case "SET_REVIEW_MODE":
-      return { ...state, isReviewMode: action.payload };
-
-    case "SET_SHOW_FEEDBACK":
-      return { ...state, showFeedback: action.payload };
-
-    case "SET_LAST_ANSWER_CORRECT":
-      return { ...state, lastAnswerCorrect: action.payload };
-
-    case "ADD_ANSWER":
-      return { ...state, answers: [...state.answers, action.payload] };
-
-    case "UPDATE_ANSWER":
-      const updatedAnswers = [...state.answers];
-      updatedAnswers[action.payload.index] = action.payload.answer;
-      return { ...state, answers: updatedAnswers };
-
-    case "NAVIGATE_QUESTION":
-      return {
-        ...state,
-        direction: action.payload.direction,
-        currentQuestionIndex: action.payload.index,
-      };
-
-    case "TIMEOUT_QUIZ":
-      return {
-        ...state,
-        quizEndTime: Date.now(),
-        isQuizCompleted: true,
-        timeRemaining: 0,
-      };
-
-    case "RESTART_QUIZ":
-      const now = Date.now();
-      return {
-        ...state,
-        currentQuestionIndex: 0,
-        answers: [],
-        quizStartTime: now,
-        quizEndTime: null,
-        questionStartTime: now,
-        timeRemaining: action.payload.timeLimit,
-        isQuizCompleted: false,
-        isReviewMode: false,
-        showFeedback: false,
-        lastAnswerCorrect: null,
-        direction: 0,
-      };
-
-    case "START_REVIEW":
-      return {
-        ...state,
-        currentQuestionIndex: 0,
-        isReviewMode: true,
-        direction: 0,
-      };
-
-    default:
-      return state;
+    case "SET_LOADING":   return { ...state, loading: action.payload };
+    case "SET_ERROR":     return { ...state, error: action.payload, loading: false };
+    case "SET_QUESTIONS": return { ...state, questions: action.payload, loading: false,
+      timeRemaining: action.payload[0]?.subtest === "FULL" ? 116*60
+        : SUBTEST_CONFIG[action.payload[0]?.subtest]?.time || action.payload.length * 60 };
+    case "TICK": return state.timeRemaining <= 1
+      ? { ...state, timeRemaining: 0, isCompleted: true }
+      : { ...state, timeRemaining: state.timeRemaining - 1 };
+    case "ANSWER": return { ...state, answers: { ...state.answers, [action.payload.questionId]: action.payload.option } };
+    case "NEXT":   return { ...state, currentIndex: Math.min(state.currentIndex + 1, state.questions.length - 1) };
+    case "PREV":   return { ...state, currentIndex: Math.max(state.currentIndex - 1, 0) };
+    case "GOTO":   return { ...state, currentIndex: action.payload };
+    case "COMPLETE": return { ...state, isCompleted: true, correctAnswers: action.payload.correctAnswers,
+      explanations: action.payload.explanations, score: action.payload.score };
+    case "START_REVIEW": return { ...state, isReviewMode: true, currentIndex: 0 };
+    default: return state;
   }
 }
+
+const initialState: QuizState = {
+  questions: [], loading: true, error: null, currentIndex: 0,
+  answers: {}, timeRemaining: 0, isCompleted: false, isReviewMode: false,
+  correctAnswers: {}, explanations: {}, score: null,
+};
 
 export function QuizPlay({ id }: { id: string }) {
   const router = useRouter();
-  const [state, dispatch] = useReducer(quizReducer, initialState);
-  const questionContainerRef = useRef<HTMLDivElement>(null);
+  const [state, dispatch] = useReducer(reducer, initialState);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const subtest = getSubtest(id);
+  const config = SUBTEST_CONFIG[subtest] || SUBTEST_CONFIG.VR;
 
-  // Fetch quiz data
+  // Fetch questions
   useEffect(() => {
-    const getQuiz = async () => {
+    const fetchQuestions = async () => {
       try {
-        dispatch({ type: "SET_LOADING", payload: true });
-        dispatch({ type: "SET_QUIZ", payload: currentQuiz });
-      } catch (err) {
-        dispatch({ type: "SET_ERROR", payload: "Failed to load quiz. Please try again later." });
+        const token = localStorage.getItem("medexam_token");
+        const base = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000/api";
+
+        if (subtest === "FULL") {
+          const all: UCATQuestion[] = [];
+          for (const st of ["VR","DM","QR","AR","SJT"]) {
+            const r = await fetch(`${base}/api/exam/questions/${st}`, {
+              headers: { Authorization: `Bearer ${token}` },
+            });
+            if (r.ok) { const d = await r.json(); all.push(...(d.data?.questions||[])); }
+          }
+          if (all.length === 0) throw new Error("No questions found");
+          dispatch({ type: "SET_QUESTIONS", payload: all });
+        } else {
+          const r = await fetch(`${base}/api/exam/questions/${subtest}`, {
+            headers: { Authorization: `Bearer ${token}` },
+          });
+          if (!r.ok) { const e = await r.json(); throw new Error(e.message||"Failed"); }
+          const d = await r.json();
+          const qs = d.data?.questions || [];
+          if (qs.length === 0) throw new Error("No questions found for this subtest");
+          dispatch({ type: "SET_QUESTIONS", payload: qs });
+        }
+      } catch (err: any) {
+        dispatch({ type: "SET_ERROR", payload: err.message });
       }
     };
+    fetchQuestions();
+  }, [id, subtest]);
 
-    getQuiz();
-  }, [id]);
-
-  // Start quiz timer when quiz is loaded
+  // Timer
   useEffect(() => {
-    if (state.quiz && !state.quizStartTime && !state.isQuizCompleted) {
-      const startTime = Date.now();
-      dispatch({ type: "SET_QUIZ_START_TIME", payload: startTime });
-      dispatch({ type: "SET_QUESTION_START_TIME", payload: startTime });
-    }
-  }, [state.quiz, state.quizStartTime, state.isQuizCompleted]);
+    if (state.loading || state.isCompleted || state.isReviewMode || state.questions.length === 0) return;
+    timerRef.current = setInterval(() => dispatch({ type: "TICK" }), 1000);
+    return () => { if (timerRef.current) clearInterval(timerRef.current); };
+  }, [state.loading, state.isCompleted, state.isReviewMode, state.questions.length]);
 
-  // Timer effect
+  // Submit when completed
   useEffect(() => {
-    if (!state.quiz || state.isQuizCompleted || !state.timeRemaining || state.isReviewMode) return;
-
-    const timer = setInterval(() => {
-      if (state.timeRemaining && state.timeRemaining <= 1) {
-        clearInterval(timer);
-        dispatch({ type: "TIMEOUT_QUIZ" });
-        return;
-      }
-      dispatch({ type: "DECREMENT_TIME" });
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, [state.quiz, state.isQuizCompleted, state.timeRemaining, state.isReviewMode]);
-
-  // Scroll to top of question container when changing questions
-  useEffect(() => {
-    if (questionContainerRef.current) {
-      questionContainerRef.current.scrollTo(0, 0);
-    }
-  }, [state.currentQuestionIndex]);
-
-  // Handle answer selection
-  const handleAnswerSelect = useCallback(
-    (questionId: string, optionId: string) => {
-      if (state.isReviewMode || state.showFeedback) return;
-
-      const currentQuestion = state.quiz?.questions[state.currentQuestionIndex];
-      if (!currentQuestion || !state.questionStartTime) return;
-
-      const timeSpent = Math.floor((Date.now() - state.questionStartTime) / 1000);
-      const isCorrect = optionId === currentQuestion.correctOptionId;
-
-      // Show feedback
-      dispatch({ type: "SET_LAST_ANSWER_CORRECT", payload: isCorrect });
-      dispatch({ type: "SET_SHOW_FEEDBACK", payload: true });
-
-      const newAnswer: Answer = {
-        questionId,
-        selectedOptionId: optionId,
-        isCorrect,
-        timeSpent,
-      };
-
-      // Check if we already have an answer for this question
-      const existingAnswerIndex = state.answers.findIndex((a) => a.questionId === questionId);
-
-      if (existingAnswerIndex >= 0) {
-        dispatch({ type: "UPDATE_ANSWER", payload: { index: existingAnswerIndex, answer: newAnswer } });
-      } else {
-        dispatch({ type: "ADD_ANSWER", payload: newAnswer });
-      }
-
-      // Move to next question after feedback delay
-      setTimeout(() => {
-        dispatch({ type: "SET_SHOW_FEEDBACK", payload: false });
-
-        if (state.currentQuestionIndex < (state.quiz?.questions.length || 0) - 1) {
-          dispatch({
-            type: "NAVIGATE_QUESTION",
-            payload: { direction: 1, index: state.currentQuestionIndex + 1 },
+    if (!state.isCompleted || state.isReviewMode || state.score !== null) return;
+    (async () => {
+      try {
+        const token = localStorage.getItem("medexam_token");
+        const base = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000/api";
+        const sr = await fetch(`${base}/api/exam/session`, {
+          method: "POST",
+          headers: { "Content-Type":"application/json", Authorization:`Bearer ${token}` },
+          body: JSON.stringify({ examType: subtest === "FULL" ? "full" : subtest }),
+        });
+        const sd = await sr.json();
+        const sessionId = sd.data?.sessionId;
+        const formatted: Record<string, Record<string, string>> = {};
+        state.questions.forEach(q => {
+          if (!formatted[q.subtest]) formatted[q.subtest] = {};
+          if (state.answers[q.questionId]) formatted[q.subtest][q.questionId] = state.answers[q.questionId];
+        });
+        if (sessionId) {
+          await fetch(`${base}/api/exam/submit/${sessionId}`, {
+            method: "POST",
+            headers: { "Content-Type":"application/json", Authorization:`Bearer ${token}` },
+            body: JSON.stringify({ answers: formatted }),
           });
-          dispatch({ type: "SET_QUESTION_START_TIME", payload: Date.now() });
-        } else {
-          dispatch({ type: "SET_QUIZ_END_TIME", payload: Date.now() });
-          dispatch({ type: "SET_QUIZ_COMPLETED", payload: true });
         }
-      }, 1500);
-    },
-    [state.currentQuestionIndex, state.quiz, state.questionStartTime, state.isReviewMode, state.showFeedback, state.answers]
+      } catch {}
+      dispatch({ type: "COMPLETE", payload: { correctAnswers:{}, explanations:{}, score: Object.keys(state.answers).length } });
+    })();
+  }, [state.isCompleted]);
+
+  const handleAnswer = useCallback((questionId: string, option: string) => {
+    if (state.isReviewMode || state.answers[questionId]) return;
+    dispatch({ type: "ANSWER", payload: { questionId, option } });
+    setTimeout(() => {
+      if (state.currentIndex < state.questions.length - 1) dispatch({ type: "NEXT" });
+    }, 600);
+  }, [state.currentIndex, state.questions.length, state.isReviewMode, state.answers]);
+
+  const formatTime = (s: number) =>
+    `${Math.floor(s/60).toString().padStart(2,"0")}:${(s%60).toString().padStart(2,"0")}`;
+
+  const progress = state.questions.length > 0 ? ((state.currentIndex+1)/state.questions.length)*100 : 0;
+
+  if (state.loading) return (
+    <div className="flex flex-col items-center justify-center min-h-[60vh] gap-4">
+      <Loader2 className="h-12 w-12 animate-spin" style={{ color: config.color }} />
+      <p className="text-lg font-semibold">Loading {config.name} questions...</p>
+    </div>
   );
 
-  // Navigate to next question (in review mode)
-  const handleNextQuestion = useCallback(() => {
-    if (state.currentQuestionIndex < (state.quiz?.questions.length || 0) - 1) {
-      dispatch({
-        type: "NAVIGATE_QUESTION",
-        payload: { direction: 1, index: state.currentQuestionIndex + 1 },
-      });
-    }
-  }, [state.currentQuestionIndex, state.quiz]);
-
-  // Navigate to previous question (in review mode)
-  const handlePrevQuestion = useCallback(() => {
-    if (state.currentQuestionIndex > 0) {
-      dispatch({
-        type: "NAVIGATE_QUESTION",
-        payload: { direction: -1, index: state.currentQuestionIndex - 1 },
-      });
-    }
-  }, [state.currentQuestionIndex]);
-
-  // Format time for display
-  const formatTime = (seconds: number): string => {
-    const mins = Math.floor(seconds / 60);
-    const secs = seconds % 60;
-    return `${mins.toString().padStart(2, "0")}:${secs.toString().padStart(2, "0")}`;
-  };
-
-  // Calculate progress percentage
-  const progressPercentage = state.quiz ? ((state.currentQuestionIndex + 1) / state.quiz.questions.length) * 100 : 0;
-
-  // Handle quiz restart
-  const handleRestartQuiz = () => {
-    dispatch({
-      type: "RESTART_QUIZ",
-      payload: { timeLimit: state.quiz?.timeLimit || null },
-    });
-  };
-
-  // Handle review answers
-  const handleReviewAnswers = () => {
-    dispatch({ type: "START_REVIEW" });
-  };
-
-  // Handle exit quiz
-  const handleExitQuiz = () => {
-    router.push(`/quiz/${id}`);
-  };
-
-  // Calculate quiz results
-  const calculateResults = () => {
-    if (!state.quiz) return null;
-
-    const totalQuestions = state.quiz.questions.length;
-    const correctAnswers = state.answers.filter((a) => a.isCorrect).length;
-    const score = Math.round((correctAnswers / totalQuestions) * 100);
-    const totalTime = state.quizEndTime && state.quizStartTime ? Math.floor((state.quizEndTime - state.quizStartTime) / 1000) : 0;
-
-    return {
-      totalQuestions,
-      correctAnswers,
-      score,
-      totalTime,
-      answers: state.answers,
-    };
-  };
-
-  // Loading state
-  if (state.loading) {
-    return (
-      <div className="flex flex-col items-center justify-center min-h-[60vh] p-4">
-        <Loader2 className="h-12 w-12 animate-spin text-primary mb-4" />
-        <p className="text-lg font-medium">Loading quiz...</p>
-      </div>
-    );
-  }
-
-  // Error state
-  if (state.error || !state.quiz) {
-    return (
-      <div className="container mx-auto py-8 px-4">
-        <Alert variant="destructive" className="mb-6">
-          <AlertTriangle className="h-5 w-5" />
-          <AlertTitle>Error</AlertTitle>
-          <AlertDescription>{state.error || "Failed to load quiz. Please try again later."}</AlertDescription>
-        </Alert>
+  if (state.error) return (
+    <div className="container max-w-2xl mx-auto py-12 px-4 text-center">
+      <AlertTriangle className="h-16 w-16 text-red-500 mx-auto mb-4" />
+      <h2 className="text-2xl font-bold mb-2">Could not load questions</h2>
+      <p className="text-muted-foreground mb-6">{state.error}</p>
+      <div className="flex gap-3 justify-center">
         <Button onClick={() => router.push("/explore")}>Back to Explore</Button>
+        <Button variant="outline" onClick={() => window.location.reload()}>Try Again</Button>
       </div>
-    );
-  }
+    </div>
+  );
 
-  // Quiz completed - show results
-  if (state.isQuizCompleted) {
-    const results = calculateResults();
+  if (state.isCompleted && !state.isReviewMode) {
+    const total = state.questions.length;
+    const answered = Object.keys(state.answers).length;
     return (
-      <div className="container mx-auto py-8 px-4">
-        <QuizResults results={results} quiz={state.quiz} onRestart={handleRestartQuiz} onReview={handleReviewAnswers} onExit={handleExitQuiz} />
-      </div>
-    );
-  }
-
-  // Review mode or active quiz
-  const currentQuestion = state.quiz.questions[state.currentQuestionIndex];
-  const currentAnswer = state.answers.find((a) => a.questionId === currentQuestion.id);
-
-  return (
-    <div className="container mx-auto py-4 px-4 md:py-8 max-w-4xl">
-      <QuizHeader title={state.quiz.title} category={state.quiz.category} difficulty={state.quiz.difficulty} isReviewMode={state.isReviewMode} />
-
-      <div className="mb-6">
-        <div className="flex justify-between items-center mb-2">
-          <div className="text-sm font-medium">
-            Question {state.currentQuestionIndex + 1} of {state.quiz.questions.length}
-          </div>
-          {!state.isReviewMode && state.timeRemaining !== null && <QuizTimer timeRemaining={state.timeRemaining} formatTime={formatTime} />}
+      <div className="container max-w-2xl mx-auto py-12 px-4">
+        <div className="text-center mb-8">
+          <CheckCircle className="h-16 w-16 mx-auto mb-4" style={{ color: config.color }} />
+          <h1 className="text-3xl font-bold mb-2">
+            {subtest === "FULL" ? "Mock Exam Complete!" : `${config.name} Complete!`}
+          </h1>
         </div>
-        <Progress value={progressPercentage} className="h-2" />
-      </div>
-
-      <div className="relative">
-        {/* Feedback overlay */}
-        {state.showFeedback && (
-          <div className="absolute inset-0 z-10 flex items-center justify-center bg-background/80 backdrop-blur-sm rounded-lg">
-            <div className={`text-center p-6 rounded-lg ${state.lastAnswerCorrect ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"}`}>
-              <div className={`text-5xl mb-2 ${state.lastAnswerCorrect ? "text-green-500" : "text-red-500"}`}>{state.lastAnswerCorrect ? "✓" : "✗"}</div>
-              <h3 className="text-xl font-bold mb-1">{state.lastAnswerCorrect ? "Correct!" : "Incorrect!"}</h3>
-              <p>{state.lastAnswerCorrect ? "Great job! Moving to next question..." : `The correct answer was: ${state.quiz.questions[state.currentQuestionIndex].options.find((o) => o.id === state.quiz!.questions[state.currentQuestionIndex].correctOptionId)?.text}`}</p>
-            </div>
-          </div>
-        )}
-
-        <Card className="overflow-hidden">
-          <div ref={questionContainerRef}>
-            <AnimatePresence mode="wait" initial={false}>
-              <motion.div key={currentQuestion.id} initial={{ opacity: 0, x: state.direction * 100 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: state.direction * -100 }} transition={{ duration: 0.3 }} className="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-                {/* Question image */}
-                {currentQuestion.image && (
-                  <div className="rounded-lg overflow-hidden">
-                    <Image src={currentQuestion.image || "/placeholder.svg"} alt="Question illustration" className="size-full object-center object-cover" />
-                  </div>
-                )}
-
-                <QuizQuestion question={currentQuestion} selectedOptionId={currentAnswer?.selectedOptionId || null} correctOptionId={state.isReviewMode ? currentQuestion.correctOptionId : undefined} onSelectOption={handleAnswerSelect} isReviewMode={state.isReviewMode} />
-
-                {state.isReviewMode && (
-                  <div className="mt-6 space-y-4">
-                    {currentQuestion.explanation && (
-                      <div className="bg-muted p-4 rounded-md">
-                        <p className="font-medium mb-1">Explanation:</p>
-                        <p>{currentQuestion.explanation}</p>
-                      </div>
-                    )}
-
-                    <div className="flex justify-between mt-6">
-                      <Button variant="outline" onClick={handlePrevQuestion} disabled={state.currentQuestionIndex === 0} className="flex items-center gap-2">
-                        <ChevronLeft className="h-4 w-4" /> Previous
-                      </Button>
-
-                      <Button variant="outline" onClick={handleNextQuestion} disabled={state.currentQuestionIndex === state.quiz.questions.length - 1} className="flex items-center gap-2">
-                        Next <ChevronRight className="h-4 w-4" />
-                      </Button>
-                    </div>
-                  </div>
-                )}
-              </motion.div>
-            </AnimatePresence>
-          </div>
-        </Card>
-      </div>
-
-      {state.isReviewMode && (
-        <div className="flex justify-center mt-6">
-          <Button onClick={handleExitQuiz} variant="default">
-            Exit Review
+        <div className="grid grid-cols-2 gap-4 mb-8">
+          {[
+            { label: "Answered",    value: answered,                              color: config.color },
+            { label: "Unanswered",  value: total - answered,                     color: "#f97316"   },
+            { label: "Total",       value: total,                                 color: config.color },
+            { label: "Completion",  value: `${Math.round(answered/total*100)}%`, color: "#16a34a"   },
+          ].map(({ label, value, color }) => (
+            <Card key={label} className="p-6 text-center">
+              <p className="text-4xl font-bold mb-1" style={{ color }}>{value}</p>
+              <p className="text-sm text-muted-foreground">{label}</p>
+            </Card>
+          ))}
+        </div>
+        <div className="flex flex-col gap-3">
+          <Button className="w-full py-6 text-lg text-white" style={{ backgroundColor: config.color }}
+            onClick={() => dispatch({ type: "START_REVIEW" })}>
+            Review Answers
+          </Button>
+          <Button variant="outline" className="w-full" onClick={() => router.push("/dashboard/user")}>
+            View Analytics
+          </Button>
+          <Button variant="ghost" className="w-full" onClick={() => router.push("/explore")}>
+            Back to Explore
           </Button>
         </div>
-      )}
+      </div>
+    );
+  }
+
+  const currentQ = state.questions[state.currentIndex];
+  if (!currentQ) return null;
+  const selectedAnswer = state.answers[currentQ.questionId];
+  const subtestColor = SUBTEST_CONFIG[currentQ.subtest]?.color || config.color;
+  const isLowTime = state.timeRemaining < 120;
+
+  return (
+    <div className="container max-w-4xl mx-auto py-4 px-4">
+      {/* Header */}
+      <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center gap-2">
+          <span className="px-3 py-1 rounded-full text-white text-sm font-bold" style={{ backgroundColor: subtestColor }}>
+            {currentQ.subtest}
+          </span>
+          <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${
+            currentQ.difficulty==="easy" ? "bg-green-100 text-green-700" :
+            currentQ.difficulty==="hard" ? "bg-red-100 text-red-700" : "bg-yellow-100 text-yellow-700"
+          }`}>{currentQ.difficulty?.toUpperCase()}</span>
+        </div>
+        {!state.isReviewMode && (
+          <div className={`flex items-center gap-2 px-3 py-1.5 rounded-lg font-mono font-bold text-lg ${
+            isLowTime ? "bg-red-100 text-red-600 animate-pulse" : "bg-muted"}`}>
+            <Clock className="h-4 w-4" />{formatTime(state.timeRemaining)}
+          </div>
+        )}
+        {state.isReviewMode && (
+          <span className="px-3 py-1.5 rounded-lg bg-blue-100 text-blue-700 font-medium text-sm">Review Mode</span>
+        )}
+      </div>
+
+      {/* Progress */}
+      <div className="mb-4">
+        <div className="flex justify-between text-sm text-muted-foreground mb-1">
+          <span>Question {state.currentIndex+1} of {state.questions.length}</span>
+          <span>{Object.keys(state.answers).length} answered</span>
+        </div>
+        <Progress value={progress} className="h-2" />
+      </div>
+
+      {/* Question */}
+      <Card className="overflow-hidden mb-4">
+        <div className="h-1" style={{ backgroundColor: subtestColor }} />
+        <div className="p-6">
+          {currentQ.passage && (
+            <div className="bg-muted/50 border-l-4 p-4 rounded-r-lg mb-5 text-sm leading-relaxed"
+              style={{ borderColor: subtestColor }}>
+              <p className="font-semibold text-xs uppercase tracking-wide mb-2 opacity-60">Passage</p>
+              <p className="leading-7">{currentQ.passage}</p>
+            </div>
+          )}
+          <p className="font-semibold text-base mb-5 leading-7">{currentQ.question}</p>
+          <div className="space-y-3">
+            {currentQ.options.map((option, i) => {
+              const letter = option.charAt(0);
+              const isSelected = selectedAnswer === letter;
+              return (
+                <button key={i} onClick={() => handleAnswer(currentQ.questionId, letter)}
+                  disabled={!!selectedAnswer || state.isReviewMode}
+                  className={`w-full text-left p-4 rounded-lg border-2 transition-all duration-200 ${
+                    isSelected ? "border-blue-500 bg-blue-50" :
+                    "border-border hover:border-gray-400 hover:bg-muted/50"
+                  } ${!selectedAnswer && !state.isReviewMode ? "cursor-pointer" : "cursor-default"}`}>
+                  <div className="flex items-start gap-3">
+                    <span className={`flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold ${
+                      isSelected ? "text-white" : "bg-muted text-muted-foreground"}`}
+                      style={isSelected ? { backgroundColor: subtestColor } : {}}>
+                      {letter}
+                    </span>
+                    <span className="text-sm leading-6">{option.slice(3)}</span>
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      </Card>
+
+      {/* Navigation */}
+      <div className="flex items-center justify-between">
+        <Button variant="outline" onClick={() => dispatch({ type: "PREV" })}
+          disabled={state.currentIndex === 0} className="flex items-center gap-2">
+          <ChevronLeft className="h-4 w-4" /> Previous
+        </Button>
+
+        <div className="flex gap-1">
+          {state.questions.slice(Math.max(0,state.currentIndex-3), Math.min(state.questions.length,state.currentIndex+4))
+            .map((_,i) => {
+              const idx = Math.max(0,state.currentIndex-3)+i;
+              const isAnswered = !!state.answers[state.questions[idx]?.questionId];
+              const isCurrent = idx === state.currentIndex;
+              return (
+                <button key={idx} onClick={() => dispatch({ type: "GOTO", payload: idx })}
+                  className={`w-7 h-7 rounded-full text-xs font-bold transition-all ${isCurrent?"scale-110":""}`}
+                  style={{ backgroundColor: isCurrent||isAnswered ? subtestColor : "#e5e7eb",
+                    color: isCurrent||isAnswered ? "white" : "#6b7280" }}>
+                  {idx+1}
+                </button>
+              );
+          })}
+        </div>
+
+        {state.currentIndex < state.questions.length-1 ? (
+          <Button onClick={() => dispatch({ type: "NEXT" })} className="flex items-center gap-2 text-white"
+            style={{ backgroundColor: subtestColor }}>
+            Next <ChevronRight className="h-4 w-4" />
+          </Button>
+        ) : (
+          <Button onClick={() => {
+            if (timerRef.current) clearInterval(timerRef.current);
+            state.isReviewMode ? router.push("/explore") : dispatch({ type: "COMPLETE", payload:{correctAnswers:{},explanations:{},score:0} });
+          }} className="flex items-center gap-2 text-white"
+            style={{ backgroundColor: state.isReviewMode ? "#6b7280" : "#16a34a" }}>
+            {state.isReviewMode ? "Exit Review" : "Finish"} <CheckCircle className="h-4 w-4" />
+          </Button>
+        )}
+      </div>
     </div>
   );
 }
