@@ -4,7 +4,20 @@ import type React from "react";
 
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { cn } from "@/lib/utils";
-import { BarChart3, BookOpen, ChevronDown, Compass, Home, LayoutDashboard, LogOut, PlusCircle, Settings, Trophy, Users } from "lucide-react";
+import {
+  BarChart3,
+  BookOpen,
+  ChevronDown,
+  Compass,
+  Home,
+  LayoutDashboard,
+  LogOut,
+  PlusCircle,
+  Settings,
+  Trophy,
+  Users,
+  CreditCard
+} from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useSidebar } from "./sidebar-context";
