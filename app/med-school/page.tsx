@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import { Stethoscope } from "lucide-react";
-
 export default function MedSchoolPage() {
   return (
     <div className="min-h-screen bg-white">
@@ -23,13 +22,11 @@ export default function MedSchoolPage() {
           </div>
         </div>
       </nav>
-
       <div className="pt-28 pb-16 px-6 bg-gradient-to-br from-[#0B1F3A] to-[#1a3a5c] text-center">
         <div className="inline-block bg-teal-500/20 text-teal-400 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-4">Complete Guide</div>
         <h1 className="text-5xl font-black text-white mb-4">How to Apply to<br/>Medical School in the UK</h1>
         <p className="text-lg text-white/60 max-w-2xl mx-auto">A step-by-step guide covering everything from GCSEs to your first day at medical school.</p>
       </div>
-
       {/* Timeline */}
       <section className="py-16 px-6">
         <div className="max-w-3xl mx-auto">
@@ -57,7 +54,6 @@ export default function MedSchoolPage() {
           </div>
         </div>
       </section>
-
       {/* UCAT table */}
       <section className="py-16 px-6 bg-gray-50">
         <div className="max-w-4xl mx-auto">
@@ -91,13 +87,11 @@ export default function MedSchoolPage() {
           </div>
         </div>
       </section>
-
       <section className="py-12 px-6 bg-[#0B1F3A] text-center">
         <h2 className="text-2xl font-black text-white mb-3">Start Your UCAT Preparation</h2>
         <p className="text-white/60 mb-6">The UCAT is one of the most important parts of your application. Begin practising today.</p>
         <Link href="/register" className="inline-block bg-teal-500 hover:bg-teal-400 text-white font-bold px-10 py-4 rounded-xl transition-colors">Start Free Trial →</Link>
       </section>
-
       <footer className="bg-[#0B1F3A] border-t border-white/10 py-8 px-6 text-center">
         <p className="text-white/40 text-sm">© {new Date().getFullYear()} Medical Exam UCAT &nbsp;·&nbsp;
           {[["About","/about"],["Blog","/blog"],["Med School","/med-school"],["Resources","/resources"]].map(([l,h]) => (

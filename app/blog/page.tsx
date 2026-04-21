@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import { Stethoscope } from "lucide-react";
-
 const POSTS = [
   { slug:"vr-strategy",   category:"VR Strategy",   color:"#1B4F72", bg:"#EBF5FB", icon:"📖", title:"The Only VR Strategy You Need: True/False/Can't Tell",       date:"April 2026",    read:"7 min",  desc:"Most students lose points in VR by overthinking. Here is the simple framework that gets you to the right answer every time." },
   { slug:"ar-scans",      category:"AR Strategy",   color:"#512E5F", bg:"#F5EEF8", icon:"👁️", title:"Abstract Reasoning: The SCANS Method That Gets You 700+",     date:"March 2026",    read:"9 min",  desc:"AR only gives you 14 seconds per question. This systematic approach means you never waste time searching aimlessly for patterns." },
@@ -12,7 +11,6 @@ const POSTS = [
   { slug:"score-700",     category:"Strategy",      color:"#00A896", bg:"#E8F8F5", icon:"🎯", title:"How to Score 700+ in Every UCAT Subtest: Complete Guide",     date:"April 2026",    read:"12 min", desc:"Scoring 700+ in each subtest puts you in the top 25% of all UCAT candidates. Here is exactly how to get there." },
   { slug:"6-week-plan",   category:"Study Plan",    color:"#117A65", bg:"#E8F8F5", icon:"📅", title:"The 6-Week UCAT Study Plan That Actually Works",              date:"January 2026",  read:"8 min",  desc:"A structured week-by-week preparation plan used by students who scored in the top quartile of the UCAT." },
 ];
-
 export default function BlogPage() {
   return (
     <div className="min-h-screen bg-white">
@@ -34,13 +32,11 @@ export default function BlogPage() {
           </div>
         </div>
       </nav>
-
       <div className="pt-28 pb-16 px-6 bg-gradient-to-br from-[#0B1F3A] to-[#1a3a5c] text-center">
         <div className="inline-block bg-teal-500/20 text-teal-400 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-4">Insights & Advice</div>
         <h1 className="text-5xl font-black text-white mb-4">The UCAT Blog</h1>
         <p className="text-lg text-white/60 max-w-xl mx-auto">Expert tips, student stories, and everything you need to know about applying to medical school in the UK.</p>
       </div>
-
       <section className="py-16 px-6">
         <div className="max-w-6xl mx-auto">
           {/* Featured */}
@@ -56,7 +52,6 @@ export default function BlogPage() {
               <Link href="/register" className="inline-block bg-teal-500 hover:bg-teal-400 text-white text-sm font-bold px-5 py-2.5 rounded-xl transition-colors">Read Article →</Link>
             </div>
           </div>
-
           {/* Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {POSTS.slice(0,6).map(p => (
@@ -75,13 +70,11 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
-
       <section className="py-12 px-6 bg-[#0B1F3A] text-center">
         <h2 className="text-2xl font-black text-white mb-3">Put It Into Practice</h2>
         <p className="text-white/60 mb-6">Apply these strategies with real UCAT-style questions.</p>
         <Link href="/register" className="inline-block bg-teal-500 hover:bg-teal-400 text-white font-bold px-8 py-3 rounded-xl transition-colors">Start Free Trial →</Link>
       </section>
-
       <footer className="bg-[#0B1F3A] border-t border-white/10 py-8 px-6 text-center">
         <p className="text-white/40 text-sm">© {new Date().getFullYear()} Medical Exam UCAT &nbsp;·&nbsp;
           {[["About","/about"],["Blog","/blog"],["Med School","/med-school"],["Resources","/resources"]].map(([l,h]) => (
